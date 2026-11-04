@@ -292,9 +292,9 @@ En el compás se sombrea la **ventana de Overton** como el polígono que encierr
 | Izquierda socialista | Unidad Popular (Gonzalo Abella, Eduardo Rubio), Rodney Arismendi |
 | Izquierda | José Mujica, Lucía Topolansky, Carolina Cosse, Óscar Andrade, Marcelo Abdala, Constanza Moreira, Gonzalo Civila, Fernando Pereira, Emilio Frugoni, Zelmar Michelini, Eduardo Galeano |
 | Centroizquierda | Yamandú Orsi, Danilo Astori, Mario Bergara, Daniel Martínez, Alejandro Sánchez, Líber Seregni, Tabaré Vázquez, José Batlle y Ordóñez (en su época), Gustavo Salle (Identidad Soberana: "Centroizquierda proteccionista") |
-| Centro | Partido Independiente (Pablo Mieres), Álvaro Delgado, Beatriz Argimón, Nicolás Olivera |
+| Centro | Partido Independiente (Pablo Mieres), Julio María Sanguinetti, Álvaro Delgado, Beatriz Argimón, Nicolás Olivera |
 | Centro conservador | Guido Manini Ríos (Cabildo Abierto) |
-| Centroderecha | Luis Lacalle Pou, Julio María Sanguinetti, Andrés Ojeda, Javier García, Laura Raffo, Azucena Arbeleche |
+| Centroderecha | Luis Lacalle Pou, Andrés Ojeda, Javier García, Laura Raffo, Azucena Arbeleche |
 | Derecha | Luis Alberto Lacalle Herrera, Pedro Bordaberry, Jorge Larrañaga, Ernesto Talvi, Sebastián da Silva, Graciela Bianchi, Gustavo Zubía |
 | Libertarismo / liberalismo económico | Jorge Batlle, Gabriel Gurméndez |
 | Derecha autoritaria | Gabriel Terra (1933–1938), Juan María Bordaberry (1973–1976), Gregorio Álvarez (1981–1985) |
@@ -405,8 +405,8 @@ Dónde quedan en el compás (con la calibración final):
 | Izquierda libertaria | Michelini, Galeano, FAU, Constanza Moreira, Civila |
 | Izquierda | Artigas, Batlle y Ordóñez, Brum, Batlle Berres, Wilson Ferreira, Seregni, Vázquez, Mujica, Topolansky, Cosse, Daniel Martínez, Alejandro Sánchez |
 | Centroizquierda | Orsi, Bergara, Salle |
-| Centro | Astori, Oddone, Argimón, Delgado, Olivera, Mieres, Manini Ríos, Lust |
-| Centroderecha | Sanguinetti, Larrañaga, Lacalle Pou, Arbeleche |
+| Centro | Astori, Oddone, Sanguinetti, Argimón, Delgado, Olivera, Mieres, Manini Ríos, Lust |
+| Centroderecha | Larrañaga, Lacalle Pou, Arbeleche |
 | Derecha | Saravia, Herrera, Lacalle Herrera, Jorge Batlle, Pedro Bordaberry, Raffo, Ojeda, Talvi, Gurméndez, García, Bianchi, Zubía, Dastugue |
 | Derecha liberal | da Silva |
 | Autoritarismo de centro | Pacheco Areco, Gregorio Álvarez |
@@ -414,6 +414,7 @@ Dónde quedan en el compás (con la calibración final):
 
 Puntos a revisar en la segunda lectura:
 - **Delgado** pasó de la centroderecha (X 60) al centro (X 50,5) en la segunda lectura. Se corrigieron siete respuestas de Economía y Control hacia posiciones moderadas: sindicatos, venta de empresas públicas, impuesto a la herencia, precios máximos, impuestos progresivos, el efecto de bajar impuestos sobre el empleo y el precio del dólar. Mantiene la regla fiscal, la independencia del Banco Central y la defensa de las AFAP.
+- **Sanguinetti** pasó de la centroderecha (X 67,5) al centro, apenas a la izquierda del centro uruguayo (X 45,5). Se leyó como batllista: servicios en manos del Estado, sin vender empresas públicas, sindicatos y Consejos de Salarios (los reinstaló en 1985), sin defender la baja de impuestos como motor del empleo. Mantiene la independencia del Banco Central, el rechazo a eliminar las AFAP y la apertura comercial.
 - **Izquierda libertaria** agrupa a quienes combinan izquierda económica con rechazo fuerte al punitivismo (Civila, Moreira, Galeano, Michelini). Es una lectura técnica del compás; puede sonar rara para el uso uruguayo de "libertario".
 - Las **22 ideologías** siguen con vectores estimados a mano. Son la próxima auditoría.
 
