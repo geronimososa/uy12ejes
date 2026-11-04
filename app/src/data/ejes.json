@@ -1,0 +1,219 @@
+[
+  {
+    "id": "estructura",
+    "nombre": "Territorio",
+    "poloA": "Descentralización",
+    "poloB": "Centralismo",
+    "adjA": "descentralizador",
+    "adjB": "centralista",
+    "descripcion": "Dónde se decide: cuánto poder para intendencias, municipios y comunidades, frente a reglas iguales fijadas por el gobierno nacional. No mide el tamaño del Estado.",
+    "vigente": 65,
+    "referentes": [
+      "artigas",
+      "saravia",
+      "batlle-ordonez",
+      "alvarez"
+    ],
+    "explicacionA": "Más poder y recursos para intendencias, municipios y comunidades: que las decisiones se tomen cerca de la gente.",
+    "explicacionB": "Reglas iguales para todo el país, fijadas por el gobierno nacional, y grandes proyectos decididos desde el centro."
+  },
+  {
+    "id": "representacion",
+    "nombre": "Representación",
+    "poloA": "Democracia",
+    "poloB": "Autocracia",
+    "adjA": "demócrata",
+    "adjB": "autoritario",
+    "descripcion": "Quién debe gobernar y bajo qué controles, incluida la memoria de 1968-1985 y la democracia directa.",
+    "vigente": 12,
+    "referentes": [
+      "wilson",
+      "pacheco",
+      "mln",
+      "bordaberry-jm"
+    ],
+    "aceptableMin": 0,
+    "explicacionA": "Elecciones libres, garantías para la oposición, plebiscitos y referéndums, y justicia por los crímenes de la dictadura.",
+    "explicacionB": "Aceptar atajos no democráticos cuando la causa parece buena: líderes fuertes, gobiernos de expertos o justificar el golpe o la vía armada."
+  },
+  {
+    "id": "poder",
+    "nombre": "Poder",
+    "poloA": "Seguridad",
+    "poloB": "Libertad",
+    "adjA": "pro seguridad",
+    "adjB": "libertario",
+    "descripcion": "Hasta dónde puede llegar el Estado sobre la vida de cada uno: vigilancia, penas y prohibiciones, frente a privacidad y autonomía.",
+    "vigente": 50,
+    "referentes": [
+      "larranaga",
+      "lacalle-pou",
+      "mujica",
+      "jorge-batlle"
+    ],
+    "explicacionA": "Prioridad al orden: más vigilancia, penas más duras, allanamientos y apoyo militar a la seguridad.",
+    "explicacionB": "Prioridad a la libertad individual: privacidad, garantías, regulación de la marihuana, eutanasia y libertad de expresión."
+  },
+  {
+    "id": "inmigracion",
+    "nombre": "Inmigración",
+    "poloA": "Asimilación",
+    "poloB": "Pluralismo",
+    "adjA": "asimilacionista",
+    "adjB": "pluralista",
+    "descripcion": "Si quien llega debe adaptarse a la cultura local o si la diversidad es un valor en sí; cuánta apertura migratoria.",
+    "vigente": 65,
+    "referentes": [
+      "terra",
+      "manini",
+      "mujica"
+    ],
+    "explicacionA": "Quien llega debe adaptarse a las costumbres locales; preservar la identidad nacional y limitar la inmigración.",
+    "explicacionB": "La diversidad cultural enriquece; recibir refugiados y más inmigrantes ante la baja natalidad."
+  },
+  {
+    "id": "diplomacia",
+    "nombre": "Diplomacia",
+    "poloA": "Defensa fuerte",
+    "poloB": "Pacifismo",
+    "adjA": "defensista",
+    "adjB": "pacifista",
+    "descripcion": "Actitud ante la fuerza armada: gasto militar y disuasión, frente a negociación, desarme y organismos internacionales.",
+    "vigente": 70,
+    "referentes": [
+      "manini",
+      "garcia",
+      "brum"
+    ],
+    "explicacionA": "Fuerzas Armadas equipadas, control del mar y del espacio aéreo, disuasión.",
+    "explicacionB": "Negociación siempre, multilateralismo, reducir o incluso abolir las Fuerzas Armadas."
+  },
+  {
+    "id": "intervencion",
+    "nombre": "Intervención",
+    "poloA": "Neutralidad",
+    "poloB": "Afirmación nacional",
+    "adjA": "neutralista",
+    "adjB": "soberanista",
+    "descripcion": "Mantenerse al margen de los asuntos de otros países, o defender los intereses propios con firmeza y buscar protagonismo.",
+    "vigente": 35,
+    "referentes": [
+      "herrera",
+      "quijano",
+      "lacalle-pou",
+      "salle"
+    ],
+    "explicacionA": "No meterse en los asuntos de otros países, neutralidad y rechazo a sanciones y bases extranjeras.",
+    "explicacionB": "Defender los intereses nacionales con firmeza, presionar a otros y buscar liderazgo regional."
+  },
+  {
+    "id": "economia",
+    "nombre": "Economía",
+    "poloA": "Público",
+    "poloB": "Privado",
+    "adjA": "estatista",
+    "adjB": "privatista",
+    "descripcion": "Quién debe ser dueño y prestador de bienes y servicios: el Estado y lo colectivo, o los privados.",
+    "vigente": 38,
+    "aceptableMin": 20,
+    "referentes": [
+      "abella",
+      "batlle-ordonez",
+      "orsi",
+      "lacalle-herrera"
+    ],
+    "explicacionA": "Empresas públicas fuertes, servicios en manos del Estado, sindicatos, vivienda cooperativa y jubilación pública.",
+    "explicacionB": "Gestión privada, apertura de los monopolios públicos, liceos privados gratuitos y jubilación con AFAP."
+  },
+  {
+    "id": "control",
+    "nombre": "Control",
+    "poloA": "Planificación",
+    "poloB": "Mercado",
+    "adjA": "planificador",
+    "adjB": "pro mercado",
+    "descripcion": "Cuánto debe intervenir el Estado en precios, salarios, impuestos y moneda.",
+    "vigente": 45,
+    "referentes": [
+      "abdala",
+      "astori",
+      "gurmendez"
+    ],
+    "explicacionA": "El Estado interviene en precios, salarios e impuestos: Consejos de Salarios e impuestos a los que más tienen.",
+    "explicacionB": "Precios y salarios libres, impuestos más bajos, regla fiscal y Banco Central independiente."
+  },
+  {
+    "id": "comercio",
+    "nombre": "Comercio",
+    "poloA": "Protección",
+    "poloB": "Apertura",
+    "adjA": "proteccionista",
+    "adjB": "aperturista",
+    "descripcion": "Proteger la producción nacional de la competencia externa, o abrirse al comercio y la inversión extranjera.",
+    "vigente": 60,
+    "referentes": [
+      "batlle-berres",
+      "salle",
+      "astori",
+      "jorge-batlle"
+    ],
+    "explicacionA": "Proteger la producción nacional con aranceles y compras públicas; la tierra no se vende a extranjeros.",
+    "explicacionB": "Libre comercio, tratados por fuera del Mercosur si hace falta, inversión extranjera sin trabas."
+  },
+  {
+    "id": "religion",
+    "nombre": "Religión",
+    "poloA": "Laicidad estricta",
+    "poloB": "Estado confesional",
+    "adjA": "laico",
+    "adjB": "confesional",
+    "descripcion": "El lugar de la religión en lo público (no tu fe personal): laicidad estricta, laicidad abierta a expresiones religiosas, o Estado confesional.",
+    "vigente": 15,
+    "referentes": [
+      "batlle-ordonez",
+      "dastugue"
+    ],
+    "lecturaMedia": {
+      "desde": 40,
+      "hasta": 80,
+      "texto": "Laicidad abierta"
+    },
+    "aceptableMin": 0,
+    "explicacionA": "Laicidad estricta: la religión fuera de todo lo público, como en la tradición batllista.",
+    "explicacionB": "Mayor presencia de la fe en lo público, hasta un Estado con religión oficial. En el medio está la laicidad abierta."
+  },
+  {
+    "id": "moral",
+    "nombre": "Moral",
+    "poloA": "Progresismo",
+    "poloB": "Tradicionalismo",
+    "adjA": "progresista",
+    "adjB": "conservador",
+    "descripcion": "Valores culturales y derechos civiles: cambio social, género y sexualidad, frente a familia tradicional y costumbres.",
+    "vigente": 25,
+    "referentes": [
+      "mujica",
+      "vazquez",
+      "manini"
+    ],
+    "explicacionA": "Agenda de derechos: matrimonio igualitario, aborto legal, educación sexual, cuotas y paridad.",
+    "explicacionB": "Familia tradicional, costumbres, rechazo a la agenda de género y a algunas leyes de derechos."
+  },
+  {
+    "id": "tecnologia",
+    "nombre": "Tecnología",
+    "poloA": "Tecnología",
+    "poloB": "Naturaleza",
+    "adjA": "tecnófilo",
+    "adjB": "ambientalista",
+    "descripcion": "Confianza en la técnica y el desarrollo productivo, frente a precaución ambiental y preservación.",
+    "vigente": 45,
+    "referentes": [
+      "mujica",
+      "vazquez",
+      "salle"
+    ],
+    "explicacionA": "Confianza en la tecnología y la producción: inteligencia artificial, transgénicos, energía nuclear, petróleo.",
+    "explicacionB": "Precaución ambiental: menos consumo, límites a la celulosa y los agrotóxicos, frenar el crecimiento si hace falta."
+  }
+]

@@ -1,0 +1,231 @@
+{
+  "leyenda": {
+    "codigos": "A = muy de acuerdo, a = de acuerdo, 0 = neutral, d = en desacuerdo, D = muy en desacuerdo, ? = no sé. Una letra por afirmación, en el orden f1 f2 f3 f4 f5 f6 u1 u2 u3 u4 de cada eje.",
+    "criterio": "Se responde como la posición mayoritaria del partido (programa 2024-2025, votos parlamentarios, acción de gobierno y declaraciones de sus líderes), no como su sector más extremo. Cuando el partido está dividido o no tiene posición, se responde 0. Las respuestas extremas (A o D) se reservan para las posiciones que definen la identidad del partido; en el resto se usa a, 0 o d, porque los partidos uruguayos tienen sectores diversos.",
+    "estado": "Primera auditoría. Falta la revisión independiente de una segunda persona (DISENO.md §6)."
+  },
+  "perfiles": {
+    "frente-amplio": {
+      "respuestas": {
+        "estructura": "aadaDA0daa",
+        "representacion": "ADADADDAdA",
+        "poder": "d0daDaAdDa",
+        "inmigracion": "dAdAddadad",
+        "diplomacia": "dadaDda0ad",
+        "intervencion": "adAdA0a0Aa",
+        "economia": "Add0Ad0DAd",
+        "control": "adAddaA000",
+        "comercio": "0aaa0Dd0aa",
+        "religion": "AdaD0DAdda",
+        "moral": "AdAddDDAda",
+        "tecnologia": "aa000dDd0a"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "B",
+        "seguridad": "C",
+        "mundo": "C",
+        "familia": "A"
+      },
+      "notas": {
+        "estructura": "Impulsó la ley de descentralización (2009) y los municipios, pero mantiene la educación y la policía como competencias nacionales.",
+        "representacion": "Defensa de las garantías democráticas y de los mecanismos de democracia directa (promovió el referéndum contra la LUC). Posición de memoria, verdad y justicia. No reivindica hoy la lucha armada como justificada.",
+        "poder": "Votó en contra de los aumentos de penas de la LUC, no apoyó los allanamientos nocturnos (2019, 2024), aprobó la regulación de la marihuana y votó mayoritariamente la ley de eutanasia. No promueve la legalización de todas las drogas.",
+        "inmigracion": "Ley de Migración 18.250 (2008), que reconoce la migración como derecho humano; recepción de refugiados. No propone fronteras abiertas sin control.",
+        "diplomacia": "Programas que proponen reestructurar y reducir el gasto militar y la Caja Militar; prioridad de la negociación y el multilateralismo. No propone abolir las Fuerzas Armadas.",
+        "intervencion": "Tradición de no intervención y rechazo a sanciones y bloqueos; integración regional. Mecanismo de Montevideo (2019).",
+        "economia": "Defensa de las empresas públicas y de los sindicatos, vivienda cooperativa. No apoyó oficialmente el plebiscito contra las AFAP (2024): dio libertad de acción y el candidato se opuso.",
+        "control": "Consejos de Salarios y tributación progresiva (IRPF). El gobierno de Orsi mantiene metas de inflación, autonomía del BCU y una regla fiscal reformulada, y no adoptó el impuesto al 1 % más rico.",
+        "comercio": "Inserción a través del Mercosur (acuerdo con la UE) y mantenimiento del pedido de ingreso al CPTPP; compras públicas como herramienta de desarrollo; preocupación por la extranjerización de la tierra.",
+        "religion": "Laicidad estricta como tradición; no promueve enseñanza religiosa ni cambios en los feriados.",
+        "moral": "Aprobó la agenda de derechos (aborto, matrimonio igualitario, ley trans, cuota afro) y promueve la paridad.",
+        "tecnologia": "Matriz eléctrica renovable y Plan Ceibal, pero rechazo a la energía nuclear; acordó UPM 2 con críticas de su base; posición dividida sobre transgénicos y exploración petrolera."
+      }
+    },
+    "partido-nacional": {
+      "respuestas": {
+        "estructura": "a0a0DaaDaa",
+        "representacion": "ADAdaDD0Da",
+        "poder": "adaadadaad",
+        "inmigracion": "aa0a0Daa00",
+        "diplomacia": "aad00Dda0a",
+        "intervencion": "d0da0ada0a",
+        "economia": "aaD000Da0A",
+        "control": "dd0aDAaAd0",
+        "comercio": "da0A0dAdAd",
+        "religion": "a0dDdDd00d",
+        "moral": "0a0aDd00ad",
+        "tecnologia": "adad0D0dad"
+      },
+      "dilemas": {
+        "memoria": "C",
+        "inversion": "A",
+        "seguridad": "B",
+        "mundo": "B",
+        "familia": "C"
+      },
+      "notas": {
+        "estructura": "Partido del interior: gobierna la mayoría de las intendencias y reclama más recursos para ellas; a la vez impulsó desde el gobierno nacional proyectos como Arazatí.",
+        "representacion": "Tradición democrática (Wilson Ferreira); votó la Ley de Caducidad en 1986 y hoy está dividido sobre los juicios. Promovió el plebiscito Vivir sin miedo.",
+        "poder": "LUC (2020), apoyo a los allanamientos nocturnos (2024), militares en la frontera; votó en contra de la ley de marihuana (2013) y en su mayoría en contra de la eutanasia.",
+        "inmigracion": "Política de atracción de residentes durante el gobierno de Lacalle Pou; énfasis en la integración y el orden migratorio.",
+        "diplomacia": "Compra de patrulleros oceánicos y radares, respaldo a las Fuerzas Armadas; no propone servicio obligatorio.",
+        "intervencion": "Condena explícita a los gobiernos de Venezuela, Cuba y Nicaragua; política exterior activa para flexibilizar el Mercosur.",
+        "economia": "Mantuvo las empresas públicas abriendo espacios a la competencia; defensa de las AFAP en 2024; apoyo a los liceos gratuitos de gestión privada.",
+        "control": "Regla fiscal (2020), autonomía del BCU, rechazo a nuevos impuestos; mantuvo los Consejos de Salarios pidiendo más flexibilidad.",
+        "comercio": "TLC con China, pedido de ingreso al CPTPP (2022) y flexibilización del Mercosur, sin proponer salir del bloque.",
+        "religion": "Laicidad abierta: acepta expresiones religiosas en el espacio público y tiene legisladores que invocan su fe, sin proponer un Estado confesional.",
+        "moral": "Votó mayoritariamente en contra del aborto (2012) pero no promueve derogarlo; críticas a la 'agenda de género' en la educación; posición dividida en el resto.",
+        "tecnologia": "Impulso a la exploración de hidrocarburos en el mar y a la inversión productiva; apertura al debate nuclear en algunos dirigentes."
+      }
+    },
+    "partido-colorado": {
+      "respuestas": {
+        "estructura": "0adaDA000a",
+        "representacion": "ADAd0DDdDa",
+        "poder": "a0aadA0aaA",
+        "inmigracion": "aAdadDaaa0",
+        "diplomacia": "aad00Dda0a",
+        "intervencion": "d0da0ada0a",
+        "economia": "0aD000Da0A",
+        "control": "d00aDAaAda",
+        "comercio": "dAdAddAdAd",
+        "religion": "AdaD0Dadda",
+        "moral": "aaa0dDd00d",
+        "tecnologia": "AdAdaDadAd"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "B",
+        "seguridad": "B",
+        "mundo": "A",
+        "familia": "B"
+      },
+      "notas": {
+        "estructura": "Tradición batllista centralizadora; sin una agenda fuerte de descentralización.",
+        "representacion": "Partido de gobierno en la transición; promovió la Ley de Caducidad (1986). Defensa de las instituciones representativas.",
+        "poder": "Sectores punitivos (baja de imputabilidad en 2014, apoyo a los allanamientos en 2024) junto a una tradición liberal en libertades: un diputado colorado redactó el proyecto de eutanasia y la mayoría lo votó.",
+        "inmigracion": "Apertura e integración; sin propuestas restrictivas.",
+        "diplomacia": "Respaldo a las Fuerzas Armadas como parte de la coalición 2020-2025.",
+        "intervencion": "Igual que la coalición: condena a gobiernos autoritarios de la región y política exterior activa.",
+        "economia": "Fundador histórico de las empresas públicas, hoy promueve su apertura a la competencia (desmonopolización de ANCAP); defensa de las AFAP.",
+        "control": "Línea económica liberal (Jorge Batlle, Talvi, Gurméndez): regla fiscal, BCU independiente, baja de impuestos.",
+        "comercio": "El partido más aperturista: TLC por fuera del Mercosur, CPTPP, libertad para la inversión extranjera.",
+        "religion": "Laicidad batllista: separación estricta, sin enseñanza religiosa pública.",
+        "moral": "Liberal en lo social en buena parte de sus dirigentes, con sectores más conservadores; no propone revertir la agenda de derechos.",
+        "tecnologia": "A favor de la innovación, la exploración de hidrocarburos y el debate sobre energía nuclear."
+      }
+    },
+    "cabildo-abierto": {
+      "respuestas": {
+        "estructura": "0a0ADA0d0a",
+        "representacion": "Adad0d0dDa",
+        "poder": "aDA0daDAAD",
+        "inmigracion": "A0a0aD0ada",
+        "diplomacia": "A00daDDAdA",
+        "intervencion": "aA0aaAaAaA",
+        "economia": "a0d00dddaa",
+        "control": "ad0addd00D",
+        "comercio": "a0AdADda0A",
+        "religion": "0addddDaaD",
+        "moral": "DADADaadAD",
+        "tecnologia": "00addD00a0"
+      },
+      "dilemas": {
+        "memoria": "C",
+        "inversion": "D",
+        "seguridad": "A",
+        "mundo": "C",
+        "familia": "C"
+      },
+      "notas": {
+        "estructura": "Reivindica el interior y la 'soberanía particular de los pueblos', pero con una visión de Estado nacional fuerte (educación y seguridad nacionales).",
+        "representacion": "Participa del juego democrático. Su fundador relativiza el contexto del golpe y el partido propuso la prisión domiciliaria para militares mayores y criticó los juicios por la dictadura.",
+        "poder": "Mano dura en seguridad, militares en tareas de frontera; votó en contra de la eutanasia y critica la regulación de la marihuana.",
+        "inmigracion": "Énfasis en la identidad nacional y la 'orientalidad'.",
+        "diplomacia": "Reivindicación de las Fuerzas Armadas y de su equipamiento.",
+        "intervencion": "Soberanismo: interés nacional por encima de los tratados, firmeza con los vecinos, defensa de la producción y las empresas nacionales.",
+        "economia": "Discurso de 'Estado presente', ley de usura y refinanciación de deudas; votó con la coalición sin promover privatizaciones.",
+        "control": "Críticas al BCU y al 'dólar barato', pedidos de intervención para los exportadores y endeudados.",
+        "comercio": "Defensa de la producción nacional y rechazo a la extranjerización de la tierra.",
+        "religion": "Valores cristianos con peso en lo público, sin proponer un Estado confesional.",
+        "moral": "Crítica a la 'ideología de género', defensa de la familia tradicional, propuestas para restringir la ley de aborto.",
+        "tecnologia": "Productivista y rural, sin una agenda tecnológica o ambiental marcada."
+      }
+    },
+    "identidad-soberana": {
+      "respuestas": {
+        "estructura": "Ada0d0a0aD",
+        "representacion": "ADADADdadA",
+        "poder": "D0aAdAd00d",
+        "inmigracion": "a0a0aDda0a",
+        "diplomacia": "0a0D0d0aa0",
+        "intervencion": "AAa0AaaaAa",
+        "economia": "Ad00adada0",
+        "control": "ada00D00ad",
+        "comercio": "ADADADDADA",
+        "religion": "0add00d0a0",
+        "moral": "dADAD00dAd",
+        "tecnologia": "DADADaDAdA"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "E",
+        "seguridad": "D",
+        "mundo": "D",
+        "familia": "C"
+      },
+      "notas": {
+        "estructura": "Rechazo a los megaproyectos decididos desde el gobierno nacional (UPM, Arazatí) y defensa de las comunidades locales.",
+        "representacion": "Discurso constitucionalista y de democracia directa; muy crítico del sistema de partidos, sin proponer salidas no democráticas.",
+        "poder": "Rechazo a la vigilancia estatal y a los mandatos sanitarios (vacunación obligatoria); garantista frente al Estado.",
+        "inmigracion": "Énfasis en la identidad nacional, sin una agenda migratoria desarrollada.",
+        "diplomacia": "Rechazo a los organismos internacionales ('globalismo', OMS, Agenda 2030).",
+        "intervencion": "Soberanismo fuerte: rechazo a tratados que limiten la soberanía y a bases extranjeras.",
+        "economia": "Crítica a los bancos y a las multinacionales, defensa de lo público frente a contratos como el de UPM.",
+        "control": "Crítica al sistema financiero y al BCU.",
+        "comercio": "Proteccionista: rechazo al libre comercio, a las multinacionales y a la venta de tierra a extranjeros.",
+        "religion": "Sin agenda religiosa explícita; cercanía con posiciones conservadoras.",
+        "moral": "Rechazo a la 'Agenda 2030' y a la 'ideología de género'.",
+        "tecnologia": "Desconfianza de la tecnología y la industria: contra la celulosa, los agrotóxicos y la vacunación obligatoria."
+      }
+    },
+    "partido-independiente": {
+      "respuestas": {
+        "estructura": "aa0aDAada0",
+        "representacion": "ADADaDDaDa",
+        "poder": "adaaDA0ad0",
+        "inmigracion": "dAdAdDa0a0",
+        "diplomacia": "0ADaDD0a00",
+        "intervencion": "dd0a0aDa0a",
+        "economia": "a0DdA0D0aa",
+        "control": "0daaDAAad0",
+        "comercio": "dA0A0DadAd",
+        "religion": "a0dD0Da000",
+        "moral": "a0a0dDdA0a",
+        "tecnologia": "aaa00d0da0"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "B",
+        "seguridad": "B",
+        "mundo": "B",
+        "familia": "B"
+      },
+      "notas": {
+        "estructura": "Apoyo a la descentralización y a los municipios dentro del Estado unitario.",
+        "representacion": "Institucionalista y garantista.",
+        "poder": "Integró la coalición y votó la LUC, con una línea garantista; sin posición fuerte en marihuana o eutanasia.",
+        "inmigracion": "Apertura e integración.",
+        "diplomacia": "Multilateralismo y negociación.",
+        "intervencion": "Defensa de los derechos humanos en la región, en línea con la coalición.",
+        "economia": "Socialdemocracia de origen socialcristiano: valora los sindicatos y lo público sin estatismo fuerte; defensa de las AFAP.",
+        "control": "Economía social de mercado: Consejos de Salarios, tributación progresiva y responsabilidad fiscal.",
+        "comercio": "Apertura comercial dentro de la coalición.",
+        "religion": "Origen demócrata cristiano, con defensa de la laicidad.",
+        "moral": "Progresista moderado: acepta la agenda de derechos con matices.",
+        "tecnologia": "A favor de la innovación con cuidado ambiental."
+      }
+    }
+  }
+}

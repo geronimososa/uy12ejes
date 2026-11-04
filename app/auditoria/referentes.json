@@ -1,0 +1,1061 @@
+{
+  "leyenda": {
+    "codigos": "A = muy de acuerdo, a = de acuerdo, 0 = neutral, d = en desacuerdo, D = muy en desacuerdo, ? = no sé (no cuenta). Una letra por afirmación, en el orden f1 f2 f3 f4 f5 f6 u1 u2 u3 u4 de cada eje. En dilemas, '?' significa que no aplica.",
+    "criterio": "Se responde como la persona por sus votos, cargos, obra y declaraciones públicas. Las figuras históricas se responden por su época: las afirmaciones sobre temas que no existían entonces (AFAP, UPM, CPTPP, marihuana, etc.) van con '?', igual que los dilemas que no aplican. Las respuestas extremas (A o D) se reservan para las posiciones que definen a la persona.",
+    "estado": "Primera auditoría. Falta la revisión independiente de una segunda persona (DISENO.md §6)."
+  },
+  "perfiles": {
+    "artigas": {
+      "respuestas": {
+        "estructura": "AdAda0????",
+        "representacion": "ADADAD????",
+        "poder": "0?0a0?????",
+        "inmigracion": "0a0a0?????",
+        "diplomacia": "ada?0D????",
+        "intervencion": "dAdAdA?A?A",
+        "economia": "a???????a?",
+        "control": "ad0???????",
+        "comercio": "AdAdA????A",
+        "religion": "A0aD0D????",
+        "moral": "??????????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {},
+      "nota": "Instrucciones del Año XIII (confederación, soberanía de los pueblos, libertad religiosa), Reglamento de tierras y aranceles de 1815."
+    },
+    "saravia": {
+      "respuestas": {
+        "estructura": "AdAd0d????",
+        "representacion": "A0A00d????",
+        "poder": "0da00?????",
+        "inmigracion": "a000a?????",
+        "diplomacia": "Ada?aD????",
+        "intervencion": "0a0000????",
+        "economia": "da??da????",
+        "control": "da????????",
+        "comercio": "0????????A",
+        "religion": "dad?d???a?",
+        "moral": "?A?a??????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {},
+      "nota": "Caudillo blanco del interior; revoluciones de 1897 y 1904 por la coparticipación departamental y las garantías electorales."
+    },
+    "batlle-ordonez": {
+      "respuestas": {
+        "estructura": "dAdADA????",
+        "representacion": "ADADAD????",
+        "poder": "d0daDA????",
+        "inmigracion": "dAdAd?????",
+        "diplomacia": "dAdAD?????",
+        "intervencion": "adada0????",
+        "economia": "Ada?Ad????",
+        "control": "adAd0?????",
+        "comercio": "AdAdA?????",
+        "religion": "ADADaDADDA",
+        "moral": "?d?D??????",
+        "tecnologia": "a?????????"
+      },
+      "dilemas": {},
+      "nota": "Estatizaciones (BROU, BSE, usinas), ley de 8 horas, abolición de la pena de muerte (1907), divorcio por voluntad de la mujer, secularización."
+    },
+    "frugoni": {
+      "respuestas": {
+        "estructura": "aadaDA????",
+        "representacion": "ADADAD??D?",
+        "poder": "dadADA????",
+        "inmigracion": "dADAd?????",
+        "diplomacia": "dADADa????",
+        "intervencion": "adAdA?????",
+        "economia": "ADaDAD??A?",
+        "control": "aDADd?????",
+        "comercio": "adada?????",
+        "religion": "ADADaD????",
+        "moral": "?DaD??????",
+        "tecnologia": "a?????????"
+      },
+      "dilemas": {},
+      "nota": "Fundador del Partido Socialista (1910); socialismo democrático, pacifista y laico."
+    },
+    "herrera": {
+      "respuestas": {
+        "estructura": "AdAddd????",
+        "representacion": "aa000a????",
+        "poder": "ada00?????",
+        "inmigracion": "Adada?????",
+        "diplomacia": "a0a?0D????",
+        "intervencion": "AAadA0??A?",
+        "economia": "da?ada????",
+        "control": "dada??????",
+        "comercio": "da000?????",
+        "religion": "dad?d?Daad",
+        "moral": "?a?a??????",
+        "tecnologia": "da?a??????"
+      },
+      "dilemas": {},
+      "nota": "Caudillo del Partido Nacional: neutralidad, rechazo a las bases de EE. UU. (1940), defensa del campo y de la tradición; apoyó el golpe de Terra (1933)."
+    },
+    "brum": {
+      "respuestas": {
+        "estructura": "dAdADA????",
+        "representacion": "ADADAD????",
+        "poder": "d0daDA????",
+        "inmigracion": "dAdAd?????",
+        "diplomacia": "dADAD0????",
+        "intervencion": "0Da000???a",
+        "economia": "ad??ad????",
+        "control": "adad??????",
+        "comercio": "aaaa??????",
+        "religion": "ADADaDADDa",
+        "moral": "?d?D??????",
+        "tecnologia": "a?????????"
+      },
+      "dilemas": {},
+      "nota": "Presidente batllista (1919-1923): Liga Americana, ley de feriados laicos (1919); se suicidó en 1933 en protesta contra el golpe de Terra."
+    },
+    "terra": {
+      "respuestas": {
+        "estructura": "dAdADA????",
+        "representacion": "dAda0A????",
+        "poder": "ADAdaD????",
+        "inmigracion": "ADAdA?????",
+        "diplomacia": "ada?ad????",
+        "intervencion": "0a0a0a????",
+        "economia": "0a?0d0????",
+        "control": "00da??????",
+        "comercio": "adada?????",
+        "religion": "00d?0?????",
+        "moral": "dada??????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {},
+      "nota": "Presidente; golpe de Estado de 1933, leyes migratorias restrictivas."
+    },
+    "batlle-berres": {
+      "respuestas": {
+        "estructura": "dAdADA????",
+        "representacion": "ADADAD????",
+        "poder": "d0daDA????",
+        "inmigracion": "dAdAd?????",
+        "diplomacia": "0adaD?????",
+        "intervencion": "a0adaa????",
+        "economia": "Add?Ad??a?",
+        "control": "AdAdd?????",
+        "comercio": "ADAdA?????",
+        "religion": "AdaD0D????",
+        "moral": "?0?0??????",
+        "tecnologia": "a?????????"
+      },
+      "dilemas": {},
+      "nota": "Neobatllismo (1947-1951): industrialización por sustitución de importaciones y Estado de bienestar."
+    },
+    "quijano": {
+      "respuestas": {
+        "estructura": "aadadA????",
+        "representacion": "ADADAD??0?",
+        "poder": "dadADA????",
+        "inmigracion": "dAdAd?????",
+        "diplomacia": "dADaDa????",
+        "intervencion": "ADADAd??Aa",
+        "economia": "ADaDAD????",
+        "control": "ADAD0d????",
+        "comercio": "ADADA?????",
+        "religion": "AdaD0D????",
+        "moral": "??????????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {},
+      "nota": "Fundador del semanario Marcha; tercerismo, antiimperialismo y socialismo."
+    },
+    "arismendi": {
+      "respuestas": {
+        "estructura": "dAdADA????",
+        "representacion": "aa000a??d?",
+        "poder": "a0A00d????",
+        "inmigracion": "dAdAd?????",
+        "diplomacia": "adaa0D????",
+        "intervencion": "ddAdad??A?",
+        "economia": "ADADAD??A?",
+        "control": "ADADAD????",
+        "comercio": "ADADA?????",
+        "religion": "ADADaDADDA",
+        "moral": "?0a0??????",
+        "tecnologia": "AdAd??????"
+      },
+      "dilemas": {},
+      "nota": "Secretario general del Partido Comunista (1955-1988), marxista-leninista y alineado con la URSS; el PCU rechazó la vía armada del MLN."
+    },
+    "sendic": {
+      "respuestas": {
+        "estructura": "a0a000????",
+        "representacion": "d000a0??A?",
+        "poder": "dadaDa????",
+        "inmigracion": "dAdAd?????",
+        "diplomacia": "d0000D????",
+        "intervencion": "ddAdAd??Aa",
+        "economia": "ADADAD??A?",
+        "control": "ADADaD????",
+        "comercio": "ADADA????A",
+        "religion": "adaD0D????",
+        "moral": "??????????",
+        "tecnologia": "dada??????"
+      },
+      "dilemas": {},
+      "nota": "Sindicalista de los cañeros (UTAA) y fundador del MLN-Tupamaros: reforma agraria y vía armada."
+    },
+    "michelini": {
+      "respuestas": {
+        "estructura": "aadaDA????",
+        "representacion": "ADADAD??D?",
+        "poder": "DadADA????",
+        "inmigracion": "dAdAd?????",
+        "diplomacia": "dAdAD?????",
+        "intervencion": "adAdA?????",
+        "economia": "AdddAd??a?",
+        "control": "adAdd?????",
+        "comercio": "aaa0a?????",
+        "religion": "AdaD0D????",
+        "moral": "adad??????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {},
+      "nota": "Senador, de origen colorado, fundador del Frente Amplio; denunció la tortura y fue asesinado en Buenos Aires en 1976."
+    },
+    "galeano": {
+      "respuestas": {
+        "estructura": "Adad00????",
+        "representacion": "ADADAD??0A",
+        "poder": "DAdADAADDa",
+        "inmigracion": "DADADaADAD",
+        "diplomacia": "DADADaADAD",
+        "intervencion": "ADADADa0Aa",
+        "economia": "ADaDADADAD",
+        "control": "ADADaDADAD",
+        "comercio": "ADADADDADA",
+        "religion": "ADADaDADDA",
+        "moral": "ADADaDDADA",
+        "tecnologia": "dADADaDAdA"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "E",
+        "seguridad": "C",
+        "mundo": "C",
+        "familia": "A"
+      },
+      "nota": "Escritor; Las venas abiertas de América Latina. Antiimperialista, crítico del extractivismo."
+    },
+    "pacheco": {
+      "respuestas": {
+        "estructura": "dAdADA????",
+        "representacion": "aa0a0a??D?",
+        "poder": "ADADaD????",
+        "inmigracion": "adada?????",
+        "diplomacia": "AdadaD????",
+        "intervencion": "dada0a????",
+        "economia": "0aDaDa????",
+        "control": "Addaa?????",
+        "comercio": "0a0a0?????",
+        "religion": "a00D0D????",
+        "moral": "dadA??????",
+        "tecnologia": "a?????????"
+      },
+      "dilemas": {
+        "memoria": "D"
+      },
+      "nota": "Presidente (1967-1972): medidas prontas de seguridad casi permanentes, clausura de diarios y congelamiento de precios y salarios (1968)."
+    },
+    "bordaberry-jm": {
+      "respuestas": {
+        "estructura": "dAdADA????",
+        "representacion": "DADADAADDD",
+        "poder": "ADADaD????",
+        "inmigracion": "AdAdA?????",
+        "diplomacia": "AdaDaD????",
+        "intervencion": "dada0a????",
+        "economia": "dADaDa????",
+        "control": "0aDada????",
+        "comercio": "dada0?????",
+        "religion": "DADaDaDAAD",
+        "moral": "DADADA????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {
+        "memoria": "D",
+        "seguridad": "A"
+      },
+      "nota": "Presidente; disolvió el Parlamento en 1973 y en 1976 propuso eliminar los partidos y un régimen corporativo de inspiración católica."
+    },
+    "alvarez": {
+      "respuestas": {
+        "estructura": "DADADA????",
+        "representacion": "DADADAADDD",
+        "poder": "ADADaD????",
+        "inmigracion": "adadA?????",
+        "diplomacia": "AdAdAD???A",
+        "intervencion": "dada0a????",
+        "economia": "0aD0d0????",
+        "control": "a0d0d0????",
+        "comercio": "0a0a0?????",
+        "religion": "000d0d????",
+        "moral": "dAdA??????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {
+        "memoria": "D",
+        "seguridad": "A"
+      },
+      "nota": "General, presidente de facto (1981-1985); condenado por crímenes de la dictadura."
+    },
+    "wilson": {
+      "respuestas": {
+        "estructura": "a0a0Da????",
+        "representacion": "ADADADD0DA",
+        "poder": "d00aDA????",
+        "inmigracion": "0a0a0?????",
+        "diplomacia": "aadadD????",
+        "intervencion": "a0ada0??A?",
+        "economia": "adadad??a?",
+        "control": "adadd?????",
+        "comercio": "a0a0a?????",
+        "religion": "a00D0D????",
+        "moral": "?a?0??????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {
+        "memoria": "B"
+      },
+      "nota": "Líder blanco; programa de 1971 con reforma agraria y control de la banca; opositor a la dictadura desde el exilio; apoyó la Ley de Caducidad por gobernabilidad."
+    },
+    "seregni": {
+      "respuestas": {
+        "estructura": "aadaDA????",
+        "representacion": "ADADADDADA",
+        "poder": "d00aDA????",
+        "inmigracion": "dAdAd?????",
+        "diplomacia": "aADADD???a",
+        "intervencion": "adAdA0??A?",
+        "economia": "AdddAd??a?",
+        "control": "adAdd?????",
+        "comercio": "aaa0a?????",
+        "religion": "AdaD0D????",
+        "moral": "??????????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {
+        "memoria": "A"
+      },
+      "nota": "General democrático, primer presidente del Frente Amplio, preso de la dictadura; defensor de la vía institucional."
+    },
+    "mln": {
+      "respuestas": {
+        "estructura": "a0a000????",
+        "representacion": "D000aaD?A?",
+        "poder": "add000????",
+        "inmigracion": "dAdAd?????",
+        "diplomacia": "ad0daD???D",
+        "intervencion": "ddAdAd??Aa",
+        "economia": "ADADAD??A?",
+        "control": "ADADaD????",
+        "comercio": "ADADA????A",
+        "religion": "adaD0D????",
+        "moral": "??????????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {},
+      "nota": "Organización guerrillera en su etapa armada (años 60 y 70): vía armada contra gobiernos electos, socialismo y reforma agraria."
+    },
+    "fau": {
+      "respuestas": {
+        "estructura": "ADADAD????",
+        "representacion": "ADADADDAdA",
+        "poder": "DADADAADDA",
+        "inmigracion": "DADADA??AD",
+        "diplomacia": "DADaDAADAD",
+        "intervencion": "ADADAD??A?",
+        "economia": "0D0DADADAD",
+        "control": "dDADdD0DAD",
+        "comercio": "000000????",
+        "religion": "ADADADADDA",
+        "moral": "ADADADDADA",
+        "tecnologia": "dadada????"
+      },
+      "dilemas": {
+        "memoria": "A"
+      },
+      "nota": "Federación Anarquista Uruguaya (1956): autogestión, federalismo libertario y rechazo al Estado."
+    },
+    "vazquez": {
+      "respuestas": {
+        "estructura": "aa0aDAadaa",
+        "representacion": "ADADaDDAda",
+        "poder": "adaaDa0dDd",
+        "inmigracion": "dAdAddadad",
+        "diplomacia": "0ADaDda0a0",
+        "intervencion": "a0a0aaaAaa",
+        "economia": "AdddAddDAd",
+        "control": "adAddaA000",
+        "comercio": "0aaa0Dd00a",
+        "religion": "AdaD0Dadda",
+        "moral": "a0a0dDaa0a",
+        "tecnologia": "AdadaDdd0d"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "B",
+        "seguridad": "B",
+        "mundo": "C",
+        "familia": "A"
+      },
+      "nota": "Presidente (2005-2010, 2015-2020): ley antitabaco, veto a la despenalización del aborto (2008), Plan Ceibal, acuerdo con UPM 2, firmeza en el conflicto con Argentina."
+    },
+    "mujica": {
+      "respuestas": {
+        "estructura": "aaa0DAa0aa",
+        "representacion": "ADADaDDa0A",
+        "poder": "dAdaDAAdDA",
+        "inmigracion": "dADAD0ADAD",
+        "diplomacia": "0ADADda0a0",
+        "intervencion": "AdAdAaa0AA",
+        "economia": "AdddAd0DAd",
+        "control": "adAdd0A0a0",
+        "comercio": "0aaaaDd00A",
+        "religion": "AdAD0Dadda",
+        "moral": "AdAD0DDADa",
+        "tecnologia": "aAa00da0a0"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "B",
+        "seguridad": "C",
+        "mundo": "C",
+        "familia": "A"
+      },
+      "nota": "Presidente (2010-2015): regulación de la marihuana, aborto y matrimonio igualitario promulgados, recepción de refugiados, impulso a la minería de gran porte; prédica de la austeridad."
+    },
+    "topolansky": {
+      "respuestas": {
+        "estructura": "aaa0DAa0aa",
+        "representacion": "ADADaDDa0A",
+        "poder": "dadaDaAdDa",
+        "inmigracion": "dAdAddadad",
+        "diplomacia": "0ADADda0a0",
+        "intervencion": "AdAdAaa0AA",
+        "economia": "AdddAd0DAd",
+        "control": "adAdd0A0a0",
+        "comercio": "0aaaaDd0aA",
+        "religion": "AdaD0Dadda",
+        "moral": "AdAddDDAda",
+        "tecnologia": "a0a00d00a0"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "B",
+        "seguridad": "C",
+        "mundo": "C",
+        "familia": "A"
+      },
+      "nota": "Vicepresidenta (2017-2020), dirigente histórica del MPP."
+    },
+    "astori": {
+      "respuestas": {
+        "estructura": "0a0aDA000a",
+        "representacion": "ADADaDDADa",
+        "poder": "a0aaDAadDa",
+        "inmigracion": "dAdAdDada0",
+        "diplomacia": "0adaDD00a0",
+        "intervencion": "a0a00aaa0a",
+        "economia": "a0Ddadd0a0",
+        "control": "0dadDAaada",
+        "comercio": "dAdAddadAd",
+        "religion": "AdaD0Dadda",
+        "moral": "adaddDDada",
+        "tecnologia": "AdadaD0Dad"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "B",
+        "seguridad": "B",
+        "mundo": "B",
+        "familia": "A"
+      },
+      "nota": "Ministro de Economía y vicepresidente: reforma tributaria con IRPF (2007), metas de inflación, impulso a un TLC con EE. UU. (2006)."
+    },
+    "orsi": {
+      "respuestas": {
+        "estructura": "aa0aDAadaa",
+        "representacion": "ADADaDDAdA",
+        "poder": "d0aaDaadDa",
+        "inmigracion": "dAdAddadad",
+        "diplomacia": "0ADaDda0a0",
+        "intervencion": "a0a0A0a0Aa",
+        "economia": "AdDdAddDAd",
+        "control": "adadDaA000",
+        "comercio": "0aaa0Dd0aa",
+        "religion": "AdaD0Dadda",
+        "moral": "AdAddDDAda",
+        "tecnologia": "a0a00ddd00"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "B",
+        "seguridad": "C",
+        "mundo": "C",
+        "familia": "A"
+      },
+      "nota": "Presidente desde 2025: izquierda moderada y dialoguista, mantuvo la regla fiscal reformulada y la inserción vía Mercosur."
+    },
+    "cosse": {
+      "respuestas": {
+        "estructura": "aadaDAadaa",
+        "representacion": "ADADADDAdA",
+        "poder": "dadaDaAdDA",
+        "inmigracion": "dAdAddaDAd",
+        "diplomacia": "dADaDda0ad",
+        "intervencion": "adAdA0a0Aa",
+        "economia": "ADdDAD0DAd",
+        "control": "aDADdaA0a0",
+        "comercio": "aaaa0Dd0aA",
+        "religion": "ADaD0DADDa",
+        "moral": "ADAddDDADA",
+        "tecnologia": "Ad0000Dd0a"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "B",
+        "seguridad": "C",
+        "mundo": "C",
+        "familia": "A"
+      },
+      "nota": "Vicepresidenta desde 2025, expresidenta de ANTEL e intendenta de Montevideo; defensa de las empresas públicas."
+    },
+    "oddone": {
+      "respuestas": {
+        "estructura": "0a0aDA000a",
+        "representacion": "ADADaDDA0a",
+        "poder": "a0aaDAadDa",
+        "inmigracion": "dAdAdDada0",
+        "diplomacia": "0adaDD00a0",
+        "intervencion": "a0a00aaa0a",
+        "economia": "a0Ddadd0a0",
+        "control": "0dadDAaAda",
+        "comercio": "dAdAddadAd",
+        "religion": "AdaD0Dadda",
+        "moral": "adaddDDada",
+        "tecnologia": "AdadaD0dad"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "B",
+        "seguridad": "B",
+        "mundo": "B",
+        "familia": "A"
+      },
+      "nota": "Ministro de Economía desde 2025: regla fiscal, autonomía del BCU, sin el impuesto al 1 % más rico."
+    },
+    "bergara": {
+      "respuestas": {
+        "estructura": "aa0aDAadaa",
+        "representacion": "ADADaDDAdA",
+        "poder": "d0aaDaadDa",
+        "inmigracion": "dAdAddadad",
+        "diplomacia": "0ADaDda0a0",
+        "intervencion": "a0a0a0a0Aa",
+        "economia": "AdDdAdd0Ad",
+        "control": "adadDAA000",
+        "comercio": "0aaa0Dd0aa",
+        "religion": "AdaD0Dadda",
+        "moral": "AdAddDDAda",
+        "tecnologia": "a0a00dd00a"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "B",
+        "seguridad": "C",
+        "mundo": "C",
+        "familia": "A"
+      },
+      "nota": "Economista; expresidente del BCU y ministro de Economía; intendente de Montevideo desde 2025."
+    },
+    "martinez": {
+      "respuestas": {
+        "estructura": "aa0aDAadaa",
+        "representacion": "ADADaDDAdA",
+        "poder": "d0daDaAdDa",
+        "inmigracion": "dAdAddadad",
+        "diplomacia": "0ADaDda0a0",
+        "intervencion": "a0a0A0a0Aa",
+        "economia": "AddDAd0DAd",
+        "control": "adAddaA000",
+        "comercio": "0aaa0Dd0aa",
+        "religion": "AdaD0Dadda",
+        "moral": "AdAddDDAda",
+        "tecnologia": "Ad0000d00a"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "B",
+        "seguridad": "C",
+        "mundo": "C",
+        "familia": "A"
+      },
+      "nota": "Ingeniero socialista, expresidente de ANCAP, exintendente de Montevideo y candidato del FA en 2019."
+    },
+    "pereira": {
+      "respuestas": {
+        "estructura": "aadaDA0daa",
+        "representacion": "ADADADDAdA",
+        "poder": "dadADaADDa",
+        "inmigracion": "dAdAddaDAd",
+        "diplomacia": "dADaDda0ad",
+        "intervencion": "adAdA0a0Aa",
+        "economia": "ADdDADaDAD",
+        "control": "ADADddAdAd",
+        "comercio": "adadaDdadA",
+        "religion": "ADaD0DADDa",
+        "moral": "ADADdDDADA",
+        "tecnologia": "aa000dd00a"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "D",
+        "seguridad": "C",
+        "mundo": "C",
+        "familia": "A"
+      },
+      "nota": "Expresidente del PIT-CNT y del Frente Amplio."
+    },
+    "abella": {
+      "respuestas": {
+        "estructura": "Adad00adaD",
+        "representacion": "ADADADDAaA",
+        "poder": "DadADAADDa",
+        "inmigracion": "DADADaaDAD",
+        "diplomacia": "DADADaADAD",
+        "intervencion": "AaADAd0aAA",
+        "economia": "ADADADADAD",
+        "control": "ADADaDADAD",
+        "comercio": "ADADADDADA",
+        "religion": "ADADaDADDA",
+        "moral": "ADaDaDDAdA",
+        "tecnologia": "dADADaDADA"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "D",
+        "seguridad": "C",
+        "mundo": "D",
+        "familia": "A"
+      },
+      "nota": "Historiador y candidato presidencial de Unidad Popular: nacionalización de la banca y del comercio exterior, antiimperialismo."
+    },
+    "abdala": {
+      "respuestas": {
+        "estructura": "aadaDA0daa",
+        "representacion": "ADADADDAdA",
+        "poder": "d0dADaADDa",
+        "inmigracion": "dAdAddaDAd",
+        "diplomacia": "dADADdAdAD",
+        "intervencion": "AdAdA0a0Aa",
+        "economia": "ADaDADADAD",
+        "control": "ADADddAdAd",
+        "comercio": "adadaDdadA",
+        "religion": "ADAD0DADDa",
+        "moral": "ADADdDDADA",
+        "tecnologia": "aa000dD00a"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "D",
+        "seguridad": "C",
+        "mundo": "C",
+        "familia": "A"
+      },
+      "nota": "Presidente del PIT-CNT, dirigente comunista; cara del plebiscito contra las AFAP (2024) y del impuesto al 1 % más rico."
+    },
+    "moreira": {
+      "respuestas": {
+        "estructura": "aadaDAadaa",
+        "representacion": "ADADADDAdA",
+        "poder": "DAdADAADDA",
+        "inmigracion": "DADADdADAD",
+        "diplomacia": "DADADaADAD",
+        "intervencion": "AdAdA0a0Aa",
+        "economia": "ADaDADADAD",
+        "control": "ADADdDADAD",
+        "comercio": "adadaDdadA",
+        "religion": "ADAD0DADDA",
+        "moral": "ADADaDDADA",
+        "tecnologia": "dA0A0aDAdA"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "E",
+        "seguridad": "C",
+        "mundo": "C",
+        "familia": "A"
+      },
+      "nota": "Politóloga y exsenadora; izquierda crítica, feminista y ambientalista."
+    },
+    "sanguinetti": {
+      "respuestas": {
+        "estructura": "0adaDA000a",
+        "representacion": "ADAD0DDdDa",
+        "poder": "a0aaDA0a0a",
+        "inmigracion": "aAdadDa0a0",
+        "diplomacia": "aada0Dda0a",
+        "intervencion": "d00a0ada0a",
+        "economia": "0aDa0aDa0a",
+        "control": "d0daDAaAda",
+        "comercio": "dAdAddAdAd",
+        "religion": "AdADaDAddA",
+        "moral": "a0a0dDd00d",
+        "tecnologia": "AdadaDadad"
+      },
+      "dilemas": {
+        "memoria": "C",
+        "inversion": "B",
+        "seguridad": "B",
+        "mundo": "B",
+        "familia": "B"
+      },
+      "nota": "Presidente (1985-1990, 1995-2000): transición democrática, Ley de Caducidad, batllismo laico y liberal."
+    },
+    "lacalle-herrera": {
+      "respuestas": {
+        "estructura": "a0a0D0ada0",
+        "representacion": "ADAd0DddDa",
+        "poder": "adA0daDAaD",
+        "inmigracion": "aa0aaD0a00",
+        "diplomacia": "aad00Dda0a",
+        "intervencion": "dada0ada0a",
+        "economia": "dADadADA0A",
+        "control": "daDADAdADa",
+        "comercio": "DAdAddADAd",
+        "religion": "dadddDDaaD",
+        "moral": "dAdaDdadAd",
+        "tecnologia": "AdAd0DaDAD"
+      },
+      "dilemas": {
+        "memoria": "C",
+        "inversion": "A",
+        "seguridad": "B",
+        "mundo": "A",
+        "familia": "C"
+      },
+      "nota": "Presidente (1990-1995): Ley de Empresas Públicas (1991), apertura comercial y Mercosur; católico y conservador en lo social."
+    },
+    "jorge-batlle": {
+      "respuestas": {
+        "estructura": "0adaDA000a",
+        "representacion": "ADAdaDDdDa",
+        "poder": "dAdAdAAddA",
+        "inmigracion": "dAdAddAdaD",
+        "diplomacia": "0adadDd000",
+        "intervencion": "d0da0ada0a",
+        "economia": "dADADADAdA",
+        "control": "DADADAdADA",
+        "comercio": "DADAddADAD",
+        "religion": "AdADaDAddA",
+        "moral": "adaddDD0d0",
+        "tecnologia": "AdAdADADAD"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "A",
+        "seguridad": "C",
+        "mundo": "A",
+        "familia": "B"
+      },
+      "nota": "Presidente (2000-2005): el más liberal en lo económico desde 1985, propuso debatir la legalización de las drogas y buscó un TLC con EE. UU."
+    },
+    "larranaga": {
+      "respuestas": {
+        "estructura": "A0A0D0ADA0",
+        "representacion": "ADAdADd0DA",
+        "poder": "ADAdd0DAAD",
+        "inmigracion": "aa0a0D0a00",
+        "diplomacia": "aa000Dda0a",
+        "intervencion": "d0da0ada0a",
+        "economia": "aaD000Da0a",
+        "control": "d00aDaaad0",
+        "comercio": "da0a0da0ad",
+        "religion": "a0dDdDd00d",
+        "moral": "0a0aDd00ad",
+        "tecnologia": "a0a00D00a0"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "A",
+        "seguridad": "A",
+        "mundo": "B",
+        "familia": "C"
+      },
+      "nota": "Líder de Alianza Nacional, exintendente de Paysandú y ministro del Interior; impulsor de Vivir sin miedo (2019)."
+    },
+    "pedro-bordaberry": {
+      "respuestas": {
+        "estructura": "0adaDA000a",
+        "representacion": "ADAdaDddDa",
+        "poder": "ADAddaDAad",
+        "inmigracion": "aa0a0D0a00",
+        "diplomacia": "aad00Dda0a",
+        "intervencion": "d0da0aDa0a",
+        "economia": "0aDa0aDA0A",
+        "control": "dadADA0ADa",
+        "comercio": "dAdAddAdAd",
+        "religion": "a0dD0Dd0ad",
+        "moral": "0adaDd00ad",
+        "tecnologia": "adAd0DadAd"
+      },
+      "dilemas": {
+        "memoria": "C",
+        "inversion": "A",
+        "seguridad": "A",
+        "mundo": "A",
+        "familia": "C"
+      },
+      "nota": "Senador colorado (Vamos Uruguay): impulsó la baja de la edad de imputabilidad (2014); liberal en economía, conservador moderado."
+    },
+    "lacalle-pou": {
+      "respuestas": {
+        "estructura": "a0a0D0adaa",
+        "representacion": "ADAdaDd0Da",
+        "poder": "a0aaDA0aa0",
+        "inmigracion": "aA0a0Daaa0",
+        "diplomacia": "aad00DdA0a",
+        "intervencion": "dadA0aDA0A",
+        "economia": "0aD000Da0A",
+        "control": "d00aDAaAda",
+        "comercio": "dAdAddADAd",
+        "religion": "a0dD0Dd00d",
+        "moral": "0000Dd00ad",
+        "tecnologia": "AdAdaDaDAd"
+      },
+      "dilemas": {
+        "memoria": "C",
+        "inversion": "A",
+        "seguridad": "B",
+        "mundo": "A",
+        "familia": "B"
+      },
+      "nota": "Presidente (2020-2025): LUC, regla fiscal, 'libertad responsable' en la pandemia, TLC con China y CPTPP, condena a Venezuela, Cuba y Nicaragua."
+    },
+    "argimon": {
+      "respuestas": {
+        "estructura": "aaaaDAada0",
+        "representacion": "ADADADDaDA",
+        "poder": "a0aaDA0a0a",
+        "inmigracion": "0AdAdDa0a0",
+        "diplomacia": "aAdaDDdaaa",
+        "intervencion": "d00a0ada0a",
+        "economia": "aaD0a0Daaa",
+        "control": "00aaDAaad0",
+        "comercio": "da0a0dadad",
+        "religion": "a00D0D0000",
+        "moral": "a0A0dDdAdA",
+        "tecnologia": "a0a00D00a0"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "B",
+        "seguridad": "B",
+        "mundo": "B",
+        "familia": "B"
+      },
+      "nota": "Vicepresidenta (2020-2025), primera mujer en el cargo; referente de la agenda de género en el Partido Nacional."
+    },
+    "delgado": {
+      "respuestas": {
+        "estructura": "a0a0Daadaa",
+        "representacion": "ADAdaD00Da",
+        "poder": "a0aaDa0aa0",
+        "inmigracion": "aA0a0Daaa0",
+        "diplomacia": "aad00D0a0a",
+        "intervencion": "d0da0ada0a",
+        "economia": "aaD000Daaa",
+        "control": "d00aDAaAd0",
+        "comercio": "da0a0dadad",
+        "religion": "a00D0Dd000",
+        "moral": "0aa0Dd0000",
+        "tecnologia": "a0a00D00a0"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "B",
+        "seguridad": "B",
+        "mundo": "B",
+        "familia": "B"
+      },
+      "nota": "Secretario de Presidencia (2020-2023) y candidato presidencial del Partido Nacional (2024); perfil de continuidad y centro."
+    },
+    "olivera": {
+      "respuestas": {
+        "estructura": "A0A0D0ADAd",
+        "representacion": "ADADAD0aDA",
+        "poder": "a0aaDa0aa0",
+        "inmigracion": "0A0a0Da0A0",
+        "diplomacia": "0adadD0aa0",
+        "intervencion": "d0000adA0a",
+        "economia": "A0D0a000Aa",
+        "control": "a0a0DaA000",
+        "comercio": "aaaaad000a",
+        "religion": "a00D0D0000",
+        "moral": "a0a0dD0a0a",
+        "tecnologia": "a0000D0d00"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "A",
+        "seguridad": "B",
+        "mundo": "C",
+        "familia": "B"
+      },
+      "nota": "Intendente de Paysandú (2020-2025) por el Partido Nacional; perfil cercano y pragmático, con posiciones que a veces coinciden con el FA."
+    },
+    "raffo": {
+      "respuestas": {
+        "estructura": "a00aDAadaa",
+        "representacion": "ADAdaDdaDa",
+        "poder": "a0aaDA0aaa",
+        "inmigracion": "aAdadDaaa0",
+        "diplomacia": "aad00Dda0a",
+        "intervencion": "d0da0ada0a",
+        "economia": "0aDa0aDA0A",
+        "control": "dadADA0ADa",
+        "comercio": "DAdAddADAd",
+        "religion": "adaD0Dadda",
+        "moral": "a0a0dDdada",
+        "tecnologia": "AdAdaDaDAd"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "A",
+        "seguridad": "B",
+        "mundo": "A",
+        "familia": "B"
+      },
+      "nota": "Economista, candidata de la coalición a Montevideo (2020) y precandidata blanca (2024); liberal en economía y en lo social."
+    },
+    "arbeleche": {
+      "respuestas": {
+        "estructura": "0a0aDA000a",
+        "representacion": "ADAdaD00Da",
+        "poder": "a0aaDA0a00",
+        "inmigracion": "aA0a0Daaa0",
+        "diplomacia": "aada0Dda0a",
+        "intervencion": "d0da0ada0a",
+        "economia": "aaD0a0Da0a",
+        "control": "d00aDAaAd0",
+        "comercio": "dAdAddadAd",
+        "religion": "a00D0D0000",
+        "moral": "a0a0dDd000",
+        "tecnologia": "a0a00D0da0"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "B",
+        "seguridad": "B",
+        "mundo": "B",
+        "familia": "B"
+      },
+      "nota": "Ministra de Economía (2020-2025). Se reconoce en Keynes, pero su gestión fue ortodoxa: regla fiscal y baja del déficit."
+    },
+    "talvi": {
+      "respuestas": {
+        "estructura": "0adaDA000a",
+        "representacion": "ADA0aDDaDa",
+        "poder": "da0ADAa00a",
+        "inmigracion": "dAdAddAdAd",
+        "diplomacia": "0AdaDD00a0",
+        "intervencion": "d0da0aDa0a",
+        "economia": "dADAdADAdA",
+        "control": "dAdADA0ADA",
+        "comercio": "DADADdADAD",
+        "religion": "AdADaDAddA",
+        "moral": "AdAdaDDAdA",
+        "tecnologia": "AdAdADADAd"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "B",
+        "seguridad": "C",
+        "mundo": "A",
+        "familia": "A"
+      },
+      "nota": "Economista, fundador de Ciudadanos (Partido Colorado) y canciller (2020): liberal en economía, progresista en lo social."
+    },
+    "gurmendez": {
+      "respuestas": {
+        "estructura": "0adaDA000a",
+        "representacion": "ADAdaDdaDa",
+        "poder": "aaaaDAaa0A",
+        "inmigracion": "dAdAddAaA0",
+        "diplomacia": "aada0Dda0a",
+        "intervencion": "d0da0aDa0a",
+        "economia": "dADadADA0A",
+        "control": "dAdADA0ADA",
+        "comercio": "DADADdADAD",
+        "religion": "AdADaDAddA",
+        "moral": "a0a0dDd000",
+        "tecnologia": "AdAdADADAd"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "A",
+        "seguridad": "B",
+        "mundo": "A",
+        "familia": "B"
+      },
+      "nota": "Dirigente de la Lista 15, presidente de ANTEL bajo Jorge Batlle y precandidato colorado (2024); continuador de la línea liberal de Batlle."
+    },
+    "garcia": {
+      "respuestas": {
+        "estructura": "a0a0D0adaa",
+        "representacion": "ADAd0DddDa",
+        "poder": "aDA0daDAAd",
+        "inmigracion": "aa0a0D0a00",
+        "diplomacia": "AaadaDDAdA",
+        "intervencion": "dadA0ADA0A",
+        "economia": "0aDa0aDA0A",
+        "control": "dadADA0ADa",
+        "comercio": "dA0A0dAdAd",
+        "religion": "a0dDdDd0ad",
+        "moral": "0AdaDdadAd",
+        "tecnologia": "AdAd0DaDAd"
+      },
+      "dilemas": {
+        "memoria": "C",
+        "inversion": "A",
+        "seguridad": "A",
+        "mundo": "A",
+        "familia": "C"
+      },
+      "nota": "Ministro de Defensa (2020-2025) y senador del Partido Nacional: equipamiento militar, línea dura en seguridad, conservador."
+    },
+    "mieres": {
+      "respuestas": {
+        "estructura": "aa0aDAada0",
+        "representacion": "ADADaDDaDa",
+        "poder": "adaaDA0ad0",
+        "inmigracion": "dAdAdDa0a0",
+        "diplomacia": "0ADaDD0a00",
+        "intervencion": "dd0a0aDa0a",
+        "economia": "a0DdA0D0aa",
+        "control": "0daaDAAad0",
+        "comercio": "dA0A0DadAd",
+        "religion": "a0dD0Da000",
+        "moral": "a0a0dDdA0a",
+        "tecnologia": "aaa00d0da0"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "B",
+        "seguridad": "B",
+        "mundo": "B",
+        "familia": "B"
+      },
+      "nota": "Líder del Partido Independiente, de origen demócrata cristiano; ministro de Trabajo (2020-2025)."
+    }
+  }
+}

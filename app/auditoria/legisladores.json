@@ -1,0 +1,108 @@
+{
+  "leyenda": {
+    "codigos": "A = muy de acuerdo, a = de acuerdo, 0 = neutral, d = en desacuerdo, D = muy en desacuerdo, ? = no sé. Una letra por afirmación, en el orden f1 f2 f3 f4 f5 f6 u1 u2 u3 u4 de cada eje.",
+    "criterio": "Se responde como la persona, por sus votos, cargos y declaraciones públicas. Las respuestas extremas (A o D) se reservan para las posiciones que la definen. Sin evidencia, se responde 0.",
+    "estado": "Primera auditoría. Falta la revisión independiente de una segunda persona (DISENO.md §6)."
+  },
+  "perfiles": {
+    "andrade": {
+      "respuestas": {
+        "estructura": "aadaDA0daa", "representacion": "ADADADDAdA", "poder": "d0dADaADDa", "inmigracion": "dAdAddaDAd",
+        "diplomacia": "dADADdAdAD", "intervencion": "AdAdA0a0Aa", "economia": "ADaDADADAD", "control": "ADADddAdAd",
+        "comercio": "adadaDdadA", "religion": "ADAD0DADDa", "moral": "ADADdDDADA", "tecnologia": "aa000dD00a"
+      },
+      "dilemas": { "memoria": "A", "inversion": "D", "seguridad": "C", "mundo": "C", "familia": "A" },
+      "nota": "Senador del Partido Comunista (2020-2025), exdirigente del sindicato de la construcción. Apoyó el plebiscito contra las AFAP (2024) y el impuesto al 1 % más rico; defensa de la banca pública y crítica a las Fuerzas Armadas."
+    },
+    "civila": {
+      "respuestas": {
+        "estructura": "aadaDAadaa", "representacion": "ADADADDAdA", "poder": "dadADAADDA", "inmigracion": "dADADdaDAD",
+        "diplomacia": "dADADdadAd", "intervencion": "adAdA0a0Aa", "economia": "ADdDADADAD", "control": "ADADddAdAd",
+        "comercio": "ada0aDdadA", "religion": "ADaD0DADDa", "moral": "ADAD0DDADA", "tecnologia": "aA0a00Dd0A"
+      },
+      "dilemas": { "memoria": "A", "inversion": "D", "seguridad": "C", "mundo": "C", "familia": "A" },
+      "nota": "Diputado (2020-2025) y secretario general del Partido Socialista; ministro de Desarrollo Social desde 2025. El PS impulsó el plebiscito contra las AFAP."
+    },
+    "sanchez": {
+      "respuestas": {
+        "estructura": "aa0aDAadaa", "representacion": "ADADADDA0A", "poder": "dadaDaAdDA", "inmigracion": "dAdAddadad",
+        "diplomacia": "0ADaDda0ad", "intervencion": "ada0AaaaAA", "economia": "AdddAd0DAd", "control": "adAddaA000",
+        "comercio": "0aaaaDd0aA", "religion": "AdaD0Dadda", "moral": "AdAddDDAda", "tecnologia": "a0a00dd0a0"
+      },
+      "dilemas": { "memoria": "A", "inversion": "B", "seguridad": "C", "mundo": "C", "familia": "A" },
+      "nota": "Diputado del MPP (2020-2025) y secretario de Presidencia desde 2025. Perfil pragmático y productivista del MPP."
+    },
+    "ojeda": {
+      "respuestas": {
+        "estructura": "0adaDA000a", "representacion": "ADAd0Dd0Da", "poder": "a0aaDA0AaA", "inmigracion": "aAdadDaaa0",
+        "diplomacia": "aad00Dda0a", "intervencion": "d0da0ada0a", "economia": "0aDa0aDa0A", "control": "d0daDAaAda",
+        "comercio": "dAdAddAdAd", "religion": "adaD0Dadda", "moral": "a0a0dDd00d", "tecnologia": "AdadaDadAd"
+      },
+      "dilemas": { "memoria": "B", "inversion": "A", "seguridad": "B", "mundo": "A", "familia": "B" },
+      "nota": "Senador del Partido Colorado desde 2025 y candidato presidencial en 2024. Liberal en lo social, apoyo a la seguridad de la LUC y a la apertura comercial."
+    },
+    "da-silva": {
+      "respuestas": {
+        "estructura": "a0a0D0ada0", "representacion": "ADAd0D00Da", "poder": "adA0dadAAd", "inmigracion": "Aa0a0D0a0a",
+        "diplomacia": "Aa0d0DDAdA", "intervencion": "dadA0ADA0a", "economia": "dADAdADAdA", "control": "dADADAdADA",
+        "comercio": "dAdAddAdAd", "religion": "a0dDdDd0ad", "moral": "0AdaDd0dAd", "tecnologia": "ADADaDaDAD"
+      },
+      "dilemas": { "memoria": "C", "inversion": "A", "seguridad": "A", "mundo": "A", "familia": "C" },
+      "nota": "Senador del Partido Nacional desde 2020, productor rural. De las voces más pro mercado y pro agro de su partido; crítico de los sindicatos y del ambientalismo."
+    },
+    "bianchi": {
+      "respuestas": {
+        "estructura": "0a0ADA000a", "representacion": "ADAd0D00Da", "poder": "adA0dadAad", "inmigracion": "aa0a0D0a00",
+        "diplomacia": "aad00DdA0a", "intervencion": "dada0aDa0a", "economia": "0aDa0aDa0A", "control": "dadADA0ADa",
+        "comercio": "dA0A0dAdAd", "religion": "a0dDdDd00d", "moral": "0adaDd00Ad", "tecnologia": "adad0D0dad"
+      },
+      "dilemas": { "memoria": "C", "inversion": "A", "seguridad": "B", "mundo": "B", "familia": "C" },
+      "nota": "Senadora del Partido Nacional, antes militante del FA. Línea dura en seguridad y crítica a la 'agenda de género' en la educación."
+    },
+    "zubia": {
+      "respuestas": {
+        "estructura": "0adaDA000a", "representacion": "ADAd0DddDa", "poder": "AdAdd0DAAd", "inmigracion": "aaa0aDdA0a",
+        "diplomacia": "A0adaDDAdA", "intervencion": "dada0aDa0a", "economia": "0aDa0aDA0A", "control": "dadADA0ADa",
+        "comercio": "dAdA0dAdAd", "religion": "a0aD0Da00a", "moral": "0aDADdadAD", "tecnologia": "adad0Dadad"
+      },
+      "dilemas": { "memoria": "C", "inversion": "A", "seguridad": "A", "mundo": "B", "familia": "C" },
+      "nota": "Exfiscal, diputado del Partido Colorado (2020-2025). Punitivista en seguridad, crítico de la regulación de la marihuana y de la 'ideología de género'."
+    },
+    "manini": {
+      "respuestas": {
+        "estructura": "0a0ADA0d0a", "representacion": "Adad0dadDa", "poder": "aDA0daDAAD", "inmigracion": "A0a0aD0ada",
+        "diplomacia": "A00daDDAdA", "intervencion": "aA0aaAaAaA", "economia": "a0d00dddaa", "control": "ad0addd00D",
+        "comercio": "a0AdADda0A", "religion": "0addddDaaD", "moral": "DADADaadAD", "tecnologia": "00addD00a0"
+      },
+      "dilemas": { "memoria": "D", "inversion": "D", "seguridad": "A", "mundo": "C", "familia": "C" },
+      "nota": "Excomandante en jefe del Ejército, senador (2020-2025) y fundador de Cabildo Abierto. Reivindica a las Fuerzas Armadas y critica los juicios por la dictadura."
+    },
+    "lust": {
+      "respuestas": {
+        "estructura": "a0a0D0adad", "representacion": "ADADADdaDA", "poder": "ddaADAda00", "inmigracion": "aa0a0D0a00",
+        "diplomacia": "aadadDdaa0", "intervencion": "aAa0aaaaAa", "economia": "a0d00d0da0", "control": "000aDa0ad0",
+        "comercio": "aaa0aDd00A", "religion": "a00D0Dad0a", "moral": "0adaDd00ad", "tecnologia": "0a0Add0AdA"
+      },
+      "dilemas": { "memoria": "B", "inversion": "E", "seguridad": "B", "mundo": "B", "familia": "B" },
+      "nota": "Constitucionalista, diputado (2020-2025), primero por Cabildo Abierto. Fundó el Partido Constitucional Ambientalista: soberanía, apego a la Constitución y cuidado ambiental."
+    },
+    "salle": {
+      "respuestas": {
+        "estructura": "Ada0d0a0aD", "representacion": "ADADADdadA", "poder": "D0aAdAd00d", "inmigracion": "a0a0aDda0a",
+        "diplomacia": "0a0D0d0aa0", "intervencion": "AAa0AaaaAa", "economia": "Ad00adada0", "control": "ada00D00ad",
+        "comercio": "ADADADDADA", "religion": "0add00d0a0", "moral": "dADAD00dAd", "tecnologia": "DADADaDAdA"
+      },
+      "dilemas": { "memoria": "B", "inversion": "E", "seguridad": "D", "mundo": "D", "familia": "C" },
+      "nota": "Diputado desde 2025 y líder de Identidad Soberana. Mismas posiciones que su partido."
+    },
+    "dastugue": {
+      "respuestas": {
+        "estructura": "a0a0Daada0", "representacion": "ADAdaD00Da", "poder": "aDA0daDAaD", "inmigracion": "aa0A0D0a00",
+        "diplomacia": "aad00Dda0a", "intervencion": "d0da0ada0a", "economia": "0aDa0aDa0A", "control": "d0daDA0ADa",
+        "comercio": "da0a0dadad", "religion": "dADdD0DAAD", "moral": "DADADaADAD", "tecnologia": "a0aadD00a0"
+      },
+      "dilemas": { "memoria": "C", "inversion": "A", "seguridad": "A", "mundo": "B", "familia": "D" },
+      "nota": "Diputado del Partido Nacional vinculado a la iglesia evangélica Misión Vida. Fundamenta su acción política en la fe; opuesto al aborto, a la ley trans y a la 'agenda de género'."
+    }
+  }
+}

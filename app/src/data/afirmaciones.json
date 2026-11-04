@@ -1,0 +1,1018 @@
+[
+  {
+    "id": "est_f1",
+    "eje": "estructura",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Las decisiones que afectan a una localidad deberían tomarlas sus propios habitantes, no el gobierno nacional."
+  },
+  {
+    "id": "est_f2",
+    "eje": "estructura",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Es mejor que todo el país tenga las mismas reglas, aunque algunas zonas prefieran otras."
+  },
+  {
+    "id": "est_f3",
+    "eje": "estructura",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "La mayor parte de los impuestos debería quedarse en el lugar donde se recaudan."
+  },
+  {
+    "id": "est_f4",
+    "eje": "estructura",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "La educación debe tener un programa único para todo el país, definido a nivel nacional."
+  },
+  {
+    "id": "est_f5",
+    "eje": "estructura",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Una región debería poder separarse del país si la mayoría de sus habitantes lo vota."
+  },
+  {
+    "id": "est_f6",
+    "eje": "estructura",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "La policía debe depender de un único mando nacional y no de autoridades locales."
+  },
+  {
+    "id": "est_u1",
+    "eje": "estructura",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Las intendencias deberían tener más poder y más recursos, aunque eso reduzca lo que maneja el gobierno nacional.",
+    "ayuda": "Gran parte de lo que gastan las intendencias del interior viene de transferencias del gobierno nacional."
+  },
+  {
+    "id": "est_u2",
+    "eje": "estructura",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Uruguay es demasiado chico para tener 19 gobiernos departamentales: deberían ser menos.",
+    "ayuda": "Cada departamento tiene intendencia y junta departamental propias."
+  },
+  {
+    "id": "est_u3",
+    "eje": "estructura",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Los municipios deberían tener presupuesto propio y más competencias que hoy.",
+    "ayuda": "Los municipios (tercer nivel de gobierno) existen desde la ley de descentralización de 2009 y dependen en buena medida de la intendencia."
+  },
+  {
+    "id": "est_u4",
+    "eje": "estructura",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Los grandes proyectos, como puertos, rutas o tomas de agua potable, los debe decidir el gobierno nacional aunque un departamento se oponga.",
+    "ayuda": "Ejemplos de conflicto: la planta de UPM en Durazno-Tacuarembó y el proyecto de agua Arazatí en San José."
+  },
+  {
+    "id": "rep_f1",
+    "eje": "representacion",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Los gobernantes siempre deben salir de elecciones libres, aunque eso lleve al poder a gente que considero peligrosa."
+  },
+  {
+    "id": "rep_f2",
+    "eje": "representacion",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "En una crisis grave, un líder fuerte debería poder gobernar un tiempo sin el Parlamento."
+  },
+  {
+    "id": "rep_f3",
+    "eje": "representacion",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Los partidos de oposición deben tener las mismas garantías que el gobierno, incluso los que más detesto."
+  },
+  {
+    "id": "rep_f4",
+    "eje": "representacion",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Un gobierno de expertos que no dependa de elecciones tomaría mejores decisiones que los políticos electos."
+  },
+  {
+    "id": "rep_f5",
+    "eje": "representacion",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Los ciudadanos deberían poder votar directamente las leyes importantes, no solo elegir representantes."
+  },
+  {
+    "id": "rep_f6",
+    "eje": "representacion",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Si un gobierno da buenos resultados, no importa tanto que respete todas las reglas democráticas."
+  },
+  {
+    "id": "rep_u1",
+    "eje": "representacion",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "El golpe de Estado de 1973 fue, en su contexto, una respuesta comprensible al caos y a la guerrilla.",
+    "peso": 0.5,
+    "ayuda": "El 27 de junio de 1973 el presidente Bordaberry disolvió el Parlamento con apoyo militar. La dictadura duró hasta 1985."
+  },
+  {
+    "id": "rep_u2",
+    "eje": "representacion",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Los crímenes cometidos por el Estado durante la dictadura deben seguir investigándose y juzgándose, sin importar el tiempo que pasó.",
+    "peso": 0.5,
+    "ayuda": "La Ley de Caducidad (1986) impidió juzgarlos; fue ratificada en 1989 y en 2009. En 2011 una ley restableció la posibilidad de juzgarlos."
+  },
+  {
+    "id": "rep_u3",
+    "eje": "representacion",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "La lucha armada del MLN-Tupamaros contra los gobiernos de los años 60 estaba justificada.",
+    "ayuda": "El MLN actuó como guerrilla urbana desde mediados de los 60, bajo gobiernos electos."
+  },
+  {
+    "id": "rep_u4",
+    "eje": "representacion",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Los plebiscitos y referéndums, como los de la Ley de Caducidad o la LUC, son de lo mejor que tiene la democracia uruguaya.",
+    "ayuda": "Uruguay es de los países que más usan la democracia directa: empresas públicas (1992), agua (2004), LUC (2022), seguridad social (2024)."
+  },
+  {
+    "id": "pod_f1",
+    "eje": "poder",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Es aceptable que el Estado vigile las comunicaciones de las personas si eso ayuda a prevenir delitos."
+  },
+  {
+    "id": "pod_f2",
+    "eje": "poder",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Cada adulto debería poder consumir las drogas que quiera, mientras no perjudique a otros."
+  },
+  {
+    "id": "pod_f3",
+    "eje": "poder",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Las penas de cárcel deberían ser más largas y cumplirse completas, sin salidas anticipadas."
+  },
+  {
+    "id": "pod_f4",
+    "eje": "poder",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Prefiero que un culpable quede libre antes que condenar a un inocente."
+  },
+  {
+    "id": "pod_f5",
+    "eje": "poder",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Debería existir la pena de muerte para los delitos más graves.",
+    "escalon": "extremo"
+  },
+  {
+    "id": "pod_f6",
+    "eje": "poder",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "La libertad de expresión debe proteger también opiniones ofensivas o chocantes."
+  },
+  {
+    "id": "pod_u1",
+    "eje": "poder",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "La legalización de la marihuana en 2013 fue un acierto.",
+    "ayuda": "Ley 19.172: Uruguay fue el primer país en regular producción, venta y consumo."
+  },
+  {
+    "id": "pod_u2",
+    "eje": "poder",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "La Policía debería poder hacer allanamientos de noche.",
+    "ayuda": "Se plebiscitó en 2019 (\"Vivir sin miedo\") y en 2024; las dos veces no alcanzó la mayoría necesaria."
+  },
+  {
+    "id": "pod_u3",
+    "eje": "poder",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Los militares deberían participar en tareas de seguridad pública, como patrullar fronteras o barrios.",
+    "ayuda": "La propuesta de 2019 incluía una Guardia Nacional con efectivos militares."
+  },
+  {
+    "id": "pod_u4",
+    "eje": "poder",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Una persona con una enfermedad incurable debería poder pedir la eutanasia, como permite la ley aprobada en 2025.",
+    "ayuda": "Uruguay aprobó la ley de muerte digna en 2025."
+  },
+  {
+    "id": "inm_f1",
+    "eje": "inmigracion",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Quien viene a vivir al país debe adaptarse a nuestras costumbres."
+  },
+  {
+    "id": "inm_f2",
+    "eje": "inmigracion",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Que convivan muchas culturas distintas enriquece a un país."
+  },
+  {
+    "id": "inm_f3",
+    "eje": "inmigracion",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "El país debería limitar la cantidad de inmigrantes que recibe cada año."
+  },
+  {
+    "id": "inm_f4",
+    "eje": "inmigracion",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Los refugiados que huyen de guerras o persecuciones deben ser recibidos, aunque eso tenga costos."
+  },
+  {
+    "id": "inm_f5",
+    "eje": "inmigracion",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Preservar la identidad nacional es más importante que abrirse a otras culturas."
+  },
+  {
+    "id": "inm_f6",
+    "eje": "inmigracion",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Uruguay debería abrir sus fronteras a cualquier persona que quiera venir a vivir.",
+    "escalon": "extremo"
+  },
+  {
+    "id": "inm_u1",
+    "eje": "inmigracion",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Uruguay necesita más inmigrantes para compensar la baja natalidad y el envejecimiento de la población.",
+    "ayuda": "La natalidad uruguaya está por debajo del nivel de reemplazo desde hace años."
+  },
+  {
+    "id": "inm_u2",
+    "eje": "inmigracion",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Los inmigrantes recién llegados no deberían acceder enseguida a los mismos beneficios sociales que los uruguayos."
+  },
+  {
+    "id": "inm_u3",
+    "eje": "inmigracion",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "En la frontera con Brasil, las escuelas deberían enseñar en español y en portugués como lenguas de igual valor.",
+    "ayuda": "En la frontera norte se habla portugués y \"portuñol\"; hay escuelas con programas bilingües."
+  },
+  {
+    "id": "inm_u4",
+    "eje": "inmigracion",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Habría que exigir más requisitos para obtener la residencia, incluso a quienes vienen del Mercosur.",
+    "ayuda": "Desde 2014 los ciudadanos del Mercosur y asociados acceden a la residencia con trámites simplificados."
+  },
+  {
+    "id": "dip_f1",
+    "eje": "diplomacia",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Un país debe tener Fuerzas Armadas bien equipadas, aunque no tenga enemigos inmediatos."
+  },
+  {
+    "id": "dip_f2",
+    "eje": "diplomacia",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Los conflictos entre países deben resolverse siempre negociando, nunca con la fuerza."
+  },
+  {
+    "id": "dip_f3",
+    "eje": "diplomacia",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "El servicio militar debería ser obligatorio por un tiempo para los jóvenes."
+  },
+  {
+    "id": "dip_f4",
+    "eje": "diplomacia",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "La ONU y los tribunales internacionales deberían tener la última palabra en los conflictos entre países."
+  },
+  {
+    "id": "dip_f5",
+    "eje": "diplomacia",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Atacar primero a un enemigo que se prepara para atacarnos es legítimo."
+  },
+  {
+    "id": "dip_f6",
+    "eje": "diplomacia",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Uruguay debería abolir sus Fuerzas Armadas, como hizo Costa Rica.",
+    "escalon": "extremo"
+  },
+  {
+    "id": "dip_u1",
+    "eje": "diplomacia",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Uruguay debería reducir mucho sus Fuerzas Armadas y usar ese dinero en otras áreas."
+  },
+  {
+    "id": "dip_u2",
+    "eje": "diplomacia",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Uruguay necesita invertir en buques, aviones y radares para controlar su mar y su espacio aéreo.",
+    "ayuda": "Hubo debates recientes por la compra de patrulleros oceánicos y por la falta de radares."
+  },
+  {
+    "id": "dip_u3",
+    "eje": "diplomacia",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Uruguay debería comprometerse a no participar nunca en ninguna guerra."
+  },
+  {
+    "id": "dip_u4",
+    "eje": "diplomacia",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Las Fuerzas Armadas merecen más reconocimiento y respaldo de la sociedad uruguaya."
+  },
+  {
+    "id": "int_f1",
+    "eje": "intervencion",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Un país nunca debería intentar cambiar el gobierno de otro, aunque sea una dictadura."
+  },
+  {
+    "id": "int_f2",
+    "eje": "intervencion",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "El interés nacional debe estar por encima de los tratados internacionales cuando entran en conflicto."
+  },
+  {
+    "id": "int_f3",
+    "eje": "intervencion",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Las sanciones económicas contra otros países perjudican más a la población que a sus gobiernos."
+  },
+  {
+    "id": "int_f4",
+    "eje": "intervencion",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Un país debe usar su peso económico y diplomático para presionar a otros a favor de sus intereses."
+  },
+  {
+    "id": "int_f5",
+    "eje": "intervencion",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Es mejor no formar parte de alianzas militares permanentes con grandes potencias."
+  },
+  {
+    "id": "int_f6",
+    "eje": "intervencion",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "El Estado debe defender activamente a sus empresas cuando tienen conflictos en el exterior."
+  },
+  {
+    "id": "int_u1",
+    "eje": "intervencion",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Uruguay debe mantener su tradición de no intervenir en los asuntos internos de otros países, incluso cuando sus gobiernos violan derechos humanos.",
+    "ayuda": "Es un punto de debate recurrente sobre Venezuela, Cuba y Nicaragua."
+  },
+  {
+    "id": "int_u2",
+    "eje": "intervencion",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Uruguay debería ser más firme con Argentina y Brasil cuando sus decisiones perjudican al país.",
+    "ayuda": "Ejemplo: el corte del puente Fray Bentos–Gualeguaychú durante el conflicto por la planta de celulosa (2006–2010)."
+  },
+  {
+    "id": "int_u3",
+    "eje": "intervencion",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Uruguay no debería permitir bases ni instalaciones militares de otros países en su territorio.",
+    "ayuda": "En 1940 el herrerismo se opuso a instalar bases de Estados Unidos."
+  },
+  {
+    "id": "int_u4",
+    "eje": "intervencion",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Uruguay debería buscar un rol de liderazgo en la región, en vez de adaptarse a lo que deciden los países grandes."
+  },
+  {
+    "id": "eco_f1",
+    "eje": "economia",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Los servicios básicos como el agua, la luz y las telecomunicaciones deben estar en manos del Estado."
+  },
+  {
+    "id": "eco_f2",
+    "eje": "economia",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Las empresas privadas suelen gestionar mejor que el Estado."
+  },
+  {
+    "id": "eco_f3",
+    "eje": "economia",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "El Estado debería ser dueño de los bancos y de las grandes empresas.",
+    "escalon": "extremo"
+  },
+  {
+    "id": "eco_f4",
+    "eje": "economia",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "El impuesto a la herencia es injusto, porque grava algo que ya pagó impuestos."
+  },
+  {
+    "id": "eco_f5",
+    "eje": "economia",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Los sindicatos son necesarios para que los trabajadores tengan un trato justo."
+  },
+  {
+    "id": "eco_f6",
+    "eje": "economia",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "El Estado debería vender las empresas que no son esenciales y dejar esa actividad a los privados."
+  },
+  {
+    "id": "eco_u1",
+    "eje": "economia",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Las AFAP deberían eliminarse y todo el sistema jubilatorio debería ser público.",
+    "ayuda": "Era una de las propuestas del plebiscito de seguridad social de 2024, que no alcanzó la mayoría."
+  },
+  {
+    "id": "eco_u2",
+    "eje": "economia",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "ANCAP debería perder el monopolio de la importación y refinación de combustibles."
+  },
+  {
+    "id": "eco_u3",
+    "eje": "economia",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "El Estado debería ampliar las cooperativas de vivienda y la vivienda pública, en vez de dejar la construcción al mercado.",
+    "ayuda": "Las cooperativas de ayuda mutua (como las de FUCVAM) son un modelo uruguayo con más de 50 años."
+  },
+  {
+    "id": "eco_u4",
+    "eje": "economia",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Los liceos privados gratuitos para barrios pobres, financiados con donaciones de empresas que descuentan impuestos, deberían multiplicarse.",
+    "ayuda": "Ejemplos: Liceo Jubilar, Liceo Impulso."
+  },
+  {
+    "id": "con_f1",
+    "eje": "control",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "El Estado debe fijar precios máximos a los productos básicos cuando suben demasiado."
+  },
+  {
+    "id": "con_f2",
+    "eje": "control",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Los precios y los salarios deberían fijarse libremente entre las partes, sin intervención del Estado."
+  },
+  {
+    "id": "con_f3",
+    "eje": "control",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Los que más ganan deberían pagar una proporción mucho mayor de impuestos."
+  },
+  {
+    "id": "con_f4",
+    "eje": "control",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Bajar impuestos y regulaciones es la mejor forma de generar empleo."
+  },
+  {
+    "id": "con_f5",
+    "eje": "control",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "El Estado debería fijar de forma permanente los precios de todos los productos básicos.",
+    "escalon": "extremo"
+  },
+  {
+    "id": "con_f6",
+    "eje": "control",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "El Banco Central debe ser independiente del gobierno de turno."
+  },
+  {
+    "id": "con_u1",
+    "eje": "control",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Los Consejos de Salarios, donde gobierno, sindicatos y empresas negocian los sueldos, son buenos para el país.",
+    "ayuda": "Creados en 1943 y reinstalados en 2005."
+  },
+  {
+    "id": "con_u2",
+    "eje": "control",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "La regla fiscal que limita el gasto del Estado es necesaria, aunque obligue a postergar programas sociales.",
+    "ayuda": "Incorporada por la LUC en 2020."
+  },
+  {
+    "id": "con_u3",
+    "eje": "control",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Hay que crear un impuesto especial al 1 % más rico para financiar políticas contra la pobreza infantil.",
+    "ayuda": "Propuesta impulsada por el PIT-CNT en 2025."
+  },
+  {
+    "id": "con_u4",
+    "eje": "control",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "El Estado no debería intervenir para mantener alto el precio del dólar; lo tiene que fijar el mercado.",
+    "ayuda": "Los exportadores suelen reclamar por el \"dólar barato\"."
+  },
+  {
+    "id": "com_f1",
+    "eje": "comercio",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "El Estado debe proteger a la industria nacional de la competencia extranjera con aranceles."
+  },
+  {
+    "id": "com_f2",
+    "eje": "comercio",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "El libre comercio entre países beneficia a la mayoría de las personas."
+  },
+  {
+    "id": "com_f3",
+    "eje": "comercio",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Las compras del Estado deberían priorizar a empresas nacionales, aunque cuesten más."
+  },
+  {
+    "id": "com_f4",
+    "eje": "comercio",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Las empresas extranjeras deben poder invertir en el país en igualdad de condiciones con las nacionales."
+  },
+  {
+    "id": "com_f5",
+    "eje": "comercio",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Un país debería producir sus propios alimentos y medicamentos, aunque importarlos sea más barato."
+  },
+  {
+    "id": "com_f6",
+    "eje": "comercio",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Uruguay debería salir del Mercosur para comerciar libremente con el mundo.",
+    "escalon": "extremo"
+  },
+  {
+    "id": "com_u1",
+    "eje": "comercio",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Uruguay debería firmar tratados de libre comercio por su cuenta, aunque los otros socios del Mercosur no estén de acuerdo.",
+    "ayuda": "Las reglas del Mercosur exigen negociar en bloque; Uruguay pidió \"flexibilizarlo\" varias veces."
+  },
+  {
+    "id": "com_u2",
+    "eje": "comercio",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Un tratado de libre comercio con China pondría en riesgo a la industria y el empleo uruguayos.",
+    "ayuda": "Hubo un estudio de factibilidad que no avanzó a negociación."
+  },
+  {
+    "id": "com_u3",
+    "eje": "comercio",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Uruguay debería sumarse al acuerdo transpacífico (CPTPP), con países como Australia, Japón y México.",
+    "ayuda": "Uruguay pidió el ingreso en 2022."
+  },
+  {
+    "id": "com_u4",
+    "eje": "comercio",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "La tierra uruguaya no debería poder venderse a extranjeros."
+  },
+  {
+    "id": "rel_f1",
+    "eje": "religion",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "El Estado no debería financiar ni dar privilegios a ninguna religión.",
+    "escalon": "moderado"
+  },
+  {
+    "id": "rel_f2",
+    "eje": "religion",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Los valores religiosos deberían tener más peso en las decisiones políticas.",
+    "escalon": "moderado"
+  },
+  {
+    "id": "rel_f3",
+    "eje": "religion",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "La religión es un asunto privado y no debería tener ningún lugar en las instituciones del Estado.",
+    "escalon": "fuerte"
+  },
+  {
+    "id": "rel_f4",
+    "eje": "religion",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "El Estado debería tener una religión oficial.",
+    "escalon": "extremo"
+  },
+  {
+    "id": "rel_f5",
+    "eje": "religion",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Los funcionarios públicos no deberían usar símbolos religiosos visibles en su trabajo.",
+    "escalon": "fuerte"
+  },
+  {
+    "id": "rel_f6",
+    "eje": "religion",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Cuando una ley choca con la ley de Dios, debe primar la ley de Dios.",
+    "escalon": "extremo"
+  },
+  {
+    "id": "rel_u1",
+    "eje": "religion",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "La laicidad uruguaya hay que defenderla, incluso frente a símbolos religiosos en espacios públicos.",
+    "ayuda": "Debates por la cruz del Papa en Tres Cruces (1987) y por la estatua de la Virgen en la rambla del Buceo (2017)."
+  },
+  {
+    "id": "rel_u2",
+    "eje": "religion",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Debería haber enseñanza religiosa optativa en las escuelas públicas.",
+    "ayuda": "Prohibida desde 1909."
+  },
+  {
+    "id": "rel_u3",
+    "eje": "religion",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Las fiestas oficiales deberían volver a llamarse Navidad y Semana Santa.",
+    "ayuda": "Desde 1919 se llaman Día de la Familia y Semana de Turismo."
+  },
+  {
+    "id": "rel_u4",
+    "eje": "religion",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Los legisladores no deberían invocar su fe religiosa para fundamentar sus votos."
+  },
+  {
+    "id": "mor_f1",
+    "eje": "moral",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Las parejas del mismo sexo deben tener exactamente los mismos derechos que las demás, incluida la adopción."
+  },
+  {
+    "id": "mor_f2",
+    "eje": "moral",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "La familia formada por padre, madre e hijos es la base de la sociedad y el Estado debe protegerla especialmente."
+  },
+  {
+    "id": "mor_f3",
+    "eje": "moral",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "La educación sexual integral debe enseñarse en todas las escuelas."
+  },
+  {
+    "id": "mor_f4",
+    "eje": "moral",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Los cambios culturales de las últimas décadas fueron demasiado rápidos."
+  },
+  {
+    "id": "mor_f5",
+    "eje": "moral",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "El Estado debería dejar de registrar el sexo de las personas en los documentos.",
+    "escalon": "extremo"
+  },
+  {
+    "id": "mor_f6",
+    "eje": "moral",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "El matrimonio entre personas del mismo sexo debería volver a prohibirse.",
+    "escalon": "extremo"
+  },
+  {
+    "id": "mor_u1",
+    "eje": "moral",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "La ley de aborto de 2012 debería derogarse o restringirse.",
+    "ayuda": "Ley 18.987 de interrupción voluntaria del embarazo. En 2013 el intento de referéndum para derogarla no llegó al 9 %."
+  },
+  {
+    "id": "mor_u2",
+    "eje": "moral",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "La cuota para afrodescendientes en los empleos públicos es una medida justa.",
+    "ayuda": "Ley 19.122 (2013): reserva un 8 % de los ingresos al Estado."
+  },
+  {
+    "id": "mor_u3",
+    "eje": "moral",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "La \"agenda de género\" en la educación pública fue demasiado lejos.",
+    "ayuda": "Expresión usada por sectores conservadores para criticar contenidos de educación sexual y de género."
+  },
+  {
+    "id": "mor_u4",
+    "eje": "moral",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "La paridad (mitad de mujeres) debería ser obligatoria en las listas electorales.",
+    "ayuda": "Hoy rige una cuota: al menos un tercio de cada sexo."
+  },
+  {
+    "id": "tec_f1",
+    "eje": "tecnologia",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "La inteligencia artificial y la automatización traerán más beneficios que perjuicios."
+  },
+  {
+    "id": "tec_f2",
+    "eje": "tecnologia",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": true,
+    "texto": "Para cuidar el planeta hay que consumir menos, no solo producir con mejor tecnología."
+  },
+  {
+    "id": "tec_f3",
+    "eje": "tecnologia",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Los cultivos transgénicos son seguros y necesarios para alimentar al mundo."
+  },
+  {
+    "id": "tec_f4",
+    "eje": "tecnologia",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Si hay dudas sobre un riesgo ambiental, un proyecto productivo no debería aprobarse."
+  },
+  {
+    "id": "tec_f5",
+    "eje": "tecnologia",
+    "polo": "A",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "La edición genética de seres humanos para prevenir enfermedades debería permitirse."
+  },
+  {
+    "id": "tec_f6",
+    "eje": "tecnologia",
+    "polo": "B",
+    "tipo": "fundamental",
+    "rapido": false,
+    "texto": "Habría que frenar el crecimiento económico para proteger el ambiente.",
+    "escalon": "extremo"
+  },
+  {
+    "id": "tec_u1",
+    "eje": "tecnologia",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Uruguay debería permitir la energía nuclear, hoy prohibida por ley.",
+    "ayuda": "Prohibida por la ley del marco regulatorio eléctrico de 1997."
+  },
+  {
+    "id": "tec_u2",
+    "eje": "tecnologia",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": true,
+    "texto": "Las plantas de celulosa como UPM hacen más daño ambiental que el beneficio económico que dejan.",
+    "ayuda": "UPM tiene plantas en Fray Bentos y en Paso de los Toros (2023)."
+  },
+  {
+    "id": "tec_u3",
+    "eje": "tecnologia",
+    "polo": "A",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "Uruguay debería explorar si tiene petróleo o gas en su mar, aunque haya riesgos ambientales.",
+    "ayuda": "Hubo debate por los permisos de exploración sísmica en la plataforma marítima."
+  },
+  {
+    "id": "tec_u4",
+    "eje": "tecnologia",
+    "polo": "B",
+    "tipo": "uruguaya",
+    "rapido": false,
+    "texto": "El uso de agrotóxicos en el campo debería restringirse fuertemente, aunque baje la producción."
+  }
+]

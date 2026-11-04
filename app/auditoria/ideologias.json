@@ -1,0 +1,486 @@
+{
+  "leyenda": {
+    "codigos": "A = muy de acuerdo, a = de acuerdo, 0 = neutral, d = en desacuerdo, D = muy en desacuerdo, ? = no aplica (no cuenta). Una letra por afirmación, en el orden f1 f2 f3 f4 f5 f6 u1 u2 u3 u4 de cada eje.",
+    "criterio": "Ideologías universales: se responde como un adherente típico de esa ideología aplicada a Uruguay hoy. Tradiciones uruguayas: como su doctrina, completando las afirmaciones actuales solo cuando la doctrina las resuelve con claridad; el resto va con '?'.",
+    "estado": "Primera auditoría. Falta la revisión independiente de una segunda persona (DISENO.md §6)."
+  },
+  "perfiles": {
+    "artiguismo": {
+      "respuestas": {
+        "estructura": "AdAda0ADAD",
+        "representacion": "ADADAD???a",
+        "poder": "0?0a0?????",
+        "inmigracion": "0a0a0?????",
+        "diplomacia": "ada?0D????",
+        "intervencion": "dAdAdA?A?A",
+        "economia": "a???????A?",
+        "control": "ad0???????",
+        "comercio": "AdAdA????A",
+        "religion": "A0aD0D????",
+        "moral": "??????????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {},
+      "nota": "Instrucciones del Año XIII, Reglamento de tierras y aranceles de 1815; soberanía particular de los pueblos aplicada hoy a la autonomía departamental."
+    },
+    "batllismo": {
+      "respuestas": {
+        "estructura": "dAdADA000a",
+        "representacion": "ADADADD0Da",
+        "poder": "d0daDA?dDa",
+        "inmigracion": "dAdAd?a???",
+        "diplomacia": "dAdADd?0a?",
+        "intervencion": "adada0a?a?",
+        "economia": "Ada?Ad0Da0",
+        "control": "adAd0?a0??",
+        "comercio": "AdAdA?????",
+        "religion": "ADADaDADDA",
+        "moral": "?d?D??????",
+        "tecnologia": "a?????????"
+      },
+      "dilemas": {},
+      "nota": "Estado social y empresario, laicidad estricta, reformas sociales tempranas, centralismo modernizador."
+    },
+    "neobatllismo": {
+      "respuestas": {
+        "estructura": "dAdADA????",
+        "representacion": "ADADAD????",
+        "poder": "d0daDA????",
+        "inmigracion": "dAdAd?????",
+        "diplomacia": "0adaD?????",
+        "intervencion": "a0adaa????",
+        "economia": "Add?Ad??a?",
+        "control": "AdAdd?????",
+        "comercio": "ADAdA?????",
+        "religion": "AdaD0D????",
+        "moral": "?0?0??????",
+        "tecnologia": "a?????????"
+      },
+      "dilemas": {},
+      "nota": "Industrialización protegida y Estado de bienestar de mediados del siglo XX."
+    },
+    "herrerismo": {
+      "respuestas": {
+        "estructura": "AdAddd????",
+        "representacion": "aa000a????",
+        "poder": "ada00?????",
+        "inmigracion": "Adada?????",
+        "diplomacia": "a0a?0D????",
+        "intervencion": "AAadA0??A?",
+        "economia": "da?ada????",
+        "control": "dada??????",
+        "comercio": "da000?????",
+        "religion": "dad?d?Daad",
+        "moral": "?a?a??????",
+        "tecnologia": "da?a??????"
+      },
+      "dilemas": {},
+      "nota": "Nacionalismo blanco de Herrera: neutralidad, defensa del campo y de la tradición."
+    },
+    "wilsonismo": {
+      "respuestas": {
+        "estructura": "a0a0Da????",
+        "representacion": "ADADADD0DA",
+        "poder": "d00aDA????",
+        "inmigracion": "0a0a0?????",
+        "diplomacia": "aadadD????",
+        "intervencion": "a0ada0??A?",
+        "economia": "adadad??a?",
+        "control": "adadd?????",
+        "comercio": "a0a0a?????",
+        "religion": "a00D0D????",
+        "moral": "?a?0??????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {
+        "memoria": "B"
+      },
+      "nota": "Nacionalismo blanco reformista (programa de 1971) y opositor a la dictadura."
+    },
+    "tercerismo": {
+      "respuestas": {
+        "estructura": "aadadA????",
+        "representacion": "ADADAD??0?",
+        "poder": "dadADA????",
+        "inmigracion": "dAdAd?????",
+        "diplomacia": "dADaDa????",
+        "intervencion": "ADADAd??Aa",
+        "economia": "ADaDAD????",
+        "control": "ADAD0d????",
+        "comercio": "ADADA?????",
+        "religion": "AdaD0D????",
+        "moral": "??????????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {},
+      "nota": "Antiimperialismo latinoamericano de Marcha: ni Estados Unidos ni la URSS."
+    },
+    "tupamarismo": {
+      "respuestas": {
+        "estructura": "a0a000????",
+        "representacion": "D000aaD?A?",
+        "poder": "add000????",
+        "inmigracion": "dAdAd?????",
+        "diplomacia": "ad0daD???D",
+        "intervencion": "ddAdAd??Aa",
+        "economia": "ADADAD??A?",
+        "control": "ADADaD????",
+        "comercio": "ADADA????A",
+        "religion": "adaD0D????",
+        "moral": "??????????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {},
+      "nota": "Vía armada revolucionaria de los años 60 y 70."
+    },
+    "seregnismo": {
+      "respuestas": {
+        "estructura": "aadaDA????",
+        "representacion": "ADADADDADA",
+        "poder": "d00aDA????",
+        "inmigracion": "dAdAd?????",
+        "diplomacia": "aADADD???a",
+        "intervencion": "adAdA0??A?",
+        "economia": "AdddAd??a?",
+        "control": "adAdd?????",
+        "comercio": "aaa0a?????",
+        "religion": "AdaD0D????",
+        "moral": "??????????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {
+        "memoria": "A"
+      },
+      "nota": "Izquierda democrática e institucional, unidad y diálogo."
+    },
+    "comunismo": {
+      "respuestas": {
+        "estructura": "dAdADA0daa",
+        "representacion": "0000aaDA0a",
+        "poder": "0d00dd0DD0",
+        "inmigracion": "dAdAd0aDAD",
+        "diplomacia": "ada00dad0D",
+        "intervencion": "dDAdAdA0Aa",
+        "economia": "ADADADADAD",
+        "control": "ADADADADAD",
+        "comercio": "ADADA0DADA",
+        "religion": "ADADADADDA",
+        "moral": "a0a00DDA0a",
+        "tecnologia": "AdAdad00a0"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "D",
+        "seguridad": "C",
+        "mundo": "D",
+        "familia": "A"
+      },
+      "nota": "Propiedad colectiva de los medios de producción y planificación central bajo un partido de vanguardia."
+    },
+    "socialismo-democratico": {
+      "respuestas": {
+        "estructura": "aadaDAadaa",
+        "representacion": "ADADADDAdA",
+        "poder": "dadADAADDA",
+        "inmigracion": "dADADdaDAD",
+        "diplomacia": "dADADdadAd",
+        "intervencion": "adAdA0a0Aa",
+        "economia": "ADdDADADAD",
+        "control": "ADADddAdAd",
+        "comercio": "ada0aDdadA",
+        "religion": "ADaD0DADDa",
+        "moral": "ADAD0DDADA",
+        "tecnologia": "aA0a00Dd0A"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "D",
+        "seguridad": "C",
+        "mundo": "C",
+        "familia": "A"
+      },
+      "nota": "Socialismo por la vía electoral, con fuerte propiedad pública y sindicatos."
+    },
+    "socialdemocracia": {
+      "respuestas": {
+        "estructura": "0a0aDA000a",
+        "representacion": "ADADaDDADa",
+        "poder": "a0aaDAadDa",
+        "inmigracion": "dAdAdDada0",
+        "diplomacia": "0adaDD00a0",
+        "intervencion": "a0a00aaa0a",
+        "economia": "AdDdAdd0Ad",
+        "control": "adadDAA000",
+        "comercio": "dAdAddadAd",
+        "religion": "AdaD0Dadda",
+        "moral": "adaddDDada",
+        "tecnologia": "AdadaD0Dad"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "B",
+        "seguridad": "B",
+        "mundo": "B",
+        "familia": "A"
+      },
+      "nota": "Economía de mercado con Estado de bienestar amplio, negociación colectiva y responsabilidad fiscal."
+    },
+    "progresismo": {
+      "respuestas": {
+        "estructura": "aa0aDAadaa",
+        "representacion": "ADADADDAdA",
+        "poder": "dAdADAADDA",
+        "inmigracion": "dADADdADAD",
+        "diplomacia": "dADADdadAd",
+        "intervencion": "adada0a0aa",
+        "economia": "Add0Ad0DAd",
+        "control": "adAddaA0a0",
+        "comercio": "0aaa0Dd0aa",
+        "religion": "ADAD0DADDA",
+        "moral": "ADADaDDADA",
+        "tecnologia": "aA0a0dDd0A"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "B",
+        "seguridad": "C",
+        "mundo": "C",
+        "familia": "A"
+      },
+      "nota": "Ampliación de derechos civiles y cambio social."
+    },
+    "ecologismo": {
+      "respuestas": {
+        "estructura": "AdAd0dAdAD",
+        "representacion": "ADADADDAdA",
+        "poder": "dadADaADDa",
+        "inmigracion": "dAdAddaDAd",
+        "diplomacia": "dADADdADAD",
+        "intervencion": "adAdA0a0Aa",
+        "economia": "Ad0dAdadAd",
+        "control": "aDAdddAdad",
+        "comercio": "ADADADDADA",
+        "religion": "AdaD0Dadda",
+        "moral": "AdAddDDAda",
+        "tecnologia": "dADADaDADA"
+      },
+      "dilemas": {
+        "memoria": "A",
+        "inversion": "E",
+        "seguridad": "C",
+        "mundo": "D",
+        "familia": "A"
+      },
+      "nota": "El ambiente como prioridad sobre el crecimiento; desconfianza de la celulosa, los agrotóxicos y la megaminería."
+    },
+    "democracia-cristiana": {
+      "respuestas": {
+        "estructura": "aa0aDAada0",
+        "representacion": "ADADADDaDA",
+        "poder": "adaaDadadd",
+        "inmigracion": "dAdAdDa0a0",
+        "diplomacia": "0ADaDD0aa0",
+        "intervencion": "dd0a0aDa0a",
+        "economia": "a0DdAdD0aA",
+        "control": "0daaDAAad0",
+        "comercio": "dA0A0DadAd",
+        "religion": "0adDddDaad",
+        "moral": "dA0aDdaaaa",
+        "tecnologia": "a0a0dD0d00"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "B",
+        "seguridad": "C",
+        "mundo": "B",
+        "familia": "B"
+      },
+      "nota": "Valores cristianos aplicados a la justicia social: economía social de mercado, familia y dignidad humana."
+    },
+    "liberalismo-social": {
+      "respuestas": {
+        "estructura": "0adaDA000a",
+        "representacion": "ADADaDDaDa",
+        "poder": "da0ADAAd0A",
+        "inmigracion": "dAdAddAdAd",
+        "diplomacia": "0AdaDD00a0",
+        "intervencion": "d0da0aDa0a",
+        "economia": "0aDd0aDa0a",
+        "control": "d0aaDAaAda",
+        "comercio": "dAdAddAdAd",
+        "religion": "AdADaDAddA",
+        "moral": "AdAdaDDAdA",
+        "tecnologia": "AdAdaDadAd"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "B",
+        "seguridad": "C",
+        "mundo": "A",
+        "familia": "A"
+      },
+      "nota": "Libertades individuales y mercado, con igualdad de oportunidades y Estado regulador."
+    },
+    "liberalismo-clasico": {
+      "respuestas": {
+        "estructura": "0adaDA000a",
+        "representacion": "ADAdaDDdDa",
+        "poder": "dAdAdAAddA",
+        "inmigracion": "dAdAddAdaD",
+        "diplomacia": "0adadDd000",
+        "intervencion": "d0da0ada0a",
+        "economia": "dADADADAdA",
+        "control": "DADADAdADA",
+        "comercio": "DADAddADAD",
+        "religion": "AdADaDAddA",
+        "moral": "adaddDD0d0",
+        "tecnologia": "AdAdADADAD"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "A",
+        "seguridad": "C",
+        "mundo": "A",
+        "familia": "B"
+      },
+      "nota": "Estado limitado, mercado libre, apertura comercial y libertades individuales."
+    },
+    "libertarismo": {
+      "respuestas": {
+        "estructura": "AdADADaaaD",
+        "representacion": "ADADaDDaDa",
+        "poder": "DADADAADDA",
+        "inmigracion": "dAdAdaAdaD",
+        "diplomacia": "dAdaDad0A0",
+        "intervencion": "AdAdAda0Ad",
+        "economia": "DADADADADA",
+        "control": "DADADADADA",
+        "comercio": "DADADAADAD",
+        "religion": "AdAD0DAddA",
+        "moral": "a000aDdD0D",
+        "tecnologia": "AdAdADADAD"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "A",
+        "seguridad": "D",
+        "mundo": "A",
+        "familia": "C"
+      },
+      "nota": "Estado mínimo en lo económico y en lo personal; rechazo a impuestos, regulaciones, cuotas y prohibiciones."
+    },
+    "conservadurismo-liberal": {
+      "respuestas": {
+        "estructura": "a0a0D0ada0",
+        "representacion": "ADAd0DddDa",
+        "poder": "adA0daDAaD",
+        "inmigracion": "aa0aaD0a00",
+        "diplomacia": "aad00Dda0a",
+        "intervencion": "dada0ada0a",
+        "economia": "dADadADA0A",
+        "control": "daDADAdADa",
+        "comercio": "DAdAddADAd",
+        "religion": "dadddDDaaD",
+        "moral": "dAdaDdadAd",
+        "tecnologia": "AdAd0DaDAD"
+      },
+      "dilemas": {
+        "memoria": "C",
+        "inversion": "A",
+        "seguridad": "B",
+        "mundo": "A",
+        "familia": "C"
+      },
+      "nota": "Mercado libre con valores tradicionales, orden y respeto a las instituciones."
+    },
+    "conservadurismo-social": {
+      "respuestas": {
+        "estructura": "a0a0Daada0",
+        "representacion": "ADAdaD00Da",
+        "poder": "aDA0daDAaD",
+        "inmigracion": "aa0A0D0a00",
+        "diplomacia": "aad00Dda0a",
+        "intervencion": "d0da0ada0a",
+        "economia": "0ad000d0a0",
+        "control": "000aDA0a00",
+        "comercio": "da0a0dadad",
+        "religion": "dADdD0DAAD",
+        "moral": "DADADaADAD",
+        "tecnologia": "a0aadD00a0"
+      },
+      "dilemas": {
+        "memoria": "C",
+        "inversion": "A",
+        "seguridad": "A",
+        "mundo": "B",
+        "familia": "D"
+      },
+      "nota": "Familia, tradición y religión como base de la sociedad; sin una posición económica definida."
+    },
+    "soberanismo-constitucionalista": {
+      "respuestas": {
+        "estructura": "a0a0D0adad",
+        "representacion": "ADADADdaDA",
+        "poder": "ddaADAda00",
+        "inmigracion": "aa0a0D0a00",
+        "diplomacia": "aadadDdaa0",
+        "intervencion": "AAa0AaaaAa",
+        "economia": "a0d00d0da0",
+        "control": "000aDa0ad0",
+        "comercio": "AdAdADDADA",
+        "religion": "a00D0Dad0a",
+        "moral": "0adaDd00ad",
+        "tecnologia": "0a0Add0AdA"
+      },
+      "dilemas": {
+        "memoria": "B",
+        "inversion": "E",
+        "seguridad": "D",
+        "mundo": "D",
+        "familia": "B"
+      },
+      "nota": "Defensa de la soberanía y de la Constitución frente a contratos, tratados y organismos internacionales."
+    },
+    "anarquismo": {
+      "respuestas": {
+        "estructura": "ADADAD????",
+        "representacion": "ADADADDAdA",
+        "poder": "DADADAADDA",
+        "inmigracion": "DADADA??AD",
+        "diplomacia": "DADaDAADAD",
+        "intervencion": "ADADAD??A?",
+        "economia": "0D0DADADAD",
+        "control": "dDADdD0DAD",
+        "comercio": "000000????",
+        "religion": "ADADADADDA",
+        "moral": "ADADADDADA",
+        "tecnologia": "dadada????"
+      },
+      "dilemas": {
+        "memoria": "A"
+      },
+      "nota": "Sociedad sin Estado, organizada en federaciones libres y autogestión."
+    },
+    "autoritarismo-militar": {
+      "respuestas": {
+        "estructura": "DADADA????",
+        "representacion": "DADADAADDD",
+        "poder": "ADADaDDAAD",
+        "inmigracion": "adadA?????",
+        "diplomacia": "AdAdAD?A?A",
+        "intervencion": "dada0a????",
+        "economia": "0aD0d0????",
+        "control": "a0d0d0????",
+        "comercio": "0a0a0?????",
+        "religion": "000d0d????",
+        "moral": "dAdA??????",
+        "tecnologia": "??????????"
+      },
+      "dilemas": {
+        "memoria": "D",
+        "seguridad": "A"
+      },
+      "nota": "Gobierno de las Fuerzas Armadas por encima de las instituciones, en nombre del orden."
+    }
+  }
+}
