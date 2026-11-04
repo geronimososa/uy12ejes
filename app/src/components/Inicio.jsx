@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import ejes from '../data/ejes.json';
 import perfiles from '../data/perfiles.json';
 import { rankear } from '../logic/calculo.js';
@@ -13,30 +14,59 @@ const GRUPOS = [
   { id: 'independientes', nombre: 'Independientes, organizaciones y figuras sin partido' },
 ];
 
-const EJEMPLO = {
-  estructura: 60, representacion: 10, poder: 55, inmigracion: 65, diplomacia: 60, intervencion: 45,
-  economia: 45, control: 48, comercio: 62, religion: 25, moral: 35, tecnologia: 45,
-};
+const EJEMPLOS = ['orsi', 'lacalle-pou'].map((id) => {
+  const persona = referentes.find((r) => r.id === id);
+  return {
+    persona,
+    partido: rankear(persona.vector, partidos)[0],
+    cercano: rankear(persona.vector, referentes.filter((r) => r.id !== id))[0],
+  };
+});
+
+const SEGUNDOS_POR_EJEMPLO = 6;
 
 function Ejemplo() {
-  const partido = rankear(EJEMPLO, partidos)[0];
-  const referente = rankear(EJEMPLO, referentes)[0];
+  const [actual, setActual] = useState(0);
+
+  useEffect(() => {
+    const intervalo = setInterval(() => setActual((prev) => (prev + 1) % EJEMPLOS.length), SEGUNDOS_POR_EJEMPLO * 1000);
+    return () => clearInterval(intervalo);
+  }, []);
+
   return (
-    <aside className="ejemplo" aria-label="Ejemplo de resultado">
+    <aside className="ejemplo" aria-label="Ejemplos de resultado">
       <p className="sobretitulo">Ejemplo de resultado</p>
-      <p className="ejemplo-etiqueta">{etiqueta(EJEMPLO, ejes)}</p>
-      <p className="ejemplo-afin">
-        Partido más afín: <strong>{partido.perfil.nombre}</strong> ({partido.porcentaje} %)<br />
-        Referente más afín: <strong>{referente.perfil.nombre}</strong> ({referente.porcentaje} %)
-      </p>
-      <ul className="ejemplo-ejes">
-        {ejes.map((e) => (
-          <li key={e.id}>
-            <span className="ejemplo-nombre">{e.nombre}</span>
-            <span className="ejemplo-barra"><span style={{ left: `${EJEMPLO[e.id]}%` }} /></span>
-          </li>
+      <div className="ejemplo-carrusel">
+        {EJEMPLOS.map(({ persona, partido, cercano }, i) => (
+          <div key={persona.id} className={`ejemplo-diapositiva${i === actual ? ' visible' : ''}`} aria-hidden={i !== actual}>
+            <p className="ejemplo-quien">Si respondieras como <strong>{persona.nombre}</strong></p>
+            <p className="ejemplo-etiqueta">{etiqueta(persona.vector, ejes)}</p>
+            <p className="ejemplo-afin">
+              Partido más afín: <strong>{partido.perfil.nombre}</strong> ({partido.porcentaje} %)<br />
+              También cerca de: <strong>{cercano.perfil.nombre}</strong> ({cercano.porcentaje} %)
+            </p>
+            <ul className="ejemplo-ejes">
+              {ejes.map((e) => (
+                <li key={e.id}>
+                  <span className="ejemplo-nombre">{e.nombre}</span>
+                  <span className="ejemplo-barra"><span style={{ left: `${persona.vector[e.id]}%` }} /></span>
+                </li>
+              ))}
+            </ul>
+          </div>
         ))}
-      </ul>
+      </div>
+      <div className="ejemplo-puntos" role="group" aria-label="Elegir ejemplo">
+        {EJEMPLOS.map(({ persona }, i) => (
+          <button
+            key={persona.id}
+            type="button"
+            className={i === actual ? 'activo' : ''}
+            aria-label={`Ver el ejemplo de ${persona.nombre}`}
+            onClick={() => setActual(i)}
+          />
+        ))}
+      </div>
     </aside>
   );
 }
@@ -55,7 +85,7 @@ function Tarjeta({ perfil, extra }) {
   );
 }
 
-export default function Inicio({ onComenzar, onNavegar }) {
+export default function Inicio({ onComenzar, onNavegar, enCurso, onContinuar }) {
   return (
     <div className="portada">
       <section className="hero" id="arriba">
@@ -77,6 +107,12 @@ export default function Inicio({ onComenzar, onNavegar }) {
             <li>Rápido</li>
             <li>Resultado al instante</li>
           </ul>
+          {enCurso ? (
+            <button type="button" className="continuar" onClick={onContinuar}>
+              <strong>Continuar el test</strong>
+              <span>Vas por la pregunta {enCurso.actual} de {enCurso.total}</span>
+            </button>
+          ) : null}
         </div>
         <Ejemplo />
       </section>

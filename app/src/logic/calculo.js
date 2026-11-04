@@ -6,7 +6,7 @@ export const RESPUESTAS = [
   { valor: 0.5, texto: 'Neutral' },
   { valor: 0.25, texto: 'En desacuerdo' },
   { valor: 0, texto: 'Muy en desacuerdo' },
-  { valor: null, texto: 'No sé / Prefiero no responder' },
+  { valor: null, texto: 'No sé' },
 ];
 
 export function valorHaciaB(afirmacion, acuerdo) {

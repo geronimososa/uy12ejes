@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { Navigate, Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom';
 import afirmaciones from './data/afirmaciones.json';
 import dilemas from './data/dilemas.json';
 import { calcularPosiciones } from './logic/calculo.js';
-import { codificar, decodificar } from './logic/enlace.js';
+import { decodificar } from './logic/enlace.js';
 import Encabezado from './components/Encabezado.jsx';
 import Inicio from './components/Inicio.jsx';
 import Formato from './components/Formato.jsx';
@@ -10,12 +11,34 @@ import Pregunta from './components/Pregunta.jsx';
 import Dilema from './components/Dilema.jsx';
 import Resultado from './components/Resultado.jsx';
 
-function leerEnlace() {
+const CLAVE_TEST = 'uy12ejes-test';
+const CLAVE_RESULTADO = 'uy12ejes-resultado';
+const PORID = Object.fromEntries(afirmaciones.map((a) => [a.id, a]));
+
+function leer(clave) {
   try {
-    return decodificar(new URLSearchParams(window.location.search).get('v'));
+    const texto = window.sessionStorage.getItem(clave);
+    return texto ? JSON.parse(texto) : null;
   } catch {
     return null;
   }
+}
+
+function guardar(clave, valor) {
+  try {
+    if (valor === null) window.sessionStorage.removeItem(clave);
+    else window.sessionStorage.setItem(clave, JSON.stringify(valor));
+  } catch {
+    return;
+  }
+}
+
+function testGuardado() {
+  const g = leer(CLAVE_TEST);
+  if (!g || !Array.isArray(g.ordenIds)) return null;
+  const orden = g.ordenIds.map((id) => PORID[id]).filter(Boolean);
+  if (orden.length === 0 || orden.length !== g.ordenIds.length) return null;
+  return { orden, indice: g.indice ?? 0, respuestas: g.respuestas ?? {}, elecciones: g.elecciones ?? {}, indiceDilema: g.indiceDilema ?? 0, etapa: g.etapa ?? 'preguntas' };
 }
 
 function mezclar(lista) {
@@ -27,11 +50,6 @@ function mezclar(lista) {
   return copia;
 }
 
-function ponerEnlace(posiciones) {
-  const url = posiciones ? `?v=${codificar(posiciones)}` : window.location.pathname;
-  window.history.replaceState(null, '', url);
-}
-
 function irA(id) {
   if (id === 'arriba') {
     window.scrollTo(0, 0);
@@ -40,119 +58,147 @@ function irA(id) {
   document.getElementById(id)?.scrollIntoView();
 }
 
+function ResultadoCompartido() {
+  const { codigo } = useParams();
+  const navigate = useNavigate();
+  const posiciones = decodificar(codigo);
+  if (!posiciones) {
+    return (
+      <section className="tarjeta">
+        <h2 className="afirmacion">Este enlace no es válido</h2>
+        <p className="nota">Puede estar incompleto o haber sido modificado.</p>
+        <button type="button" className="boton boton-amarillo" onClick={() => navigate('/test')}>Hacer el test</button>
+      </section>
+    );
+  }
+  return <Resultado posiciones={posiciones} compartido onReiniciar={() => navigate('/test')} />;
+}
+
 export default function App() {
-  const [compartido] = useState(leerEnlace);
-  const [pantalla, setPantalla] = useState(compartido ? 'resultado' : 'inicio');
-  const [orden, setOrden] = useState([]);
-  const [indice, setIndice] = useState(0);
-  const [respuestas, setRespuestas] = useState({});
-  const [elecciones, setElecciones] = useState({});
-  const [indiceDilema, setIndiceDilema] = useState(0);
-  const [posiciones, setPosiciones] = useState(compartido);
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const [test, setTest] = useState(testGuardado);
+  const [posiciones, setPosiciones] = useState(() => leer(CLAVE_RESULTADO));
+
+  function actualizarTest(nuevo) {
+    setTest(nuevo);
+    guardar(CLAVE_TEST, nuevo ? { ...nuevo, orden: undefined, ordenIds: nuevo.orden.map((a) => a.id) } : null);
+  }
+
+  function ir(ruta) {
+    navigate(ruta);
+    window.scrollTo(0, 0);
+  }
 
   function navegar(id) {
-    if (pantalla === 'inicio') {
+    if (pathname === '/') {
       irA(id);
       return;
     }
-    setPantalla('inicio');
-    setTimeout(() => irA(id), 0);
-  }
-
-  function comenzar() {
-    setPantalla('formato');
-    window.scrollTo(0, 0);
+    navigate('/');
+    setTimeout(() => irA(id), 50);
   }
 
   function empezar(rapido) {
     const elegidas = rapido ? afirmaciones.filter((a) => a.rapido) : afirmaciones;
-    setOrden(mezclar(elegidas));
-    setIndice(0);
-    setRespuestas({});
-    setElecciones({});
-    setIndiceDilema(0);
-    setPantalla('pregunta');
-    window.scrollTo(0, 0);
+    actualizarTest({ orden: mezclar(elegidas), indice: 0, respuestas: {}, elecciones: {}, indiceDilema: 0, etapa: 'preguntas' });
+    ir('/test/preguntas');
   }
 
   function responder(valor) {
-    const actual = orden[indice];
-    setRespuestas((prev) => ({ ...prev, [actual.id]: valor }));
-    if (indice + 1 < orden.length) {
-      setIndice(indice + 1);
-    } else {
-      setPantalla('dilema');
-    }
+    const actual = test.orden[test.indice];
+    const respuestas = { ...test.respuestas, [actual.id]: valor };
+    const ultima = test.indice + 1 >= test.orden.length;
+    actualizarTest({ ...test, respuestas, indice: ultima ? test.indice : test.indice + 1, etapa: ultima ? 'dilemas' : 'preguntas' });
   }
 
   function volverPregunta() {
-    if (indice === 0) {
-      setPantalla('formato');
-    } else {
-      setIndice(indice - 1);
+    if (test.indice === 0) {
+      ir('/test');
+      return;
     }
+    actualizarTest({ ...test, indice: test.indice - 1 });
   }
 
   function elegir(opcionId) {
-    const dilema = dilemas[indiceDilema];
-    const nuevas = { ...elecciones, [dilema.id]: opcionId };
-    setElecciones(nuevas);
-    if (indiceDilema + 1 < dilemas.length) {
-      setIndiceDilema(indiceDilema + 1);
+    const dilema = dilemas[test.indiceDilema];
+    const elecciones = { ...test.elecciones, [dilema.id]: opcionId };
+    if (test.indiceDilema + 1 < dilemas.length) {
+      actualizarTest({ ...test, elecciones, indiceDilema: test.indiceDilema + 1 });
       return;
     }
-    const resultado = calcularPosiciones(orden, respuestas, dilemas, nuevas);
+    const resultado = calcularPosiciones(test.orden, test.respuestas, dilemas, elecciones);
     setPosiciones(resultado);
-    ponerEnlace(resultado);
-    setPantalla('resultado');
+    guardar(CLAVE_RESULTADO, resultado);
+    actualizarTest(null);
+    navigate('/resultado', { replace: true });
     window.scrollTo(0, 0);
   }
 
   function volverDilema() {
-    if (indiceDilema === 0) {
-      setPantalla('pregunta');
-    } else {
-      setIndiceDilema(indiceDilema - 1);
+    if (test.indiceDilema === 0) {
+      actualizarTest({ ...test, etapa: 'preguntas' });
+      return;
     }
+    actualizarTest({ ...test, indiceDilema: test.indiceDilema - 1 });
   }
 
   function reiniciar() {
-    ponerEnlace(null);
     setPosiciones(null);
-    setPantalla('formato');
-    window.scrollTo(0, 0);
+    guardar(CLAVE_RESULTADO, null);
+    ir('/test');
   }
+
+  const enCurso = test ? {
+    actual: test.etapa === 'dilemas' ? test.orden.length + test.indiceDilema + 1 : test.indice + 1,
+    total: test.orden.length + dilemas.length,
+  } : null;
 
   return (
     <>
-      <Encabezado onNavegar={navegar} onComenzar={comenzar} />
-      {pantalla === 'inicio' ? <Inicio onComenzar={comenzar} onNavegar={navegar} /> : null}
-      <main className="contenedor">
-        {pantalla === 'formato' ? <Formato onEmpezar={empezar} onVolver={() => navegar('arriba')} /> : null}
-        {pantalla === 'pregunta' ? (
-          <Pregunta
-            afirmacion={orden[indice]}
-            numero={indice + 1}
-            total={orden.length}
-            elegida={respuestas[orden[indice].id]}
-            onResponder={responder}
-            onVolver={volverPregunta}
-          />
-        ) : null}
-        {pantalla === 'dilema' ? (
-          <Dilema
-            dilema={dilemas[indiceDilema]}
-            numero={indiceDilema + 1}
-            total={dilemas.length}
-            elegida={elecciones[dilemas[indiceDilema].id]}
-            onElegir={elegir}
-            onVolver={volverDilema}
-          />
-        ) : null}
-        {pantalla === 'resultado' && posiciones ? (
-          <Resultado posiciones={posiciones} onReiniciar={reiniciar} />
-        ) : null}
-      </main>
+      <Encabezado onNavegar={navegar} onComenzar={() => ir(test ? '/test/preguntas' : '/test')} />
+      <Routes>
+        <Route
+          path="/"
+          element={<Inicio onComenzar={() => ir('/test')} onNavegar={navegar} enCurso={enCurso} onContinuar={() => ir('/test/preguntas')} />}
+        />
+        <Route
+          path="/test"
+          element={<main className="contenedor"><Formato onEmpezar={empezar} onVolver={() => ir('/')} enCurso={enCurso} onContinuar={() => ir('/test/preguntas')} /></main>}
+        />
+        <Route
+          path="/test/preguntas"
+          element={!test ? <Navigate to="/test" replace /> : (
+            <main className="contenedor">
+              {test.etapa === 'preguntas' ? (
+                <Pregunta
+                  afirmacion={test.orden[test.indice]}
+                  numero={test.indice + 1}
+                  total={test.orden.length}
+                  elegida={test.respuestas[test.orden[test.indice].id]}
+                  onResponder={responder}
+                  onVolver={volverPregunta}
+                />
+              ) : (
+                <Dilema
+                  dilema={dilemas[test.indiceDilema]}
+                  numero={test.indiceDilema + 1}
+                  total={dilemas.length}
+                  elegida={test.elecciones[dilemas[test.indiceDilema].id]}
+                  onElegir={elegir}
+                  onVolver={volverDilema}
+                />
+              )}
+            </main>
+          )}
+        />
+        <Route
+          path="/resultado"
+          element={posiciones ? <main className="contenedor"><Resultado posiciones={posiciones} onReiniciar={reiniciar} /></main> : <Navigate to="/" replace />}
+        />
+        <Route path="/r/:codigo" element={<main className="contenedor"><ResultadoCompartido /></main>} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </>
   );
 }

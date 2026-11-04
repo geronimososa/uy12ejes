@@ -247,3 +247,14 @@ describe('ejes sin datos', () => {
     expect(etiqueta(artigas, ejes)).not.toMatch(/undefined|null|NaN/);
   });
 });
+
+describe('enlace opaco', () => {
+  it('no muestra los números y detecta un código modificado', () => {
+    const vector = { estructura: 64, representacion: 59, poder: 47, inmigracion: 50, diplomacia: 50, intervencion: 59, economia: 38, control: 42, comercio: 63, religion: 48, moral: 37, tecnologia: 60 };
+    const codigo = codificar(vector);
+    expect(codigo).not.toMatch(/64|59|47/);
+    expect(decodificar(codigo)).toEqual(vector);
+    const alterado = (codigo[0] === 'A' ? 'B' : 'A') + codigo.slice(1);
+    expect(decodificar(alterado)).toBeNull();
+  });
+});

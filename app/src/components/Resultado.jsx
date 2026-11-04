@@ -32,7 +32,7 @@ function Afinidad({ fila }) {
   );
 }
 
-export default function Resultado({ posiciones, onReiniciar }) {
+export default function Resultado({ posiciones, onReiniciar, compartido = false }) {
   const [copiado, setCopiado] = useState('');
   const yo = posicionCompas(posiciones);
   const centro = centroUruguayo(partidos);
@@ -42,7 +42,7 @@ export default function Resultado({ posiciones, onReiniciar }) {
   const menosAfin = rankingReferentes[rankingReferentes.length - 1];
 
   async function copiar() {
-    const enlace = `${window.location.origin}${window.location.pathname}?v=${codificar(posiciones)}`;
+    const enlace = `${window.location.origin}/r/${codificar(posiciones)}`;
     try {
       await navigator.clipboard.writeText(enlace);
       setCopiado('Enlace copiado.');
@@ -53,7 +53,7 @@ export default function Resultado({ posiciones, onReiniciar }) {
 
   return (
     <section className="resultado">
-      <p className="sobretitulo">Tu resultado</p>
+      <p className="sobretitulo">{compartido ? "Resultado compartido" : "Tu resultado"}</p>
       <h1>{etiqueta(posiciones, ejes)}</h1>
       <p className="bajada">
         Respecto al centro político uruguayo, estás <strong>{lecturaUruguaya(yo, centro)}</strong>.
@@ -94,13 +94,13 @@ export default function Resultado({ posiciones, onReiniciar }) {
 
       <div className="acciones">
         <button type="button" className="principal" onClick={copiar}>Copiar enlace al resultado</button>
-        <button type="button" onClick={onReiniciar}>Hacer el test de nuevo</button>
+        <button type="button" onClick={onReiniciar}>{compartido ? "Hacer mi propio test" : "Hacer el test de nuevo"}</button>
       </div>
       {copiado ? <p className="nota copiado">{copiado}</p> : null}
 
       <h2>Nota metodológica</h2>
       <p className="nota">
-        uy12ejes es una herramienta para explorar ideas, no un instrumento científico. Un porcentaje alto de afinidad significa que tus respuestas se parecen a un perfil, no que pertenezcas a un partido o debas votarlo. Las ubicaciones de partidos y referentes son <strong>estimaciones</strong> basadas en votos, leyes y declaraciones públicas, todavía en revisión. Las preguntas llevan, inevitablemente, la mirada de quien las escribió.
+        uy12ejes es una herramienta para explorar ideas, no un instrumento científico. Un porcentaje alto de afinidad significa que tus respuestas se parecen a un perfil, no que pertenezcas a un partido o debas votarlo. Las ubicaciones de partidos y referentes son <strong>estimaciones</strong> basadas en votos, leyes y declaraciones públicas, todavía en revisión.
       </p>
     </section>
   );
