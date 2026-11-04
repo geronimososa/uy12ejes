@@ -405,15 +405,15 @@ Dónde quedan en el compás (con la calibración final):
 | Izquierda libertaria | Michelini, Galeano, FAU, Constanza Moreira, Civila |
 | Izquierda | Artigas, Batlle y Ordóñez, Brum, Batlle Berres, Wilson Ferreira, Seregni, Vázquez, Mujica, Topolansky, Cosse, Daniel Martínez, Alejandro Sánchez |
 | Centroizquierda | Orsi, Bergara, Salle |
-| Centro | Astori, Oddone, Argimón, Olivera, Mieres, Manini Ríos, Lust |
-| Centroderecha | Sanguinetti, Larrañaga, Lacalle Pou, Delgado, Arbeleche |
+| Centro | Astori, Oddone, Argimón, Delgado, Olivera, Mieres, Manini Ríos, Lust |
+| Centroderecha | Sanguinetti, Larrañaga, Lacalle Pou, Arbeleche |
 | Derecha | Saravia, Herrera, Lacalle Herrera, Jorge Batlle, Pedro Bordaberry, Raffo, Ojeda, Talvi, Gurméndez, García, Bianchi, Zubía, Dastugue |
 | Derecha liberal | da Silva |
 | Autoritarismo de centro | Pacheco Areco, Gregorio Álvarez |
 | Derecha autoritaria | Terra, Juan María Bordaberry |
 
 Puntos a revisar en la segunda lectura:
-- **Delgado** queda en la centroderecha (X 60), no en el centro: como candidato de continuidad defendió la regla fiscal, la LUC y la apertura comercial. Si hay posiciones suyas que lo acercan al centro, se corrigen las respuestas en el archivo de auditoría.
+- **Delgado** pasó de la centroderecha (X 60) al centro (X 50,5) en la segunda lectura. Se corrigieron siete respuestas de Economía y Control hacia posiciones moderadas: sindicatos, venta de empresas públicas, impuesto a la herencia, precios máximos, impuestos progresivos, el efecto de bajar impuestos sobre el empleo y el precio del dólar. Mantiene la regla fiscal, la independencia del Banco Central y la defensa de las AFAP.
 - **Izquierda libertaria** agrupa a quienes combinan izquierda económica con rechazo fuerte al punitivismo (Civila, Moreira, Galeano, Michelini). Es una lectura técnica del compás; puede sonar rara para el uso uruguayo de "libertario".
 - Las **22 ideologías** siguen con vectores estimados a mano. Son la próxima auditoría.
 
