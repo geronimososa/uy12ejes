@@ -1,6 +1,11 @@
 <div align="center">
 
-# uy12ejes
+<a href="https://uy12ejes.vercel.app">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/img/logo-oscuro.svg">
+    <img src="docs/img/logo-claro.svg" alt="uy12ejes" width="360">
+  </picture>
+</a>
 
 ### El test político de 12 ejes pensado para Uruguay
 
@@ -10,6 +15,17 @@ qué partido piensa más parecido a vos y qué referente uruguayo está más cer
 <br>
 
 [![Hacer el test](https://img.shields.io/badge/Hacer_el_test-uy12ejes.vercel.app-f5c518?style=for-the-badge&labelColor=0b3a7e)](https://uy12ejes.vercel.app)
+
+<br><br>
+
+<table>
+<tr>
+<td align="center"><sub><b>Si respondieras como Yamandú Orsi</b></sub><br><br><img src="docs/img/ejemplo-orsi.png" alt="Tarjeta de resultado de ejemplo: Yamandú Orsi, Centroizquierda progresista" width="400"></td>
+<td align="center"><sub><b>Si respondieras como Luis Lacalle Pou</b></sub><br><br><img src="docs/img/ejemplo-lacalle-pou.png" alt="Tarjeta de resultado de ejemplo: Luis Lacalle Pou, Centroderecha aperturista" width="400"></td>
+</tr>
+</table>
+
+<sub>Tarjetas de ejemplo como las que genera el sitio al terminar el test.</sub>
 
 <br>
 
@@ -26,6 +42,8 @@ qué partido piensa más parecido a vos y qué referente uruguayo está más cer
 
 > [!NOTE]
 > uy12ejes es una herramienta para explorar ideas, no un instrumento científico. Una afinidad alta significa que tus respuestas se parecen a un perfil, no que pertenezcas a un partido ni que debas votarlo.
+>
+> **Datos actualizados a noviembre de 2026.** La ventana de Overton y las posiciones político-partidarias e ideológicas están ajustadas a esa fecha e intentan ser lo más objetivas posible según la información y los datos utilizados.
 
 ---
 
@@ -237,23 +255,11 @@ $$
 
 ### Los partidos en el compás
 
-```mermaid
-quadrantChart
-    title Partidos con bancas en el compás uruguayo
-    x-axis Izquierda --> Derecha
-    y-axis Libertario --> Autoritario
-    quadrant-1 Derecha autoritaria
-    quadrant-2 Izquierda autoritaria
-    quadrant-3 Izquierda libertaria
-    quadrant-4 Derecha libertaria
-    Frente Amplio: [0.29, 0.14]
-    Partido Nacional: [0.63, 0.365]
-    Partido Colorado: [0.665, 0.31]
-    Cabildo Abierto: [0.42, 0.535]
-    Identidad Soberana: [0.315, 0.25]
-    Partido Independiente: [0.465, 0.27]
-    Centro uruguayo: [0.459, 0.247]
-```
+<p align="center">
+  <img src="docs/img/compas.png" alt="Compás uruguayo con los seis partidos con bancas, la ventana de Overton sombreada y el centro uruguayo" width="560">
+</p>
+
+<p align="center"><sub>FA: Frente Amplio · PN: Partido Nacional · PC: Partido Colorado · CA: Cabildo Abierto · IS: Identidad Soberana · PI: Partido Independiente.<br>La zona sombreada es la ventana de Overton: lo más oscuro, el rango entre FA, PN y PC; lo más claro, el de todos los partidos con bancas.</sub></p>
 
 ### El centro uruguayo
 
@@ -271,7 +277,7 @@ Tu resultado se lee respecto de ese centro:
 
 ## La ventana de Overton uruguaya
 
-La **ventana de Overton** es el rango de ideas que hoy se discuten en serio en un país. uy12ejes la calcula eje por eje con la posición de los partidos con bancas y de un grupo de legisladores auditados (2020–2030):
+La **ventana de Overton** es el rango de ideas que hoy se discuten en serio en un país. uy12ejes la calcula eje por eje con la posición de los partidos con bancas y de un grupo de legisladores auditados (2020–2030). Los valores están ajustados a **noviembre de 2026**:
 
 | Zona | Qué significa | Cómo se calcula |
 |---|---|---|

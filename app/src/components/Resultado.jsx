@@ -8,6 +8,7 @@ import { ventana } from '../logic/overton.js';
 import BarraEje from './BarraEje.jsx';
 import Compas from './Compas.jsx';
 import TarjetaResultado from './TarjetaResultado.jsx';
+import { AVISO_ACTUALIZACION } from '../data/actualizacion.js';
 import CompartirImagen from './CompartirImagen.jsx';
 import Foto from './Foto.jsx';
 
@@ -129,7 +130,7 @@ export default function Resultado({ posiciones, onReiniciar, compartido = false 
 
       <h2>Nota metodológica</h2>
       <p className="nota">
-        uy12ejes es una herramienta para explorar ideas, no un instrumento científico. Un porcentaje alto de afinidad significa que tus respuestas se parecen a un perfil, no que pertenezcas a un partido o debas votarlo. Las ubicaciones de partidos y referentes son <strong>estimaciones</strong> basadas en votos, leyes y declaraciones públicas, todavía en revisión.
+        uy12ejes es una herramienta para explorar ideas, no un instrumento científico. Un porcentaje alto de afinidad significa que tus respuestas se parecen a un perfil, no que pertenezcas a un partido o debas votarlo. Las ubicaciones de partidos y referentes son <strong>estimaciones</strong> basadas en votos, leyes y declaraciones públicas, todavía en revisión. {AVISO_ACTUALIZACION}
       </p>
     </section>
   );

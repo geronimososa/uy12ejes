@@ -1,4 +1,5 @@
 import { posicionCompas } from '../logic/compas.js';
+import { ACTUALIZACION } from '../data/actualizacion.js';
 
 const SIGLAS = {
   'frente-amplio': 'FA',
@@ -40,7 +41,7 @@ export default function Compas({ usuario, partidos, centro }) {
     <div className="compas">
       <div className="compas-explicacion">
         <p><strong>Cómo leerlo.</strong> De izquierda a derecha, la economía: más Estado o más mercado. De abajo hacia arriba, el poder: más libertades y garantías, o más autoridad y orden.</p>
-        <p><strong>La zona sombreada es lo que hoy se discute en serio en Uruguay.</strong> Es el espacio que ocupan los partidos con bancas en el Parlamento. Lo más oscuro es donde se mueven el FA, el PN y el PC. Si tu punto cae afuera, tus ideas existen, pero hoy ningún partido con bancas las defiende así.</p>
+        <p><strong>La zona sombreada es lo que hoy se discute en serio en Uruguay.</strong> Es el espacio que ocupan los partidos con bancas en el Parlamento. Lo más oscuro es donde se mueven el FA, el PN y el PC. Si tu punto cae afuera, tus ideas existen, pero hoy ningún partido con bancas las defiende así. Datos ajustados a {ACTUALIZACION}.</p>
         <ul className="compas-leyenda">
           <li><i className="cl-usuario" /> Vos</li>
           <li><i className="cl-partido" /> Partidos</li>

@@ -7,6 +7,7 @@ import { etiqueta } from '../logic/compas.js';
 import EjesInicio from './EjesInicio.jsx';
 import Foto from './Foto.jsx';
 import Ideologias from './Ideologias.jsx';
+import { AVISO_ACTUALIZACION } from '../data/actualizacion.js';
 import TarjetaResultado from './TarjetaResultado.jsx';
 
 const partidos = perfiles.filter((p) => p.tipo === 'partido');
@@ -134,7 +135,7 @@ export default function Inicio({ onComenzar, onNavegar, enCurso, onContinuar }) 
           <li><strong>Resolvés 8 dilemas.</strong> Escenarios uruguayos de opción múltiple que tocan varios ejes a la vez.</li>
           <li><strong>Ves tu resultado.</strong> Tu posición en los 12 ejes, en el compás uruguayo y frente a la ventana de Overton, y los partidos, referentes e ideologías más afines. Podés compartirlo con un link.</li>
         </ol>
-        <p className="nota">Tus respuestas no salen de tu navegador. Las ubicaciones de partidos, referentes e ideologías salen de responder el mismo test, a partir de sus votos, programas y declaraciones públicas.</p>
+        <p className="nota">Tus respuestas no salen de tu navegador. Las ubicaciones de partidos, referentes e ideologías salen de responder el mismo test, a partir de sus votos, programas y declaraciones públicas. {AVISO_ACTUALIZACION}</p>
       </section>
 
       <section className="seccion" id="ejes">
@@ -189,6 +190,7 @@ export default function Inicio({ onComenzar, onNavegar, enCurso, onContinuar }) 
 
       <footer className="pie">
         <p><strong>uy12ejes</strong> es una herramienta para explorar ideas, no un instrumento científico. Inspirado en tests multieje como 12 Axes y Political Compass. Ubicaciones en revisión: si ves un error, avisanos.</p>
+        <p className="pie-actualizacion">{AVISO_ACTUALIZACION}</p>
         <p><Link to="/creditos">Créditos de las imágenes</Link></p>
       </footer>
     </div>
