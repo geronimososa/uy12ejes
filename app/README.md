@@ -16,9 +16,9 @@ npm run dev
 
 | Carpeta | Contenido |
 |---|---|
-| `src/data/` | `ejes.json`, `afirmaciones.json` (120), `dilemas.json` (5), `perfiles.json` (6 partidos, 59 referentes, 22 ideologías) |
+| `src/data/` | `ejes.json`, `afirmaciones.json` (120), `dilemas.json` (8), `perfiles.json` (6 partidos, 59 referentes, 22 ideologías), `fotos.json` (créditos de imágenes) |
 | `src/logic/` | `calculo.js` (posiciones, intensidad, afinidad), `compas.js` (compás, regiones, etiqueta, centro uruguayo), `overton.js` (ventana por eje), `enlace.js` (resultado en la URL) |
-| `src/components/` | Pantallas: `Inicio`, `Pregunta`, `Dilema`, `Resultado`, y los gráficos `BarraEje` y `Compas` |
+| `src/components/` | Pantallas: `Inicio`, `Pregunta`, `Dilema`, `Resultado`, `Creditos`, los gráficos `BarraEje` y `Compas`, y `TarjetaResultado` y `Foto` |
 
 ## Datos
 
