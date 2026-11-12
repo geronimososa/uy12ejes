@@ -77,3 +77,10 @@ export function rankear(usuario, perfiles) {
     .map((perfil) => ({ perfil, ...afinidad(usuario, perfil.vector) }))
     .sort((a, b) => b.porcentaje - a.porcentaje);
 }
+
+export const AFINIDAD_HISTORICA_MINIMA = 60;
+
+export function figuraHistorica(rankingReferentes) {
+  const mejor = rankingReferentes.find((fila) => fila.perfil.epoca === 'historico');
+  return mejor && mejor.porcentaje >= AFINIDAD_HISTORICA_MINIMA ? mejor : null;
+}
