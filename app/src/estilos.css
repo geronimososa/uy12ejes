@@ -418,7 +418,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--celeste); outli
 .tr-etiqueta { margin: 4px 0 16px; font-size: 1.9rem; line-height: 1.1; color: #fff; }
 .tr-cuerpo { display: grid; grid-template-columns: 1fr 1.25fr; gap: 10px; margin-bottom: 10px; }
 .tr-bloque { background: var(--tr-bloque); border-radius: 16px; padding: 14px; min-width: 0; }
-.tr-afin { display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(160deg, #2c4a72, #2a3442 70%); }
+.tr-afin { display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(160deg, var(--tr-espectro-suave, #2c4a72), #2a3442 70%); }
 .tr-porcentaje { margin: 0; font-size: 2.6rem; font-weight: 800; line-height: 1; color: #fff; }
 .tr-afin strong { margin-top: 8px; font-size: 1.15rem; line-height: 1.2; }
 .tr-descripcion { margin: 4px 0 0; font-size: 0.78rem; color: var(--tr-suave); }
@@ -489,3 +489,20 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--celeste); outli
 .resultado .afinidad .detalle { margin-top: 6px; }
 .resultado .acciones { margin-top: 56px; }
 .resultado > .nota { line-height: 1.6; }
+
+.foto { display: inline-block; flex: none; border-radius: 50%; object-fit: cover; background: #e9e4d8; vertical-align: middle; }
+.foto-logo { border-radius: 22%; background: #ffffff; }
+.foto-iniciales { display: inline-flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 700; letter-spacing: 0.02em; line-height: 1; }
+.tarjeta-perfil-cabeza { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
+.afinidad-cabeza { align-items: center; }
+.afinidad-cabeza strong { flex: 1; }
+.tr-afin-cabeza { display: flex; align-items: center; gap: 12px; }
+.tr-afin-cabeza .foto { border: 2px solid #f5c518; }
+.tr-lista li { align-items: center; }
+.tr-lista li span, .tr-historica p span { flex: 1; }
+.tr-historica p { align-items: center; }
+.lista-creditos { list-style: none; padding: 0; margin: 20px 0; display: grid; gap: 12px; }
+.lista-creditos li { display: flex; gap: 12px; align-items: flex-start; }
+.lista-creditos p { margin: 2px 0 0; font-size: 0.85rem; color: var(--suave); overflow-wrap: anywhere; }
+.pie a, .creditos a { color: var(--azul); }
+.tr-historica p span { min-width: 0; line-height: 1.2; }

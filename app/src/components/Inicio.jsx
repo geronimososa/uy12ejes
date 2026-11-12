@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import ejes from '../data/ejes.json';
 import perfiles from '../data/perfiles.json';
-import { rankear } from '../logic/calculo.js';
+import { figuraHistorica, rankear } from '../logic/calculo.js';
 import { etiqueta } from '../logic/compas.js';
 import EjesInicio from './EjesInicio.jsx';
+import Foto from './Foto.jsx';
 import Ideologias from './Ideologias.jsx';
 import TarjetaResultado from './TarjetaResultado.jsx';
 
@@ -26,7 +28,7 @@ const EJEMPLOS = ['orsi', 'lacalle-pou'].map((id) => {
     referentes: rankingReferentes.slice(0, 4),
     partidos: rankear(persona.vector, partidos).slice(0, 3),
     ideologia: rankear(persona.vector, ideologias)[0],
-    historica: rankingReferentes.find((fila) => fila.perfil.epoca === 'historico'),
+    historica: figuraHistorica(rankingReferentes),
   };
 });
 
@@ -77,7 +79,10 @@ function Ejemplo() {
 function Tarjeta({ perfil, extra }) {
   return (
     <li className="tarjeta-perfil">
-      <strong>{perfil.nombre}</strong>
+      <div className="tarjeta-perfil-cabeza">
+        <Foto perfil={perfil} tamano={52} />
+        <strong>{perfil.nombre}</strong>
+      </div>
       <span className="tarjeta-region">{etiqueta(perfil.vector, ejes)}</span>
       <p>{perfil.descripcion}</p>
       {Object.values(perfil.vector).some((v) => v === null) ? (
@@ -184,6 +189,7 @@ export default function Inicio({ onComenzar, onNavegar, enCurso, onContinuar }) 
 
       <footer className="pie">
         <p><strong>uy12ejes</strong> es una herramienta para explorar ideas, no un instrumento científico. Inspirado en tests multieje como 12 Axes y Political Compass. Ubicaciones en revisión: si ves un error, avisanos.</p>
+        <p><Link to="/creditos">Créditos de las imágenes</Link></p>
       </footer>
     </div>
   );

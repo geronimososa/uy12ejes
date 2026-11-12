@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import ejes from '../data/ejes.json';
 import perfiles from '../data/perfiles.json';
-import { rankear } from '../logic/calculo.js';
+import { AFINIDAD_HISTORICA_MINIMA, figuraHistorica, rankear } from '../logic/calculo.js';
 import { centroUruguayo, etiqueta, lecturaUruguaya, posicionCompas } from '../logic/compas.js';
 import { codificar } from '../logic/enlace.js';
 import { ventana } from '../logic/overton.js';
@@ -9,6 +9,7 @@ import BarraEje from './BarraEje.jsx';
 import Compas from './Compas.jsx';
 import TarjetaResultado from './TarjetaResultado.jsx';
 import CompartirImagen from './CompartirImagen.jsx';
+import Foto from './Foto.jsx';
 
 const partidos = perfiles.filter((p) => p.tipo === 'partido');
 const referentes = perfiles.filter((p) => p.tipo === 'referente');
@@ -21,6 +22,7 @@ function Afinidad({ fila }) {
   return (
     <li className="afinidad">
       <div className="afinidad-cabeza">
+        {fila.perfil.tipo !== 'ideologia' ? <Foto perfil={fila.perfil} tamano={40} /> : null}
         <strong>{fila.perfil.nombre}</strong>
         <span>{fila.porcentaje} %</span>
       </div>
@@ -43,7 +45,7 @@ export default function Resultado({ posiciones, onReiniciar, compartido = false 
   const rankingReferentes = rankear(posiciones, referentes);
   const rankingIdeologias = rankear(posiciones, ideologias);
   const menosAfin = rankingReferentes[rankingReferentes.length - 1];
-  const historica = rankingReferentes.find((fila) => fila.perfil.epoca === 'historico');
+  const historica = figuraHistorica(rankingReferentes);
 
   async function copiar() {
     const enlace = `${window.location.origin}/r/${codificar(posiciones)}`;
@@ -108,7 +110,11 @@ export default function Resultado({ posiciones, onReiniciar, compartido = false 
       <h2>Referentes más afines</h2>
       <ol className="lista">{rankingReferentes.slice(0, 5).map((fila) => <Afinidad key={fila.perfil.id} fila={fila} />)}</ol>
       <h3>Figura histórica más afín</h3>
-      <ol className="lista"><Afinidad fila={historica} /></ol>
+      {historica ? (
+        <ol className="lista"><Afinidad fila={historica} /></ol>
+      ) : (
+        <p className="nota">Ninguna figura histórica llega al {AFINIDAD_HISTORICA_MINIMA} % de afinidad con tus respuestas.</p>
+      )}
       <h3>El menos afín</h3>
       <ol className="lista"><Afinidad fila={menosAfin} /></ol>
 

@@ -10,6 +10,7 @@ import Formato from './components/Formato.jsx';
 import Pregunta from './components/Pregunta.jsx';
 import Dilema from './components/Dilema.jsx';
 import Resultado from './components/Resultado.jsx';
+import Creditos from './components/Creditos.jsx';
 
 const CLAVE_TEST = 'uy12ejes-test';
 const CLAVE_RESULTADO = 'uy12ejes-resultado';
@@ -197,6 +198,7 @@ export default function App() {
           element={posiciones ? <main className="contenedor"><Resultado posiciones={posiciones} onReiniciar={reiniciar} /></main> : <Navigate to="/" replace />}
         />
         <Route path="/r/:codigo" element={<main className="contenedor"><ResultadoCompartido /></main>} />
+        <Route path="/creditos" element={<main className="contenedor"><Creditos /></main>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
