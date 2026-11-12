@@ -288,14 +288,85 @@ Complemento de [DISENO.md](DISENO.md). Escala de cada eje: **0 = polo A, 100 = p
 
 ---
 
-## Dilemas uruguayos (5)
+## Dilemas uruguayos (8)
 
-Se responden al final, con una sola opción. Cada opción suma una respuesta más en los ejes indicados (valor 0 = polo A, 100 = polo B). Los textos son escenarios concretos, distintos de los "arquetipos" del original.
+Se responden al final, con una sola opción. Cada opción suma una respuesta más en los ejes indicados (valor 0 = polo A, 100 = polo B). Los textos son escenarios concretos, distintos de los "arquetipos" del original. Cubren los ejes que menos tocaban los dilemas anteriores: Inmigración, Diplomacia, Religión y Economía.
 
-### D1. Memoria · "¿Cómo debería recordar el país los años 1968–1985?"
+### D1. Memoria · "Aparecen restos de un desaparecido en un predio militar. ¿Qué debería pasar?"
 
 | Opción | Efectos |
 |---|---|
+| A. Abrir todos los archivos militares y juzgar a los responsables, sin plazo. | Representación 5 |
+| B. Juzgar los casos con pruebas, y también reconocer a las víctimas de la guerrilla. | Representación 25 |
+| C. Identificar y entregar los restos, pero sin reabrir causas: la Ley de Caducidad se votó dos veces. | Representación 35 |
+| D. Basta de revisar el pasado: los militares ya pagaron demasiado. | Representación 75 · Poder 15 |
+
+### D2. Un presidente popular · "Un presidente con 70 % de apoyo quiere gobernar por decreto durante un año para "ordenar la seguridad". ¿Qué opinás?"
+
+| Opción | Efectos |
+|---|---|
+| A. Nunca: las reglas valen más que cualquier urgencia. | Representación 5 · Poder 75 |
+| B. Solo con aprobación del Parlamento y por un plazo corto. | Representación 30 · Poder 45 |
+| C. Que lo decida la gente en un plebiscito. | Representación 55 · Poder 40 |
+| D. Si funciona, que lo haga. | Representación 85 · Poder 15 |
+
+### D3. AFAP y jubilaciones · "El sistema jubilatorio tiene déficit. ¿Qué hacés?"
+
+| Opción | Efectos |
+|---|---|
+| A. Eliminar las AFAP y volver a un sistema 100 % público. | Economía 5 · Control 20 |
+| B. Mantener el sistema mixto y subir los aportes de los que más ganan. | Economía 35 · Control 30 |
+| C. Subir la edad de retiro y mantener las AFAP. | Economía 65 · Control 70 |
+| D. Que cada uno elija su ahorro privado, con una jubilación mínima del Estado. | Economía 90 · Control 85 |
+
+### D4. ANCAP · "ANCAP pierde plata. ¿Qué hacés?"
+
+| Opción | Efectos |
+|---|---|
+| A. Sigue estatal y con monopolio: es estratégica. | Economía 10 · Comercio 25 |
+| B. Sigue estatal, pero con gestión profesional y metas. | Economía 35 |
+| C. Asociarla con una empresa privada para refinar. | Economía 65 |
+| D. Abrir la importación de combustibles y que compita. | Economía 85 · Comercio 85 |
+
+### D5. Inmigración · "Llegan miles de inmigrantes de Venezuela, Cuba y otros países. ¿Qué priorizás?"
+
+| Opción | Efectos |
+|---|---|
+| A. Puertas abiertas y regularización rápida: Uruguay se hizo con inmigrantes. | Inmigración 95 |
+| B. Recibirlos, con cursos de idioma, cultura y acceso al trabajo formal. | Inmigración 65 |
+| C. Recibir solo a quienes tengan un oficio o una oferta de trabajo. | Inmigración 35 |
+| D. Frenar la llegada hasta resolver el empleo de los uruguayos. | Inmigración 10 |
+
+### D6. Conflicto internacional · "Una potencia invade a un país vecino suyo. ¿Qué hace Uruguay?"
+
+| Opción | Efectos |
+|---|---|
+| A. Condena firme y apoyo a las sanciones, junto a sus aliados. | Intervención 85 · Diplomacia 35 |
+| B. Condena en la ONU, pero sin sanciones: somos un país chico. | Intervención 55 · Diplomacia 65 |
+| C. Neutralidad total: no es nuestro problema. | Intervención 10 · Diplomacia 60 |
+| D. Ofrecer mediación y mandar ayuda humanitaria. | Intervención 40 · Diplomacia 90 |
+
+### D7. Religión en lo público · "Una intendencia quiere poner una estatua de la Virgen en la rambla. ¿Qué opinás?"
+
+| Opción | Efectos |
+|---|---|
+| A. No: el espacio público es laico, sin excepciones. | Religión 5 |
+| B. Sí, si se permite lo mismo a otras creencias. | Religión 45 · Inmigración 70 |
+| C. Sí: es parte de la cultura del país. | Religión 70 · Moral 70 |
+| D. Sí, y el Estado debería apoyar más a las iglesias por su trabajo social. | Religión 90 · Moral 80 |
+
+### D8. Marihuana y consumo · "Aumenta el consumo problemático entre los jóvenes. ¿Qué hacés?"
+
+| Opción | Efectos |
+|---|---|
+| A. Mantener la regulación de la marihuana y sumar prevención y salud. | Poder 75 · Moral 25 |
+| B. Ampliar la regulación también a otras drogas. | Poder 95 · Moral 10 |
+| C. Endurecer los controles y limitar los clubes y las farmacias. | Poder 35 · Moral 60 |
+| D. Volver a prohibir la marihuana. | Poder 10 · Moral 80 |
+
+Para las figuras históricas, los dilemas sin equivalente en su época (AFAP, inmigración reciente, regulación de la marihuana, y ANCAP antes de 1931) quedan sin responder y no cuentan.
+
+---|---|
 | A. Memoria, verdad y justicia: buscar a todos los desaparecidos y juzgar a los responsables del terrorismo de Estado. | Representación 5 |
 | B. Reconocer la violencia de todos los sectores y que la Justicia actúe caso a caso. | Representación 25 |
 | C. Dar vuelta la página: la Ley de Caducidad ya la confirmó la ciudadanía dos veces. | Representación 35 |

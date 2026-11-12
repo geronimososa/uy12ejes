@@ -20,7 +20,16 @@
         "moral": "??????????",
         "tecnologia": "??????????"
       },
-      "dilemas": {},
+      "dilemas": {
+        "memoria": "?",
+        "presidente": "A",
+        "afap": "A",
+        "ancap": "A",
+        "inmigracion": "B",
+        "conflicto": "A",
+        "religion": "B",
+        "drogas": "A"
+      },
       "nota": "Instrucciones del Año XIII, Reglamento de tierras y aranceles de 1815; soberanía particular de los pueblos aplicada hoy a la autonomía departamental."
     },
     "batllismo": {
@@ -38,7 +47,16 @@
         "moral": "?d?D??????",
         "tecnologia": "a?????????"
       },
-      "dilemas": {},
+      "dilemas": {
+        "memoria": "?",
+        "presidente": "A",
+        "afap": "B",
+        "ancap": "B",
+        "inmigracion": "A",
+        "conflicto": "D",
+        "religion": "A",
+        "drogas": "A"
+      },
       "nota": "Estado social y empresario, laicidad estricta, reformas sociales tempranas, centralismo modernizador."
     },
     "neobatllismo": {
@@ -56,7 +74,16 @@
         "moral": "?0?0??????",
         "tecnologia": "a?????????"
       },
-      "dilemas": {},
+      "dilemas": {
+        "memoria": "?",
+        "presidente": "A",
+        "afap": "A",
+        "ancap": "B",
+        "inmigracion": "A",
+        "conflicto": "D",
+        "religion": "B",
+        "drogas": "A"
+      },
       "nota": "Industrialización protegida y Estado de bienestar de mediados del siglo XX."
     },
     "herrerismo": {
@@ -74,7 +101,16 @@
         "moral": "?a?a??????",
         "tecnologia": "da?a??????"
       },
-      "dilemas": {},
+      "dilemas": {
+        "memoria": "?",
+        "presidente": "C",
+        "afap": "C",
+        "ancap": "C",
+        "inmigracion": "D",
+        "conflicto": "C",
+        "religion": "C",
+        "drogas": "C"
+      },
       "nota": "Nacionalismo blanco de Herrera: neutralidad, defensa del campo y de la tradición."
     },
     "wilsonismo": {
@@ -93,7 +129,14 @@
         "tecnologia": "??????????"
       },
       "dilemas": {
-        "memoria": "B"
+        "memoria": "B",
+        "presidente": "A",
+        "afap": "B",
+        "ancap": "B",
+        "inmigracion": "B",
+        "conflicto": "C",
+        "religion": "B",
+        "drogas": "C"
       },
       "nota": "Nacionalismo blanco reformista (programa de 1971) y opositor a la dictadura."
     },
@@ -112,7 +155,16 @@
         "moral": "??????????",
         "tecnologia": "??????????"
       },
-      "dilemas": {},
+      "dilemas": {
+        "memoria": "?",
+        "presidente": "A",
+        "afap": "A",
+        "ancap": "A",
+        "inmigracion": "A",
+        "conflicto": "C",
+        "religion": "B",
+        "drogas": "A"
+      },
       "nota": "Antiimperialismo latinoamericano de Marcha: ni Estados Unidos ni la URSS."
     },
     "tupamarismo": {
@@ -130,7 +182,16 @@
         "moral": "??????????",
         "tecnologia": "??????????"
       },
-      "dilemas": {},
+      "dilemas": {
+        "memoria": "?",
+        "presidente": "C",
+        "afap": "A",
+        "ancap": "A",
+        "inmigracion": "A",
+        "conflicto": "C",
+        "religion": "B",
+        "drogas": "C"
+      },
       "nota": "Vía armada revolucionaria de los años 60 y 70."
     },
     "seregnismo": {
@@ -149,7 +210,14 @@
         "tecnologia": "??????????"
       },
       "dilemas": {
-        "memoria": "A"
+        "memoria": "A",
+        "presidente": "A",
+        "afap": "B",
+        "ancap": "A",
+        "inmigracion": "A",
+        "conflicto": "C",
+        "religion": "B",
+        "drogas": "A"
       },
       "nota": "Izquierda democrática e institucional, unidad y diálogo."
     },
@@ -170,10 +238,13 @@
       },
       "dilemas": {
         "memoria": "A",
-        "inversion": "D",
-        "seguridad": "C",
-        "mundo": "D",
-        "familia": "A"
+        "presidente": "B",
+        "afap": "A",
+        "ancap": "A",
+        "inmigracion": "A",
+        "conflicto": "C",
+        "religion": "A",
+        "drogas": "A"
       },
       "nota": "Propiedad colectiva de los medios de producción y planificación central bajo un partido de vanguardia."
     },
@@ -194,10 +265,13 @@
       },
       "dilemas": {
         "memoria": "A",
-        "inversion": "D",
-        "seguridad": "C",
-        "mundo": "C",
-        "familia": "A"
+        "presidente": "A",
+        "afap": "A",
+        "ancap": "A",
+        "inmigracion": "A",
+        "conflicto": "D",
+        "religion": "A",
+        "drogas": "B"
       },
       "nota": "Socialismo por la vía electoral, con fuerte propiedad pública y sindicatos."
     },
@@ -218,10 +292,13 @@
       },
       "dilemas": {
         "memoria": "A",
-        "inversion": "B",
-        "seguridad": "B",
-        "mundo": "B",
-        "familia": "A"
+        "presidente": "A",
+        "afap": "B",
+        "ancap": "B",
+        "inmigracion": "B",
+        "conflicto": "B",
+        "religion": "B",
+        "drogas": "A"
       },
       "nota": "Economía de mercado con Estado de bienestar amplio, negociación colectiva y responsabilidad fiscal."
     },
@@ -242,10 +319,13 @@
       },
       "dilemas": {
         "memoria": "A",
-        "inversion": "B",
-        "seguridad": "C",
-        "mundo": "C",
-        "familia": "A"
+        "presidente": "A",
+        "afap": "B",
+        "ancap": "B",
+        "inmigracion": "A",
+        "conflicto": "D",
+        "religion": "A",
+        "drogas": "B"
       },
       "nota": "Ampliación de derechos civiles y cambio social."
     },
@@ -266,10 +346,13 @@
       },
       "dilemas": {
         "memoria": "A",
-        "inversion": "E",
-        "seguridad": "C",
-        "mundo": "D",
-        "familia": "A"
+        "presidente": "A",
+        "afap": "A",
+        "ancap": "A",
+        "inmigracion": "A",
+        "conflicto": "D",
+        "religion": "B",
+        "drogas": "A"
       },
       "nota": "El ambiente como prioridad sobre el crecimiento; desconfianza de la celulosa, los agrotóxicos y la megaminería."
     },
@@ -290,10 +373,13 @@
       },
       "dilemas": {
         "memoria": "B",
-        "inversion": "B",
-        "seguridad": "C",
-        "mundo": "B",
-        "familia": "B"
+        "presidente": "B",
+        "afap": "B",
+        "ancap": "B",
+        "inmigracion": "B",
+        "conflicto": "B",
+        "religion": "C",
+        "drogas": "C"
       },
       "nota": "Valores cristianos aplicados a la justicia social: economía social de mercado, familia y dignidad humana."
     },
@@ -314,10 +400,13 @@
       },
       "dilemas": {
         "memoria": "B",
-        "inversion": "B",
-        "seguridad": "C",
-        "mundo": "A",
-        "familia": "A"
+        "presidente": "A",
+        "afap": "C",
+        "ancap": "C",
+        "inmigracion": "A",
+        "conflicto": "B",
+        "religion": "A",
+        "drogas": "A"
       },
       "nota": "Libertades individuales y mercado, con igualdad de oportunidades y Estado regulador."
     },
@@ -338,10 +427,13 @@
       },
       "dilemas": {
         "memoria": "B",
-        "inversion": "A",
-        "seguridad": "C",
-        "mundo": "A",
-        "familia": "B"
+        "presidente": "A",
+        "afap": "D",
+        "ancap": "D",
+        "inmigracion": "A",
+        "conflicto": "B",
+        "religion": "A",
+        "drogas": "A"
       },
       "nota": "Estado limitado, mercado libre, apertura comercial y libertades individuales."
     },
@@ -362,10 +454,13 @@
       },
       "dilemas": {
         "memoria": "B",
-        "inversion": "A",
-        "seguridad": "D",
-        "mundo": "A",
-        "familia": "C"
+        "presidente": "A",
+        "afap": "D",
+        "ancap": "D",
+        "inmigracion": "A",
+        "conflicto": "C",
+        "religion": "A",
+        "drogas": "B"
       },
       "nota": "Estado mínimo en lo económico y en lo personal; rechazo a impuestos, regulaciones, cuotas y prohibiciones."
     },
@@ -386,10 +481,13 @@
       },
       "dilemas": {
         "memoria": "C",
-        "inversion": "A",
-        "seguridad": "B",
-        "mundo": "A",
-        "familia": "C"
+        "presidente": "B",
+        "afap": "D",
+        "ancap": "D",
+        "inmigracion": "C",
+        "conflicto": "A",
+        "religion": "C",
+        "drogas": "D"
       },
       "nota": "Mercado libre con valores tradicionales, orden y respeto a las instituciones."
     },
@@ -410,10 +508,13 @@
       },
       "dilemas": {
         "memoria": "C",
-        "inversion": "A",
-        "seguridad": "A",
-        "mundo": "B",
-        "familia": "D"
+        "presidente": "B",
+        "afap": "C",
+        "ancap": "C",
+        "inmigracion": "B",
+        "conflicto": "A",
+        "religion": "D",
+        "drogas": "D"
       },
       "nota": "Familia, tradición y religión como base de la sociedad; sin una posición económica definida."
     },
@@ -434,10 +535,13 @@
       },
       "dilemas": {
         "memoria": "B",
-        "inversion": "E",
-        "seguridad": "D",
-        "mundo": "D",
-        "familia": "B"
+        "presidente": "A",
+        "afap": "B",
+        "ancap": "B",
+        "inmigracion": "B",
+        "conflicto": "B",
+        "religion": "B",
+        "drogas": "C"
       },
       "nota": "Defensa de la soberanía y de la Constitución frente a contratos, tratados y organismos internacionales."
     },
@@ -457,7 +561,14 @@
         "tecnologia": "dadada????"
       },
       "dilemas": {
-        "memoria": "A"
+        "memoria": "A",
+        "presidente": "A",
+        "afap": "A",
+        "ancap": "A",
+        "inmigracion": "A",
+        "conflicto": "C",
+        "religion": "A",
+        "drogas": "B"
       },
       "nota": "Sociedad sin Estado, organizada en federaciones libres y autogestión."
     },
@@ -478,7 +589,13 @@
       },
       "dilemas": {
         "memoria": "D",
-        "seguridad": "A"
+        "presidente": "D",
+        "afap": "C",
+        "ancap": "C",
+        "inmigracion": "D",
+        "conflicto": "A",
+        "religion": "C",
+        "drogas": "D"
       },
       "nota": "Gobierno de las Fuerzas Armadas por encima de las instituciones, en nombre del orden."
     }

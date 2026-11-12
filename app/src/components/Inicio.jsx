@@ -3,6 +3,9 @@ import ejes from '../data/ejes.json';
 import perfiles from '../data/perfiles.json';
 import { rankear } from '../logic/calculo.js';
 import { etiqueta } from '../logic/compas.js';
+import EjesInicio from './EjesInicio.jsx';
+import Ideologias from './Ideologias.jsx';
+import TarjetaResultado from './TarjetaResultado.jsx';
 
 const partidos = perfiles.filter((p) => p.tipo === 'partido');
 const referentes = perfiles.filter((p) => p.tipo === 'referente');
@@ -16,14 +19,18 @@ const GRUPOS = [
 
 const EJEMPLOS = ['orsi', 'lacalle-pou'].map((id) => {
   const persona = referentes.find((r) => r.id === id);
+  const otros = referentes.filter((r) => r.id !== id);
+  const rankingReferentes = rankear(persona.vector, otros);
   return {
     persona,
-    partido: rankear(persona.vector, partidos)[0],
-    cercano: rankear(persona.vector, referentes.filter((r) => r.id !== id))[0],
+    referentes: rankingReferentes.slice(0, 4),
+    partidos: rankear(persona.vector, partidos).slice(0, 3),
+    ideologia: rankear(persona.vector, ideologias)[0],
+    historica: rankingReferentes.find((fila) => fila.perfil.epoca === 'historico'),
   };
 });
 
-const SEGUNDOS_POR_EJEMPLO = 6;
+const SEGUNDOS_POR_EJEMPLO = 7;
 
 function Ejemplo() {
   const [actual, setActual] = useState(0);
@@ -31,28 +38,24 @@ function Ejemplo() {
   useEffect(() => {
     const intervalo = setInterval(() => setActual((prev) => (prev + 1) % EJEMPLOS.length), SEGUNDOS_POR_EJEMPLO * 1000);
     return () => clearInterval(intervalo);
-  }, []);
+  }, [actual]);
 
   return (
     <aside className="ejemplo" aria-label="Ejemplos de resultado">
       <p className="sobretitulo">Ejemplo de resultado</p>
       <div className="ejemplo-carrusel">
-        {EJEMPLOS.map(({ persona, partido, cercano }, i) => (
-          <div key={persona.id} className={`ejemplo-diapositiva${i === actual ? ' visible' : ''}`} aria-hidden={i !== actual}>
-            <p className="ejemplo-quien">Si respondieras como <strong>{persona.nombre}</strong></p>
-            <p className="ejemplo-etiqueta">{etiqueta(persona.vector, ejes)}</p>
-            <p className="ejemplo-afin">
-              Partido más afín: <strong>{partido.perfil.nombre}</strong> ({partido.porcentaje} %)<br />
-              También cerca de: <strong>{cercano.perfil.nombre}</strong> ({cercano.porcentaje} %)
-            </p>
-            <ul className="ejemplo-ejes">
-              {ejes.map((e) => (
-                <li key={e.id}>
-                  <span className="ejemplo-nombre">{e.nombre}</span>
-                  <span className="ejemplo-barra"><span style={{ left: `${persona.vector[e.id]}%` }} /></span>
-                </li>
-              ))}
-            </ul>
+        {EJEMPLOS.map((ej, i) => (
+          <div key={ej.persona.id} className={`ejemplo-diapositiva${i === actual ? ' visible' : ''}`} aria-hidden={i !== actual}>
+            <p className="ejemplo-quien">Si respondieras como <strong>{ej.persona.nombre}</strong></p>
+            <TarjetaResultado
+              etiqueta={etiqueta(ej.persona.vector, ejes)}
+              referentes={ej.referentes}
+              partidos={ej.partidos}
+              ideologia={ej.ideologia}
+              historica={ej.historica}
+              posiciones={ej.persona.vector}
+              encabezado="Ejemplo"
+            />
           </div>
         ))}
       </div>
@@ -123,7 +126,7 @@ export default function Inicio({ onComenzar, onNavegar, enCurso, onContinuar }) 
         <ol className="pasos">
           <li><strong>Elegís el formato.</strong> Rápido (48 afirmaciones, unos 6 minutos) o completo (120, unos 15 minutos).</li>
           <li><strong>Respondés afirmaciones.</strong> Sobre principios y sobre debates uruguayos concretos: la dictadura, la LUC, las AFAP, la laicidad, el Mercosur. Podés decir "No sé" y no cuenta.</li>
-          <li><strong>Resolvés 5 dilemas.</strong> Escenarios uruguayos de opción múltiple que tocan varios ejes a la vez.</li>
+          <li><strong>Resolvés 8 dilemas.</strong> Escenarios uruguayos de opción múltiple que tocan varios ejes a la vez.</li>
           <li><strong>Ves tu resultado.</strong> Tu posición en los 12 ejes, en el compás uruguayo y frente a la ventana de Overton, y los partidos, referentes e ideologías más afines. Podés compartirlo con un link.</li>
         </ol>
         <p className="nota">Tus respuestas no salen de tu navegador. Las ubicaciones de partidos, referentes e ideologías salen de responder el mismo test, a partir de sus votos, programas y declaraciones públicas.</p>
@@ -133,35 +136,15 @@ export default function Inicio({ onComenzar, onNavegar, enCurso, onContinuar }) 
         <p className="sobretitulo">Los 12 ejes</p>
         <h2>Doce preguntas de fondo, medidas por separado</h2>
         <p className="bajada">Cada eje va de un polo al otro. Podés estar en un extremo en uno y en el centro en otro: el test muestra esa combinación en vez de promediarla.</p>
-        <ol className="lista-ejes">
-          {ejes.map((e, i) => (
-            <li key={e.id} className="eje-tarjeta">
-              <p className="eje-numero">{String(i + 1).padStart(2, '0')}</p>
-              <h3>{e.nombre}</h3>
-              <p className="eje-polos-titulo"><span className="polo-a">{e.poloA}</span> ↔ <span className="polo-b">{e.poloB}</span></p>
-              <p>{e.descripcion}</p>
-              <dl>
-                <dt className="polo-a">{e.poloA}</dt>
-                <dd>{e.explicacionA}</dd>
-                <dt className="polo-b">{e.poloB}</dt>
-                <dd>{e.explicacionB}</dd>
-              </dl>
-            </li>
-          ))}
-        </ol>
+        <p className="nota">Tocá el <span className="ayuda-redonda ayuda-ejemplo" aria-hidden="true">?</span> de cada eje para ver qué mide y qué significa cada polo.</p>
+        <EjesInicio />
       </section>
 
       <section className="seccion" id="ideologias">
         <p className="sobretitulo">Ideologías</p>
-        <h2>{ideologias.length} ideologías para comparar</h2>
-        <h3 className="subtitulo-grupo">Tradiciones uruguayas</h3>
-        <ul className="grilla">
-          {ideologias.filter((i) => i.grupo === 'uruguaya').map((i) => <Tarjeta key={i.id} perfil={i} />)}
-        </ul>
-        <h3 className="subtitulo-grupo">Ideologías universales</h3>
-        <ul className="grilla">
-          {ideologias.filter((i) => i.grupo === 'universal').map((i) => <Tarjeta key={i.id} perfil={i} />)}
-        </ul>
+        <h2>Ideologías por espectro</h2>
+        <p className="bajada">Tradiciones uruguayas y corrientes universales, ubicadas en el compás con las mismas 120 afirmaciones del test.</p>
+        <Ideologias ideologias={ideologias} />
       </section>
 
       <section className="seccion" id="personalidades">

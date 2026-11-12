@@ -38,6 +38,15 @@ export default function Compas({ usuario, partidos, centro }) {
 
   return (
     <div className="compas">
+      <div className="compas-explicacion">
+        <p><strong>Cómo leerlo.</strong> De izquierda a derecha, la economía: más Estado o más mercado. De abajo hacia arriba, el poder: más libertades y garantías, o más autoridad y orden.</p>
+        <p><strong>La zona sombreada es lo que hoy se discute en serio en Uruguay.</strong> Es el espacio que ocupan los partidos con bancas en el Parlamento. Lo más oscuro es donde se mueven el FA, el PN y el PC. Si tu punto cae afuera, tus ideas existen, pero hoy ningún partido con bancas las defiende así.</p>
+        <ul className="compas-leyenda">
+          <li><i className="cl-usuario" /> Vos</li>
+          <li><i className="cl-partido" /> Partidos</li>
+          <li><span className="cl-cruz">+</span> Centro uruguayo (promedio de los partidos según sus bancas)</li>
+        </ul>
+      </div>
       <svg viewBox="-12 -8 124 120" className="compas-svg" role="img" aria-label="Compás político uruguayo">
         <rect className="c-cuadro" x={0} y={0} width={100} height={100} />
         <rect className="c-aut-izq" x={0} y={0} width={50} height={50} />
@@ -61,7 +70,6 @@ export default function Compas({ usuario, partidos, centro }) {
         <path className="c-centro" d={`M ${c.x - 2} ${c.y} h 4 M ${c.x} ${c.y - 2} v 4`} />
         <circle className="c-usuario" cx={yo.x} cy={yo.y} r={2.6} />
       </svg>
-      <p className="nota">Horizontal: economía (Economía y Control). Vertical: autoritarismo frente a libertad (Representación y Poder). Zona sombreada: ventana de Overton de los partidos con bancas; más oscuro, FA, PN y PC. La cruz es el centro uruguayo, ponderado por bancas.</p>
     </div>
   );
 }

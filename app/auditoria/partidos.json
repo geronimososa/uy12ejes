@@ -22,10 +22,13 @@
       },
       "dilemas": {
         "memoria": "A",
-        "inversion": "B",
-        "seguridad": "C",
-        "mundo": "C",
-        "familia": "A"
+        "presidente": "A",
+        "afap": "B",
+        "ancap": "A",
+        "inmigracion": "B",
+        "conflicto": "D",
+        "religion": "B",
+        "drogas": "A"
       },
       "notas": {
         "estructura": "Impulsó la ley de descentralización (2009) y los municipios, pero mantiene la educación y la policía como competencias nacionales.",
@@ -59,10 +62,13 @@
       },
       "dilemas": {
         "memoria": "C",
-        "inversion": "A",
-        "seguridad": "B",
-        "mundo": "B",
-        "familia": "C"
+        "presidente": "A",
+        "afap": "C",
+        "ancap": "C",
+        "inmigracion": "B",
+        "conflicto": "A",
+        "religion": "C",
+        "drogas": "C"
       },
       "notas": {
         "estructura": "Partido del interior: gobierna la mayoría de las intendencias y reclama más recursos para ellas; a la vez impulsó desde el gobierno nacional proyectos como Arazatí.",
@@ -96,10 +102,13 @@
       },
       "dilemas": {
         "memoria": "B",
-        "inversion": "B",
-        "seguridad": "B",
-        "mundo": "A",
-        "familia": "B"
+        "presidente": "A",
+        "afap": "C",
+        "ancap": "C",
+        "inmigracion": "B",
+        "conflicto": "A",
+        "religion": "B",
+        "drogas": "C"
       },
       "notas": {
         "estructura": "Tradición batllista centralizadora; sin una agenda fuerte de descentralización.",
@@ -133,10 +142,13 @@
       },
       "dilemas": {
         "memoria": "C",
-        "inversion": "D",
-        "seguridad": "A",
-        "mundo": "C",
-        "familia": "C"
+        "presidente": "B",
+        "afap": "B",
+        "ancap": "B",
+        "inmigracion": "C",
+        "conflicto": "A",
+        "religion": "C",
+        "drogas": "D"
       },
       "notas": {
         "estructura": "Reivindica el interior y la 'soberanía particular de los pueblos', pero con una visión de Estado nacional fuerte (educación y seguridad nacionales).",
@@ -170,10 +182,13 @@
       },
       "dilemas": {
         "memoria": "B",
-        "inversion": "E",
-        "seguridad": "D",
-        "mundo": "D",
-        "familia": "C"
+        "presidente": "A",
+        "afap": "B",
+        "ancap": "B",
+        "inmigracion": "C",
+        "conflicto": "B",
+        "religion": "C",
+        "drogas": "C"
       },
       "notas": {
         "estructura": "Rechazo a los megaproyectos decididos desde el gobierno nacional (UPM, Arazatí) y defensa de las comunidades locales.",
@@ -207,10 +222,13 @@
       },
       "dilemas": {
         "memoria": "B",
-        "inversion": "B",
-        "seguridad": "B",
-        "mundo": "B",
-        "familia": "B"
+        "presidente": "A",
+        "afap": "B",
+        "ancap": "B",
+        "inmigracion": "B",
+        "conflicto": "B",
+        "religion": "B",
+        "drogas": "A"
       },
       "notas": {
         "estructura": "Apoyo a la descentralización y a los municipios dentro del Estado unitario.",

@@ -4,7 +4,7 @@ Versión 0.1 · 4 de noviembre de 2026
 
 Documento de diseño de un test político de 12 ejes calibrado para Uruguay, inspirado en la experiencia de 12 Axes. Este archivo define qué se hace y cómo. El contenido político está en otros dos archivos:
 
-- [EJES-Y-PREGUNTAS.md](EJES-Y-PREGUNTAS.md): los 12 ejes redefinidos para Uruguay, las 120 afirmaciones y los 5 dilemas.
+- [EJES-Y-PREGUNTAS.md](EJES-Y-PREGUNTAS.md): los 12 ejes redefinidos para Uruguay, las 120 afirmaciones y los 8 dilemas.
 - [OVERTON-Y-REFERENTES.md](OVERTON-Y-REFERENTES.md): la ventana de Overton uruguaya por eje y en el compás, los perfiles estimados de los partidos y los referentes de cada punto.
 
 ---
@@ -51,7 +51,7 @@ Sin suscripciones, sin pagos, sin cuentas, sin base de datos. Las respuestas no 
 | Escala de 5 puntos (muy de acuerdo → muy en desacuerdo) | Igual |
 | Mitad de las afirmaciones apuntan a cada polo | Igual: 5 y 5 por eje, para que "estar de acuerdo con todo" no sesgue |
 | Formatos de distinto largo | Dos: **Rápido** (48) y **Completo** (120) |
-| Preguntas de opción múltiple al final que tocan varios ejes | 5 **dilemas uruguayos** (escenarios concretos, no copias de los arquetipos) |
+| Preguntas de opción múltiple al final que tocan varios ejes | 8 **dilemas uruguayos** (escenarios concretos, no copias de los arquetipos) |
 | Avance automático y botón "Volver" | Igual |
 | Resultado por eje con intensidad | Igual, con etiquetas propias |
 | Compás 2D a partir de los ejes | Igual, con fórmula propia y lectura uruguaya (partidos, ventana y centro uruguayo) |
@@ -87,7 +87,7 @@ Sin suscripciones, sin pagos, sin cuentas, sin base de datos. Las respuestas no 
 ## 3. Flujo de pantallas
 
 ```
-Inicio ──► Elegir formato ──► Afirmaciones (48 o 120) ──► Dilemas (5) ──► Resultado
+Inicio ──► Elegir formato ──► Afirmaciones (48 o 120) ──► Dilemas (8) ──► Resultado
                                    ▲    │ Volver
                                    └────┘
 ```
@@ -95,7 +95,7 @@ Inicio ──► Elegir formato ──► Afirmaciones (48 o 120) ──► Dile
 1. **Inicio**: título, una frase ("¿Dónde estás parado en la política uruguaya?"), botón "Empezar", link a "Cómo funciona".
 2. **Formato**: Rápido (48 afirmaciones, ~6 min) o Completo (120, ~15 min).
 3. **Afirmación**: una por pantalla, barra de progreso, cinco botones: *Muy de acuerdo · De acuerdo · Neutral · En desacuerdo · Muy en desacuerdo*, y aparte "No sé / Prefiero no responder", que no cuenta para el puntaje. Avanza solo al elegir. Botón "Volver". Las afirmaciones se muestran mezcladas (no agrupadas por eje).
-4. **Dilemas**: 5 preguntas de opción múltiple con escenarios uruguayos.
+4. **Dilemas**: 8 preguntas de opción múltiple con escenarios uruguayos.
 5. **Resultado**, en este orden:
    1. Etiqueta general: región del compás + rasgo más marcado (ej.: "Centroizquierda laica" o "Derecha liberal").
    2. Las 12 barras: tu punto, la ventana de Overton sombreada, la marca de "política vigente" y 2 o 3 referentes ubicados sobre la barra.
@@ -243,7 +243,7 @@ Todo en archivos JSON dentro del proyecto. Ejemplos de forma:
 
 El punto débil de cualquier test así es dónde se pone a cada persona. Método propuesto:
 
-1. **Responder las 120 afirmaciones y los 5 dilemas como lo haría ese perfil**, con base en hechos verificables: votos en el Parlamento, leyes que impulsó o vetó, programas de gobierno, declaraciones públicas. Si no hay evidencia, se responde *Neutral*.
+1. **Responder las 120 afirmaciones y los 8 dilemas como lo haría ese perfil**, con base en hechos verificables: votos en el Parlamento, leyes que impulsó o vetó, programas de gobierno, declaraciones públicas. Si no hay evidencia, se responde *Neutral*.
 2. Anotar una **fuente por eje** como mínimo.
 3. Para figuras históricas, responder **por su época** (Batlle y Ordóñez en 1910, no "qué pensaría hoy").
 4. **Dos personas** lo hacen por separado. Si en un eje difieren en más de 20 puntos, se discute y se documenta la decisión.
@@ -296,7 +296,7 @@ src/
 
 | Fase | Contenido |
 |---|---|
-| **1. MVP** | 12 ejes, 120 afirmaciones, 5 dilemas, formatos Rápido y Completo, barras con ventana de Overton y referentes, compás uruguayo, afinidad con los 6 partidos y los 59 referentes, link compartible, nota metodológica |
+| **1. MVP** | 12 ejes, 120 afirmaciones, 8 dilemas, formatos Rápido y Completo, barras con ventana de Overton y referentes, compás uruguayo, afinidad con los 6 partidos y los 59 referentes, link compartible, nota metodológica |
 | **2. Completo** | Revisión humana de la auditoría de partidos y referentes (hecha en borrador), auditoría de las ideologías, ~22 ideologías, tarjeta PNG, explicación ("ayuda") en cada afirmación |
 | **3. Extras** | Ventana de Overton histórica (cómo se movió desde 1985), países cercanos, comparar dos resultados |
 

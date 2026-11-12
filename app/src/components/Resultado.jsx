@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import ejes from '../data/ejes.json';
 import perfiles from '../data/perfiles.json';
 import { rankear } from '../logic/calculo.js';
@@ -7,6 +7,8 @@ import { codificar } from '../logic/enlace.js';
 import { ventana } from '../logic/overton.js';
 import BarraEje from './BarraEje.jsx';
 import Compas from './Compas.jsx';
+import TarjetaResultado from './TarjetaResultado.jsx';
+import CompartirImagen from './CompartirImagen.jsx';
 
 const partidos = perfiles.filter((p) => p.tipo === 'partido');
 const referentes = perfiles.filter((p) => p.tipo === 'referente');
@@ -34,12 +36,14 @@ function Afinidad({ fila }) {
 
 export default function Resultado({ posiciones, onReiniciar, compartido = false }) {
   const [copiado, setCopiado] = useState('');
+  const tarjetaRef = useRef(null);
   const yo = posicionCompas(posiciones);
   const centro = centroUruguayo(partidos);
   const rankingPartidos = rankear(posiciones, partidos);
   const rankingReferentes = rankear(posiciones, referentes);
   const rankingIdeologias = rankear(posiciones, ideologias);
   const menosAfin = rankingReferentes[rankingReferentes.length - 1];
+  const historica = rankingReferentes.find((fila) => fila.perfil.epoca === 'historico');
 
   async function copiar() {
     const enlace = `${window.location.origin}/r/${codificar(posiciones)}`;
@@ -58,6 +62,26 @@ export default function Resultado({ posiciones, onReiniciar, compartido = false 
       <p className="bajada">
         Respecto al centro político uruguayo, estás <strong>{lecturaUruguaya(yo, centro)}</strong>.
       </p>
+
+      <div className="resultado-destacado">
+        <div className="destacado-tarjeta">
+          <div ref={tarjetaRef} className="tarjeta-captura">
+            <TarjetaResultado
+              etiqueta={etiqueta(posiciones, ejes)}
+              referentes={rankingReferentes.slice(0, 4)}
+              partidos={rankingPartidos.slice(0, 3)}
+              ideologia={rankingIdeologias[0]}
+              historica={historica}
+              posiciones={posiciones}
+            />
+          </div>
+          <CompartirImagen objetivo={tarjetaRef} />
+        </div>
+        <div className="destacado-compas">
+          <h2>Compás</h2>
+          <Compas usuario={yo} partidos={partidos} centro={centro} />
+        </div>
+      </div>
 
       <h2>Tus 12 ejes</h2>
       <div className="leyenda">
@@ -78,14 +102,13 @@ export default function Resultado({ posiciones, onReiniciar, compartido = false 
         />
       ))}
 
-      <h2>Compás</h2>
-      <Compas usuario={yo} partidos={partidos} centro={centro} />
-
       <h2>Partidos</h2>
       <ol className="lista">{rankingPartidos.map((fila) => <Afinidad key={fila.perfil.id} fila={fila} />)}</ol>
 
       <h2>Referentes más afines</h2>
       <ol className="lista">{rankingReferentes.slice(0, 5).map((fila) => <Afinidad key={fila.perfil.id} fila={fila} />)}</ol>
+      <h3>Figura histórica más afín</h3>
+      <ol className="lista"><Afinidad fila={historica} /></ol>
       <h3>El menos afín</h3>
       <ol className="lista"><Afinidad fila={menosAfin} /></ol>
 

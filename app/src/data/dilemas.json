@@ -2,205 +2,89 @@
   {
     "id": "memoria",
     "titulo": "Memoria",
-    "texto": "¿Cómo debería recordar el país los años 1968-1985?",
+    "texto": "Aparecen restos de un desaparecido en un predio militar. ¿Qué debería pasar?",
     "opciones": [
-      {
-        "id": "A",
-        "texto": "Memoria, verdad y justicia: buscar a todos los desaparecidos y juzgar a los responsables del terrorismo de Estado.",
-        "efectos": {
-          "representacion": 5
-        }
-      },
-      {
-        "id": "B",
-        "texto": "Reconocer la violencia de todos los sectores y que la Justicia actúe caso a caso.",
-        "efectos": {
-          "representacion": 25
-        }
-      },
-      {
-        "id": "C",
-        "texto": "Dar vuelta la página: la Ley de Caducidad ya la confirmó la ciudadanía dos veces.",
-        "efectos": {
-          "representacion": 35
-        }
-      },
-      {
-        "id": "D",
-        "texto": "Las Fuerzas Armadas frenaron a la guerrilla y evitaron algo peor.",
-        "efectos": {
-          "representacion": 75,
-          "poder": 15
-        }
-      }
+      { "id": "A", "texto": "Abrir todos los archivos militares y juzgar a los responsables, sin plazo.", "efectos": { "representacion": 5 } },
+      { "id": "B", "texto": "Juzgar los casos con pruebas, y también reconocer a las víctimas de la guerrilla.", "efectos": { "representacion": 25 } },
+      { "id": "C", "texto": "Identificar y entregar los restos, pero sin reabrir causas: la Ley de Caducidad se votó dos veces.", "efectos": { "representacion": 35 } },
+      { "id": "D", "texto": "Basta de revisar el pasado: los militares ya pagaron demasiado.", "efectos": { "representacion": 75, "poder": 15 } }
     ]
   },
   {
-    "id": "inversion",
-    "titulo": "Inversión",
-    "texto": "Llega una empresa extranjera que promete 2.000 empleos en el interior, pero pide exoneraciones fiscales y usará mucha agua del río. ¿Qué hacés?",
+    "id": "presidente",
+    "titulo": "Un presidente popular",
+    "texto": "Un presidente con 70 % de apoyo quiere gobernar por decreto durante un año para \"ordenar la seguridad\". ¿Qué opinás?",
     "opciones": [
-      {
-        "id": "A",
-        "texto": "Se acepta: el empleo en el interior es la prioridad.",
-        "efectos": {
-          "comercio": 85,
-          "tecnologia": 20,
-          "control": 70
-        }
-      },
-      {
-        "id": "B",
-        "texto": "Se acepta, pero con controles ambientales estrictos y sin exoneraciones especiales.",
-        "efectos": {
-          "comercio": 60,
-          "tecnologia": 50,
-          "control": 35
-        }
-      },
-      {
-        "id": "C",
-        "texto": "Que el departamento donde se instala tenga la última palabra, con participación de los vecinos.",
-        "efectos": {
-          "estructura": 10,
-          "representacion": 10
-        }
-      },
-      {
-        "id": "D",
-        "texto": "No: prefiero desarrollo con empresas nacionales o públicas.",
-        "efectos": {
-          "comercio": 20,
-          "economia": 20,
-          "tecnologia": 60
-        }
-      },
-      {
-        "id": "E",
-        "texto": "No: el agua y el ambiente no se negocian.",
-        "efectos": {
-          "tecnologia": 90,
-          "comercio": 35
-        }
-      }
+      { "id": "A", "texto": "Nunca: las reglas valen más que cualquier urgencia.", "efectos": { "representacion": 5, "poder": 75 } },
+      { "id": "B", "texto": "Solo con aprobación del Parlamento y por un plazo corto.", "efectos": { "representacion": 30, "poder": 45 } },
+      { "id": "C", "texto": "Que lo decida la gente en un plebiscito.", "efectos": { "representacion": 55, "poder": 40 } },
+      { "id": "D", "texto": "Si funciona, que lo haga.", "efectos": { "representacion": 85, "poder": 15 } }
     ]
   },
   {
-    "id": "seguridad",
-    "titulo": "Seguridad",
-    "texto": "Hay una ola de rapiñas en tu barrio. ¿Qué pedís primero?",
+    "id": "afap",
+    "titulo": "AFAP y jubilaciones",
+    "texto": "El sistema jubilatorio tiene déficit. ¿Qué hacés?",
     "opciones": [
-      {
-        "id": "A",
-        "texto": "Más policías, penas más duras y militares de apoyo.",
-        "efectos": {
-          "poder": 10,
-          "diplomacia": 25
-        }
-      },
-      {
-        "id": "B",
-        "texto": "Más policías y cámaras, pero con controles sobre su uso.",
-        "efectos": {
-          "poder": 35
-        }
-      },
-      {
-        "id": "C",
-        "texto": "Programas para jóvenes, empleo y rehabilitación en las cárceles.",
-        "efectos": {
-          "poder": 65,
-          "economia": 30
-        }
-      },
-      {
-        "id": "D",
-        "texto": "Que el barrio se organice y decida con la policía comunitaria.",
-        "efectos": {
-          "poder": 60,
-          "estructura": 15
-        }
-      }
+      { "id": "A", "texto": "Eliminar las AFAP y volver a un sistema 100 % público.", "efectos": { "economia": 5, "control": 20 } },
+      { "id": "B", "texto": "Mantener el sistema mixto y subir los aportes de los que más ganan.", "efectos": { "economia": 35, "control": 30 } },
+      { "id": "C", "texto": "Subir la edad de retiro y mantener las AFAP.", "efectos": { "economia": 65, "control": 70 } },
+      { "id": "D", "texto": "Que cada uno elija su ahorro privado, con una jubilación mínima del Estado.", "efectos": { "economia": 90, "control": 85 } }
     ]
   },
   {
-    "id": "mundo",
-    "titulo": "Mundo",
-    "texto": "El Mercosur bloquea un acuerdo comercial que Uruguay quiere firmar. ¿Qué hacés?",
+    "id": "ancap",
+    "titulo": "ANCAP",
+    "texto": "ANCAP pierde plata. ¿Qué hacés?",
     "opciones": [
-      {
-        "id": "A",
-        "texto": "Firmarlo igual, aunque haya represalias.",
-        "efectos": {
-          "comercio": 90,
-          "intervencion": 70
-        }
-      },
-      {
-        "id": "B",
-        "texto": "Negociar dentro del bloque hasta que el Mercosur se flexibilice.",
-        "efectos": {
-          "comercio": 65,
-          "intervencion": 35
-        }
-      },
-      {
-        "id": "C",
-        "texto": "Priorizar el Mercosur y la integración latinoamericana.",
-        "efectos": {
-          "comercio": 40,
-          "intervencion": 30
-        }
-      },
-      {
-        "id": "D",
-        "texto": "Mejor así: no necesitamos más tratados de libre comercio.",
-        "efectos": {
-          "comercio": 10,
-          "intervencion": 45
-        }
-      }
+      { "id": "A", "texto": "Sigue estatal y con monopolio: es estratégica.", "efectos": { "economia": 10, "comercio": 25 } },
+      { "id": "B", "texto": "Sigue estatal, pero con gestión profesional y metas.", "efectos": { "economia": 35 } },
+      { "id": "C", "texto": "Asociarla con una empresa privada para refinar.", "efectos": { "economia": 65 } },
+      { "id": "D", "texto": "Abrir la importación de combustibles y que compita.", "efectos": { "economia": 85, "comercio": 85 } }
     ]
   },
   {
-    "id": "familia",
-    "titulo": "Familia y Estado",
-    "texto": "Una ley propone que la educación sexual en la escuela pública sea optativa, a elección de los padres. ¿Qué votás?",
+    "id": "inmigracion",
+    "titulo": "Inmigración",
+    "texto": "Llegan miles de inmigrantes de Venezuela, Cuba y otros países. ¿Qué priorizás?",
     "opciones": [
-      {
-        "id": "A",
-        "texto": "En contra: es un derecho del niño y el Estado debe garantizarlo.",
-        "efectos": {
-          "moral": 10,
-          "estructura": 70,
-          "religion": 15
-        }
-      },
-      {
-        "id": "B",
-        "texto": "En contra, pero con contenidos acordados con las familias.",
-        "efectos": {
-          "moral": 35,
-          "estructura": 60
-        }
-      },
-      {
-        "id": "C",
-        "texto": "A favor: la educación en valores es de los padres.",
-        "efectos": {
-          "moral": 70,
-          "poder": 70,
-          "religion": 55
-        }
-      },
-      {
-        "id": "D",
-        "texto": "A favor, y además que haya formación religiosa optativa.",
-        "efectos": {
-          "moral": 85,
-          "religion": 70
-        }
-      }
+      { "id": "A", "texto": "Puertas abiertas y regularización rápida: Uruguay se hizo con inmigrantes.", "efectos": { "inmigracion": 95 } },
+      { "id": "B", "texto": "Recibirlos, con cursos de idioma, cultura y acceso al trabajo formal.", "efectos": { "inmigracion": 65 } },
+      { "id": "C", "texto": "Recibir solo a quienes tengan un oficio o una oferta de trabajo.", "efectos": { "inmigracion": 35 } },
+      { "id": "D", "texto": "Frenar la llegada hasta resolver el empleo de los uruguayos.", "efectos": { "inmigracion": 10 } }
+    ]
+  },
+  {
+    "id": "conflicto",
+    "titulo": "Conflicto internacional",
+    "texto": "Una potencia invade a un país vecino suyo. ¿Qué hace Uruguay?",
+    "opciones": [
+      { "id": "A", "texto": "Condena firme y apoyo a las sanciones, junto a sus aliados.", "efectos": { "intervencion": 85, "diplomacia": 35 } },
+      { "id": "B", "texto": "Condena en la ONU, pero sin sanciones: somos un país chico.", "efectos": { "intervencion": 55, "diplomacia": 65 } },
+      { "id": "C", "texto": "Neutralidad total: no es nuestro problema.", "efectos": { "intervencion": 10, "diplomacia": 60 } },
+      { "id": "D", "texto": "Ofrecer mediación y mandar ayuda humanitaria.", "efectos": { "intervencion": 40, "diplomacia": 90 } }
+    ]
+  },
+  {
+    "id": "religion",
+    "titulo": "Religión en lo público",
+    "texto": "Una intendencia quiere poner una estatua de la Virgen en la rambla. ¿Qué opinás?",
+    "opciones": [
+      { "id": "A", "texto": "No: el espacio público es laico, sin excepciones.", "efectos": { "religion": 5 } },
+      { "id": "B", "texto": "Sí, si se permite lo mismo a otras creencias.", "efectos": { "religion": 45, "inmigracion": 70 } },
+      { "id": "C", "texto": "Sí: es parte de la cultura del país.", "efectos": { "religion": 70, "moral": 70 } },
+      { "id": "D", "texto": "Sí, y el Estado debería apoyar más a las iglesias por su trabajo social.", "efectos": { "religion": 90, "moral": 80 } }
+    ]
+  },
+  {
+    "id": "drogas",
+    "titulo": "Marihuana y consumo",
+    "texto": "Aumenta el consumo problemático entre los jóvenes. ¿Qué hacés?",
+    "opciones": [
+      { "id": "A", "texto": "Mantener la regulación de la marihuana y sumar prevención y salud.", "efectos": { "poder": 75, "moral": 25 } },
+      { "id": "B", "texto": "Ampliar la regulación también a otras drogas.", "efectos": { "poder": 95, "moral": 10 } },
+      { "id": "C", "texto": "Endurecer los controles y limitar los clubes y las farmacias.", "efectos": { "poder": 35, "moral": 60 } },
+      { "id": "D", "texto": "Volver a prohibir la marihuana.", "efectos": { "poder": 10, "moral": 80 } }
     ]
   }
 ]

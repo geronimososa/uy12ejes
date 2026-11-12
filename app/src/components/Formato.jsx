@@ -20,7 +20,7 @@ export default function Formato({ onEmpezar, onVolver, enCurso, onContinuar }) {
         </button>
       </div>
       <p className="nota">
-        Al final hay 5 dilemas de opción múltiple.{enCurso ? ' Si elegís un formato, el test que empezaste se descarta.' : ''}
+        Al final hay 8 dilemas de opción múltiple.{enCurso ? ' Si elegís un formato, el test que empezaste se descarta.' : ''}
       </p>
       <button type="button" className="volver" onClick={onVolver}>Volver al inicio</button>
     </section>
