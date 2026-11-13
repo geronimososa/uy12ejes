@@ -61,9 +61,10 @@ qué partido piensa más parecido a vos y qué referente uruguayo está más cer
 10. [Ideologías](#ideologías)
 11. [Tendencias que muestran los datos](#tendencias-que-muestran-los-datos)
 12. [Cómo se ubica a cada perfil](#cómo-se-ubica-a-cada-perfil)
-13. [Límites y advertencias](#límites-y-advertencias)
-14. [Privacidad](#privacidad)
-15. [Documentación y créditos](#documentación-y-créditos)
+13. [Validación externa: Chapel Hill Expert Survey](#validación-externa-chapel-hill-expert-survey)
+14. [Límites y advertencias](#límites-y-advertencias)
+15. [Privacidad](#privacidad)
+16. [Documentación y créditos](#documentación-y-créditos)
 
 ---
 
@@ -469,6 +470,84 @@ Las respuestas de cada perfil, con sus notas, se pueden consultar en la carpeta 
 
 ---
 
+## Validación externa: Chapel Hill Expert Survey
+
+Las ubicaciones de uy12ejes se construyen con un procedimiento propio: cada perfil responde el mismo test que un usuario. Para comprobar que ese procedimiento no introduce un sesgo sistemático, las posiciones de los partidos se contrastaron con una fuente académica independiente.
+
+### Marco: las encuestas a expertos
+
+En ciencia política, una de las formas más usadas de medir la posición ideológica de los partidos son las **encuestas a expertos**: politólogos y especialistas de cada país ubican a cada partido en una serie de escalas, y la posición del partido es el promedio de sus juicios. Frente a otras fuentes, como el análisis de programas o las encuestas a votantes, tienen dos ventajas para este propósito: miden **varias dimensiones por separado** (economía, valores, inmigración, religión, territorio) y lo hacen con escalas comunes entre partidos y países.
+
+La más reconocida es la **Chapel Hill Expert Survey (CHES)**, que mide a los partidos europeos desde 1999 y es una referencia estándar en la literatura comparada. En 2020 se aplicó por primera vez en América Latina.
+
+### La fuente
+
+| | |
+|---|---|
+| **Encuesta** | Chapel Hill Expert Survey América Latina (CHES-LA), 2020 |
+| **Alcance** | 160 expertos; 112 partidos y presidentes de 12 países de América Latina |
+| **Uruguay** | Frente Amplio, Partido Nacional, Partido Colorado, Cabildo Abierto y Partido Independiente, más el presidente Luis Lacalle Pou como figura propia |
+| **Escala** | 0 a 10 en cada dimensión |
+| **Cita** | Martínez-Gallardo, C., de la Cerda, N., Hartlyn, J., Hooghe, L., Marks, G. y Bakker, R. (2022). *Revisiting party system structuration in Latin America and Europe: Economic and socio-cultural dimensions*. Party Politics. https://doi.org/10.1177/13540688221090604 |
+
+Se utilizó el archivo de datos agregados por partido que publica el proyecto (`ches_la_2020_aggregate_level_v01.csv`).
+
+### Procedimiento
+
+1. **Correspondencia de dimensiones.** Se emparejó cada dimensión de CHES con el eje de uy12ejes que mide lo mismo. Cuando los polos están invertidos (por ejemplo, CHES mide el apoyo al proteccionismo y uy12ejes la apertura comercial), se invirtió la escala de uy12ejes.
+2. **Escala común.** Las posiciones de uy12ejes (0 a 100) se dividieron por 10 para llevarlas a la escala de CHES (0 a 10).
+3. **Comparación.** Para cada dimensión se calcularon:
+   - la **correlación de Pearson (r)** entre las dos fuentes a lo largo de los cinco partidos, que mide si ambas ordenan y separan a los partidos de la misma manera (1 = acuerdo perfecto, 0 = sin relación);
+   - la **diferencia media absoluta**, en puntos de la escala 0 a 10, que mide cuán lejos quedan los valores entre sí.
+
+Identidad Soberana no se incluye porque se fundó después de la encuesta.
+
+### Resultados
+
+| Dimensión CHES | Eje de uy12ejes | r | Diferencia media |
+|---|---|:-:|:-:|
+| Valores sociales (GAL-TAN) | Moral | **0,98** | 0,7 |
+| Religión en la política | Religión | **0,98** | 0,7 |
+| Política migratoria | Inmigración (invertido) | **0,92** | 0,8 |
+| Proteccionismo | Comercio (invertido) | **0,86** | 1,0 |
+| Redistribución | Control | **0,80** | 0,9 |
+| Izquierda–derecha económica | Compás (X) | 0,76 | 1,0 |
+| Izquierda–derecha general | Compás (X) | 0,50 | 1,4 |
+| Descentralización | Territorio | 0,16 | 2,5 |
+
+<sub>Escala 0 a 10. Diferencia media: promedio de las distancias absolutas entre las dos fuentes para los cinco partidos.</sub>
+
+En seis de las ocho dimensiones la correlación es **alta (0,76 a 0,98)** y las dos fuentes difieren en promedio alrededor de un punto sobre diez. El acuerdo es casi perfecto en las dimensiones socioculturales (valores, religión e inmigración), que son las más expuestas a acusaciones de sesgo.
+
+Como control adicional, CHES ubica al **presidente Luis Lacalle Pou** por separado. Sus valores quedan cerca de los de uy12ejes: economía 7,4 frente a 6,7; valores 6,0 frente a 5,5; redistribución 7,2 frente a 6,8; proteccionismo 2,1 frente a 1,5.
+
+### Las diferencias y su explicación
+
+**Cabildo Abierto en economía.** La correlación en izquierda–derecha económica y general baja por un solo partido: si se excluye a Cabildo Abierto, sube a **0,97** en las dos. CHES (2020) lo ubica a la derecha en economía (7,1), mientras que uy12ejes lo ubica en un estatismo moderado (4,2). La encuesta se hizo cuando Cabildo Abierto integraba la coalición de gobierno y acompañaba sus votaciones (Ley de Urgente Consideración, regla fiscal). Desde su salida de la coalición vota en varias ocasiones junto al Frente Amplio en Diputados, y su discurso económico ("Estado presente", producción nacional, endeudamiento) es el que reflejan sus respuestas en uy12ejes. En la dimensión de valores, en cambio, las dos fuentes coinciden: es el partido más tradicionalista (9,4 en CHES y 8,6 en uy12ejes).
+
+**Territorio.** Es la única dimensión sin acuerdo, y la diferencia es de **definición, no de sesgo**. La pregunta de CHES mide solo el apoyo a transferir poder a los gobiernos regionales o locales. El eje Territorio de uy12ejes es más amplio: incluye además la preferencia por reglas y estructuras nacionales uniformes (un programa educativo único, un mando policial nacional, grandes obras decididas por el gobierno central). El Frente Amplio ilustra la diferencia: impulsó el tercer nivel de gobierno con la creación de los municipios (2009), lo que CHES registra como descentralización, pero también defiende políticas nacionales uniformes en educación y seguridad, y en octubre de 2026 un senador de su bancada, Nicolás Viera (MPP), propuso reemplazar las 19 intendencias por ocho o nueve regiones ([Subrayado](https://www.subrayado.com.uy/senador-del-fa-propone-eliminar-todas-las-intendencias-y-crear-ocho-o-nueve-regiones-cada-una-su-intendente-y-junta-n1020751)), presentada como una propuesta personal. Además, en un Estado unitario como Uruguay la descentralización es un tema de baja relevancia en la competencia entre partidos, lo que vuelve menos precisa esa medición en cualquier encuesta. Por estas razones, Territorio se considera el eje **menos comparable** con fuentes externas.
+
+### Alcance y limitaciones
+
+- **Tamaño.** La comparación abarca cinco partidos. Con pocos casos, la correlación es sensible a un solo partido, como muestra el caso de Cabildo Abierto.
+- **Fecha.** CHES-LA corresponde a 2020, antes de las elecciones de 2024 y del actual período de gobierno. Las ubicaciones de uy12ejes están ajustadas a noviembre de 2026.
+- **Cobertura.** CHES mide partidos y presidentes. Las figuras históricas y la mayoría de los referentes no tienen una medición académica equivalente; su ubicación se apoya en el procedimiento de auditoría descrito arriba.
+- **Sentido de las escalas.** Las dimensiones se interpretaron según las convenciones de CHES (0 = izquierda, valores liberales, apoyo a la redistribución, a la apertura comercial, a una política migratoria abierta, a la laicidad y a la descentralización; 10 = el polo opuesto). La consistencia de los resultados en seis dimensiones respalda esa lectura.
+- **Naturaleza de los datos.** Una encuesta a expertos mide cómo perciben a los partidos los especialistas, no sus votaciones ni sus programas. Es un contraste independiente, no una verdad definitiva.
+
+### Conclusión
+
+En las dimensiones comparables, las posiciones que uy12ejes asigna a los partidos uruguayos coinciden en forma alta con las de una encuesta académica independiente a 160 expertos. Las diferencias se concentran en dos puntos identificados y explicados (la posición económica de Cabildo Abierto, medida antes de su salida de la coalición, y una diferencia de definición en el eje Territorio), y no muestran una inclinación sistemática hacia la izquierda ni hacia la derecha.
+
+**Referencias**
+
+- Martínez-Gallardo, C., de la Cerda, N., Hartlyn, J., Hooghe, L., Marks, G. y Bakker, R. (2022). Revisiting party system structuration in Latin America and Europe: Economic and socio-cultural dimensions. *Party Politics*. https://doi.org/10.1177/13540688221090604
+- Jolly, S. et al. (2022). Chapel Hill Expert Survey trend file, 1999–2019. *Electoral Studies*, 75. https://doi.org/10.1016/j.electstud.2021.102420
+- Chapel Hill Expert Survey: https://www.chesdata.eu/ches-la/
+
+---
+
+
 ## Límites y advertencias
 
 > [!IMPORTANT]
@@ -487,6 +566,7 @@ Si ves un error en alguna ubicación, [abrí un issue](https://github.com/geroni
 - **Sin registro ni cuentas.**
 - **Tus respuestas no salen de tu navegador.** El cálculo se hace en tu dispositivo, y el progreso del test y tus respuestas se guardan solo en la pestaña abierta, para poder explicarte cada eje en el resultado. Al cerrarla se borran.
 - **El enlace del resultado** solo contiene tus 12 posiciones codificadas, no tus respuestas. Por eso un resultado compartido no muestra el desplegable *¿Por qué me salió esto?*.
+- **El modo claro u oscuro** que elijas con el botón del encabezado se guarda en tu navegador, para recordarlo la próxima vez. No incluye ningún dato tuyo.
 - El sitio usa **Vercel Analytics** para contar visitas de forma agregada, sin cookies ni datos personales.
 
 La política completa, bajo la Ley N.º 18.331 de Protección de Datos Personales, está en la página [Privacidad](https://uy12ejes.vercel.app/privacidad) del sitio.

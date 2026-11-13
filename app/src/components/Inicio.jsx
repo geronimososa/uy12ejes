@@ -194,6 +194,7 @@ export default function Inicio({ onComenzar, onNavegar, enCurso, onContinuar }) 
       <footer className="pie">
         <p><strong>uy12ejes</strong> es una herramienta para explorar ideas, no un instrumento científico. Inspirado en tests multieje como 12 Axes y Political Compass. Ubicaciones en revisión: si ves un error, avisanos.</p>
         <p className="pie-actualizacion">{AVISO_ACTUALIZACION}</p>
+        <p className="pie-validacion">Validación externa: las posiciones de los partidos se contrastaron con la Chapel Hill Expert Survey América Latina 2020, una encuesta académica a 160 expertos (Martínez-Gallardo, de la Cerda, Hartlyn, Hooghe, Marks y Bakker, 2022, <cite>Party Politics</cite>). En las dimensiones comparables, la correlación con las ubicaciones de uy12ejes llega a 0,98. <a href={`${REPOSITORIO}#validación-externa-chapel-hill-expert-survey`} target="_blank" rel="noreferrer">Ver la metodología y los resultados</a>.</p>
         <p className="pie-enlaces"><Link to="/privacidad">Privacidad</Link><Link to="/creditos">Créditos de las imágenes</Link><a href={REPOSITORIO} target="_blank" rel="noreferrer">Código fuente en GitHub</a></p>
       </footer>
     </div>
