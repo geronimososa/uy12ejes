@@ -80,7 +80,8 @@ Lo que lo hace distinto de los tests genéricos:
 | 🪟 **Ventana de Overton** | Cada eje muestra qué posiciones son mayoritarias, aceptables, radicales o impensables hoy en Uruguay. |
 | 🧑‍⚖️ **Perfiles auditados** | Los 6 partidos, 59 referentes y 22 ideologías responden el mismo test que vos, a partir de votos, leyes, programas y declaraciones públicas. |
 | 🔍 **Resultado explicado** | En cada eje podés ver qué afirmaciones te empujaron hacia ese lado y qué respondiste. |
-| 🪪 **Una página por perfil** | Cada partido, referente e ideología tiene su página con sus 12 ejes, su punto en el compás y los perfiles más cercanos. |
+| 🪪 **Una página por perfil** | Cada partido, referente e ideología tiene su página con sus 12 ejes, su punto en el compás y los perfiles más cercanos. Si ya hiciste el test, también ves tu punto al lado del suyo. |
+| ⚖️ **Comparar perfiles** | Elegís dos partidos, referentes o ideologías y los ves eje por eje, con su afinidad y los dos puntos en el compás. |
 | 📤 **Para compartir** | Un enlace a tu resultado, una tarjeta en imagen lista para redes y botones para mandarlo por WhatsApp o publicarlo en X. |
 
 ---
@@ -102,7 +103,7 @@ flowchart LR
     F --> J[Tarjeta, enlace,<br/>WhatsApp y X]
 ```
 
-1. **Elegís el formato.** Rápido (48 afirmaciones) o completo (120). El rápido toma 4 afirmaciones de cada eje, elegidas para cubrir los dos polos.
+1. **Elegís el formato.** Rápido (48 afirmaciones) o completo (120). El rápido toma 4 afirmaciones de cada eje, elegidas para cubrir los dos polos. Si hiciste el rápido, desde el resultado podés seguir con las 72 que faltan sin repetir las ya respondidas, y el resultado se recalcula con las 120.
 2. **Respondés afirmaciones** en una escala de cinco niveles, de *Muy de acuerdo* a *Muy en desacuerdo*. También podés responder *No sé*, que no cuenta.
 3. **Resolvés 8 dilemas**: escenarios uruguayos de opción múltiple que tocan uno o dos ejes a la vez.
 4. **Ves tu resultado**: tu etiqueta, tu posición en los 12 ejes frente a la ventana de Overton, el compás con los partidos, y los partidos, referentes, figuras históricas e ideologías más afines. En cada eje, el desplegable *¿Por qué me salió esto?* muestra las 2 o 3 afirmaciones que más te empujaron hacia ese lado y qué respondiste. Cada nombre lleva a la página de ese perfil.
@@ -464,7 +465,7 @@ flowchart LR
 3. **Cálculo.** El vector se obtiene con la misma función que usa el test, así que perfiles y usuarios se miden con la misma vara.
 4. **Revisión.** Los perfiles pasan por una segunda lectura y se corrigen cuando aparece evidencia nueva. Todos están en estado *auditado-borrador*.
 
-Las respuestas de cada perfil, con sus notas, se pueden consultar en la carpeta [`app/auditoria/`](app/auditoria). Además, cada perfil tiene su página en el sitio (por ejemplo, [`/perfil/orsi`](https://uy12ejes.vercel.app/perfil/orsi) o [`/perfil/frente-amplio`](https://uy12ejes.vercel.app/perfil/frente-amplio)), con sus 12 ejes, su punto en el compás, los referentes y el partido más cercanos y la nota de auditoría.
+Las respuestas de cada perfil, con sus notas, se pueden consultar en la carpeta [`app/auditoria/`](app/auditoria). Además, cada perfil tiene su página en el sitio (por ejemplo, [`/perfil/orsi`](https://uy12ejes.vercel.app/perfil/orsi) o [`/perfil/frente-amplio`](https://uy12ejes.vercel.app/perfil/frente-amplio)), con sus 12 ejes, su punto en el compás, los referentes y el partido más cercanos y la nota de auditoría. En [`/comparar`](https://uy12ejes.vercel.app/comparar) se pueden poner dos perfiles lado a lado.
 
 ---
 

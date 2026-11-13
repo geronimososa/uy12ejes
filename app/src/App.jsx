@@ -14,10 +14,12 @@ import Creditos from './components/Creditos.jsx';
 import Privacidad from './components/Privacidad.jsx';
 
 const Perfil = lazy(() => import('./components/Perfil.jsx'));
+const Comparar = lazy(() => import('./components/Comparar.jsx'));
 
 const CLAVE_TEST = 'uy12ejes-test';
 const CLAVE_RESULTADO = 'uy12ejes-resultado';
 const CLAVE_RESPUESTAS = 'uy12ejes-respuestas';
+const CLAVE_ELECCIONES = 'uy12ejes-elecciones';
 const PORID = Object.fromEntries(afirmaciones.map((a) => [a.id, a]));
 
 function leer(clave) {
@@ -43,7 +45,7 @@ function testGuardado() {
   if (!g || !Array.isArray(g.ordenIds)) return null;
   const orden = g.ordenIds.map((id) => PORID[id]).filter(Boolean);
   if (orden.length === 0 || orden.length !== g.ordenIds.length) return null;
-  return { orden, indice: g.indice ?? 0, respuestas: g.respuestas ?? {}, elecciones: g.elecciones ?? {}, indiceDilema: g.indiceDilema ?? 0, etapa: g.etapa ?? 'preguntas' };
+  return { orden, indice: g.indice ?? 0, respuestas: g.respuestas ?? {}, elecciones: g.elecciones ?? {}, indiceDilema: g.indiceDilema ?? 0, etapa: g.etapa ?? 'preguntas', continuacion: g.continuacion ?? false };
 }
 
 function mezclar(lista) {
@@ -94,6 +96,7 @@ export default function App() {
   const [test, setTest] = useState(testGuardado);
   const [posiciones, setPosiciones] = useState(() => leer(CLAVE_RESULTADO));
   const [respuestasFinales, setRespuestasFinales] = useState(() => leer(CLAVE_RESPUESTAS));
+  const [eleccionesFinales, setEleccionesFinales] = useState(() => leer(CLAVE_ELECCIONES));
 
   function actualizarTest(nuevo) {
     setTest(nuevo);
@@ -120,10 +123,46 @@ export default function App() {
     ir('/test/preguntas');
   }
 
+  function continuarCompleto() {
+    if (test?.continuacion) {
+      ir('/test/preguntas');
+      return;
+    }
+    const respondidas = afirmaciones.filter((a) => a.id in respuestasFinales);
+    const faltantes = afirmaciones.filter((a) => !(a.id in respuestasFinales));
+    actualizarTest({
+      orden: [...respondidas, ...mezclar(faltantes)],
+      indice: respondidas.length,
+      respuestas: respuestasFinales,
+      elecciones: eleccionesFinales,
+      indiceDilema: 0,
+      etapa: 'preguntas',
+      continuacion: true,
+    });
+    ir('/test/preguntas');
+  }
+
+  function terminar(actual, elecciones) {
+    const resultado = calcularPosiciones(actual.orden, actual.respuestas, dilemas, elecciones);
+    setPosiciones(resultado);
+    guardar(CLAVE_RESULTADO, resultado);
+    setRespuestasFinales(actual.respuestas);
+    guardar(CLAVE_RESPUESTAS, actual.respuestas);
+    setEleccionesFinales(elecciones);
+    guardar(CLAVE_ELECCIONES, elecciones);
+    actualizarTest(null);
+    navigate('/resultado', { replace: true });
+    window.scrollTo(0, 0);
+  }
+
   function responder(valor) {
     const actual = test.orden[test.indice];
     const respuestas = { ...test.respuestas, [actual.id]: valor };
     const ultima = test.indice + 1 >= test.orden.length;
+    if (ultima && test.continuacion) {
+      terminar({ ...test, respuestas }, test.elecciones);
+      return;
+    }
     actualizarTest({ ...test, respuestas, indice: ultima ? test.indice : test.indice + 1, etapa: ultima ? 'dilemas' : 'preguntas' });
   }
 
@@ -142,14 +181,7 @@ export default function App() {
       actualizarTest({ ...test, elecciones, indiceDilema: test.indiceDilema + 1 });
       return;
     }
-    const resultado = calcularPosiciones(test.orden, test.respuestas, dilemas, elecciones);
-    setPosiciones(resultado);
-    guardar(CLAVE_RESULTADO, resultado);
-    setRespuestasFinales(test.respuestas);
-    guardar(CLAVE_RESPUESTAS, test.respuestas);
-    actualizarTest(null);
-    navigate('/resultado', { replace: true });
-    window.scrollTo(0, 0);
+    terminar(test, elecciones);
   }
 
   function volverDilema() {
@@ -165,12 +197,14 @@ export default function App() {
     guardar(CLAVE_RESULTADO, null);
     setRespuestasFinales(null);
     guardar(CLAVE_RESPUESTAS, null);
+    setEleccionesFinales(null);
+    guardar(CLAVE_ELECCIONES, null);
     ir('/test');
   }
 
   const enCurso = test ? {
     actual: test.etapa === 'dilemas' ? test.orden.length + test.indiceDilema + 1 : test.indice + 1,
-    total: test.orden.length + dilemas.length,
+    total: test.orden.length + (test.continuacion ? 0 : dilemas.length),
   } : null;
 
   return (
@@ -213,10 +247,21 @@ export default function App() {
         />
         <Route
           path="/resultado"
-          element={posiciones ? <main className="contenedor"><Resultado posiciones={posiciones} respuestas={respuestasFinales} onReiniciar={reiniciar} /></main> : <Navigate to="/" replace />}
+          element={posiciones ? (
+            <main className="contenedor">
+              <Resultado
+                posiciones={posiciones}
+                respuestas={respuestasFinales}
+                faltantes={respuestasFinales && eleccionesFinales ? afirmaciones.filter((a) => !(a.id in respuestasFinales)).length : 0}
+                onContinuar={continuarCompleto}
+                onReiniciar={reiniciar}
+              />
+            </main>
+          ) : <Navigate to="/" replace />}
         />
         <Route path="/r/:codigo" element={<main className="contenedor"><ResultadoCompartido /></main>} />
-        <Route path="/perfil/:id" element={<main className="contenedor"><Suspense fallback={<p className="nota">Cargando...</p>}><Perfil /></Suspense></main>} />
+        <Route path="/perfil/:id" element={<main className="contenedor"><Suspense fallback={<p className="nota">Cargando...</p>}><Perfil usuario={posiciones} /></Suspense></main>} />
+        <Route path="/comparar/:a?/:b?" element={<main className="contenedor"><Suspense fallback={<p className="nota">Cargando...</p>}><Comparar /></Suspense></main>} />
         <Route path="/creditos" element={<main className="contenedor"><Creditos /></main>} />
         <Route path="/privacidad" element={<main className="contenedor"><Privacidad /></main>} />
         <Route path="*" element={<Navigate to="/" replace />} />

@@ -4,6 +4,7 @@
   <url><loc>https://uy12ejes.vercel.app/test</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://uy12ejes.vercel.app/privacidad</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://uy12ejes.vercel.app/creditos</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://uy12ejes.vercel.app/comparar</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://uy12ejes.vercel.app/perfil/frente-amplio</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://uy12ejes.vercel.app/perfil/partido-nacional</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://uy12ejes.vercel.app/perfil/partido-colorado</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>

@@ -55,7 +55,7 @@ function Afinidad({ fila }) {
   );
 }
 
-export default function Resultado({ posiciones, respuestas = null, onReiniciar, compartido = false }) {
+export default function Resultado({ posiciones, respuestas = null, faltantes = 0, onContinuar, onReiniciar, compartido = false }) {
   const [copiado, setCopiado] = useState('');
   const tarjetaRef = useRef(null);
   const yo = posicionCompas(posiciones);
@@ -87,6 +87,12 @@ export default function Resultado({ posiciones, respuestas = null, onReiniciar, 
       <p className="bajada">
         Respecto al centro político uruguayo, estás <strong>{lecturaUruguaya(yo, centro)}</strong>.
       </p>
+      {!compartido && faltantes > 0 ? (
+        <div className="aviso-rapido">
+          <p>Hiciste la versión rápida: tu resultado puede moverse algunos puntos. Para más precisión, respondé las {faltantes} afirmaciones que faltan; las que ya contestaste se mantienen.</p>
+          <button type="button" className="boton boton-amarillo" onClick={onContinuar}>Seguir con las {faltantes} que faltan</button>
+        </div>
+      ) : null}
 
       <div className="resultado-destacado">
         <div className="destacado-tarjeta">

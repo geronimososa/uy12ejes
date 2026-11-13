@@ -6,10 +6,10 @@ import auditoriaPartidos from '../../auditoria/partidos.json';
 import auditoriaReferentes from '../../auditoria/referentes.json';
 import auditoriaIdeologias from '../../auditoria/ideologias.json';
 import auditoriaLegisladores from '../../auditoria/legisladores.json';
-import { rankear, tieneDato } from '../logic/calculo.js';
+import { afinidad, rankear, tieneDato } from '../logic/calculo.js';
 import { centroUruguayo, etiqueta, posicionCompas } from '../logic/compas.js';
-import { poloDominante } from '../logic/espectros.js';
 import Compas from './Compas.jsx';
+import Ejes12 from './Ejes12.jsx';
 import Foto from './Foto.jsx';
 
 const partidos = perfiles.filter((p) => p.tipo === 'partido');
@@ -21,6 +21,7 @@ const auditoria = {
   ...auditoriaIdeologias.perfiles,
   ...auditoriaLegisladores.perfiles,
 };
+const nombreEje = Object.fromEntries(ejes.map((e) => [e.id, e.nombre]));
 const TIPO = { partido: 'Partido', referente: 'Personalidad', ideologia: 'Ideología' };
 const TITULO_BASE = 'uy12ejes · Test político uruguayo de 12 ejes';
 
@@ -38,7 +39,7 @@ function Cercano({ fila }) {
   );
 }
 
-export default function Perfil() {
+export default function Perfil({ usuario = null }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const perfil = perfiles.find((p) => p.id === id);
@@ -65,6 +66,7 @@ export default function Perfil() {
   const cercanosReferentes = rankear(perfil.vector, referentes.filter((p) => p.id !== perfil.id)).slice(0, 3);
   const partidoCercano = rankear(perfil.vector, partidos.filter((p) => p.id !== perfil.id))[0];
   const nota = auditoria[perfil.id]?.nota;
+  const conVos = usuario ? afinidad(usuario, perfil.vector) : null;
 
   return (
     <section className="resultado perfil">
@@ -81,25 +83,23 @@ export default function Perfil() {
         <p className="nota">Figura histórica: se ubica por las posiciones de su época, en {ubicados} de 12 ejes. En el resto no tenía posición porque esos temas no se discutían.</p>
       ) : null}
 
+      {conVos ? (
+        <div className="perfil-comparar">
+          <h2>Vos y {perfil.nombre}</h2>
+          <div className="afinidad-cabeza"><span>Afinidad con tu resultado</span><strong>{conVos.porcentaje} %</strong></div>
+          <div className="afinidad-barra"><div style={{ width: `${conVos.porcentaje}%` }} /></div>
+          <p className="nota">Coinciden en {conVos.coinciden.map((e) => nombreEje[e]).join(' y ')}; difieren en {conVos.difieren.map((e) => nombreEje[e]).join(' y ')}. Abajo, tu punto aparece como un círculo vacío.</p>
+        </div>
+      ) : null}
+
       <h2>Sus 12 ejes</h2>
-      <ul className="perfil-12 perfil-12-pagina">
-        {ejes.map((eje) => {
-          const valor = perfil.vector[eje.id];
-          const polo = poloDominante(eje, valor);
-          return (
-            <li key={eje.id}>
-              <span className="perfil-12-nombre">{eje.nombre}</span>
-              <span className="perfil-12-barra">
-                {polo ? <span className={`perfil-12-punto lado-${polo.lado.toLowerCase()}`} style={{ left: `${valor}%` }} /> : null}
-              </span>
-              <span className="perfil-12-polo">{polo ? (Math.abs(valor - 50) < 10 ? 'Centro' : `${polo.nombre} · ${polo.porcentaje}`) : 'Sin posición'}</span>
-            </li>
-          );
-        })}
-      </ul>
+      {usuario ? (
+        <p className="leyenda-puntos"><span><i />{perfil.nombre}</span><span><i className="lp-otro" />Vos</span></p>
+      ) : null}
+      <Ejes12 vector={perfil.vector} otro={usuario} />
 
       <h2>Compás</h2>
-      <Compas usuario={posicionCompas(perfil.vector)} partidos={partidos} centro={centro} rotulo={perfil.nombre} />
+      <Compas usuario={posicionCompas(perfil.vector)} partidos={partidos} centro={centro} rotulo={perfil.nombre} otro={usuario ? { punto: posicionCompas(usuario), rotulo: 'Vos' } : null} />
 
       <h2>Personalidades más cercanas</h2>
       <ol className="lista">{cercanosReferentes.map((fila) => <Cercano key={fila.perfil.id} fila={fila} />)}</ol>
@@ -115,6 +115,7 @@ export default function Perfil() {
 
       <div className="acciones">
         <button type="button" className="principal" onClick={() => navigate('/test')}>Hacer el test</button>
+        <button type="button" onClick={() => navigate(`/comparar/${perfil.id}`)}>Comparar con otro perfil</button>
         <button type="button" onClick={() => navigate('/')}>Volver al inicio</button>
       </div>
     </section>

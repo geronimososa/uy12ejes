@@ -30,12 +30,13 @@ function envolvente(puntos) {
 const aSvg = ({ x, y }) => ({ x, y: 100 - y });
 const trazo = (puntos) => puntos.map((pt) => `${pt.x},${pt.y}`).join(' ');
 
-export default function Compas({ usuario, partidos, centro, rotulo = 'Vos' }) {
+export default function Compas({ usuario, partidos, centro, rotulo = 'Vos', otro = null }) {
   const puntos = partidos.map((p) => ({ id: p.id, ...aSvg(posicionCompas(p.vector)) }));
   const ventana = envolvente(puntos);
   const mayoritario = puntos.filter((pt) => MAYORITARIOS.includes(pt.id));
   const yo = aSvg(usuario);
   const c = aSvg(centro);
+  const o = otro ? aSvg(otro.punto) : null;
 
   return (
     <div className="compas">
@@ -44,6 +45,7 @@ export default function Compas({ usuario, partidos, centro, rotulo = 'Vos' }) {
         <p><strong>La zona sombreada es lo que hoy se discute en serio en Uruguay.</strong> Es el espacio que ocupan los partidos con bancas en el Parlamento. Lo más oscuro es donde se mueven el FA, el PN y el PC. Si tu punto cae afuera, tus ideas existen, pero hoy ningún partido con bancas las defiende así. Datos ajustados a {ACTUALIZACION}.</p>
         <ul className="compas-leyenda">
           <li><i className="cl-usuario" /> {rotulo}</li>
+          {otro ? <li><i className="cl-otro" /> {otro.rotulo}</li> : null}
           <li><i className="cl-partido" /> Partidos</li>
           <li><span className="cl-cruz">+</span> Centro uruguayo (promedio de los partidos según sus bancas)</li>
         </ul>
@@ -70,6 +72,7 @@ export default function Compas({ usuario, partidos, centro, rotulo = 'Vos' }) {
         ))}
         <path className="c-centro" d={`M ${c.x - 2} ${c.y} h 4 M ${c.x} ${c.y - 2} v 4`} />
         <circle className="c-usuario" cx={yo.x} cy={yo.y} r={2.6} />
+        {o ? <circle className="c-otro" cx={o.x} cy={o.y} r={2.4} /> : null}
       </svg>
     </div>
   );

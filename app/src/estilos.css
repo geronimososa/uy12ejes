@@ -539,6 +539,31 @@ a.ver-perfil { text-decoration: none; }
 .motivos li strong { font-size: 0.82rem; color: var(--suave); }
 
 @media (max-width: 480px) {
-  .perfil-12-pagina li, .perfil-12 li { grid-template-columns: 84px 1fr 96px; gap: 8px; }
   .perfil-cabeza { align-items: flex-start; }
 }
+
+.c-otro { fill: none; stroke: var(--texto); stroke-width: 1; }
+.cl-otro { border: 2px solid var(--texto); box-sizing: border-box; }
+.perfil-12-otro { background: transparent; border: 2px solid var(--texto); box-sizing: border-box; }
+.perfil-comparar { background: var(--superficie); border: 1px solid var(--borde); border-radius: 14px; padding: 16px; margin-top: 16px; }
+.perfil-comparar h2 { margin-top: 0; }
+.perfil-comparar p { margin: 6px 0 0; }
+.leyenda-puntos { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.85rem; color: var(--suave); margin-bottom: 8px; }
+.leyenda-puntos i, .comparar-cabeza i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; vertical-align: -1px; margin-right: 6px; }
+.lp-principal, .leyenda-puntos i:not(.lp-otro) { background: linear-gradient(90deg, var(--celeste) 50%, var(--amarillo) 50%); }
+.comparar-perfiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.comparar-cabeza { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.comparar-cabeza > div { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0; }
+.lp-otro { background: transparent; border: 2px solid var(--texto); box-sizing: border-box; }
+.selectores { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+.selectores label { display: flex; flex-direction: column; gap: 4px; font-size: 0.85rem; color: var(--suave); min-width: 0; }
+.selectores select { font: inherit; color: var(--texto); background: var(--superficie); border: 1px solid var(--borde); border-radius: 10px; padding: 10px; width: 100%; }
+
+@media (max-width: 480px) {
+  .perfil-12-pagina li, .perfil-12 li { grid-template-columns: 92px 1fr 100px; gap: 8px; }
+  .perfil-12-pagina .perfil-12-polo { font-size: 0.74rem; }
+  .selectores, .comparar-perfiles { grid-template-columns: 1fr; }
+}
+
+.aviso-rapido { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; background: var(--celeste-suave); border: 1px solid var(--borde); border-left: 6px solid var(--amarillo); border-radius: 14px; padding: 14px 18px; margin: 16px 0 0; }
+.aviso-rapido p { flex: 1 1 320px; margin: 0; }
