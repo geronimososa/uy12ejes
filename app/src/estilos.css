@@ -22,11 +22,13 @@
   --z-mayoritario: #4b8fd1;
   --usuario: #c0392b;
   --ref: #141c2b;
+  --brillo: 75, 143, 209;
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    --brillo: 245, 197, 24;
     --fondo: #10151d;
     --superficie: #18202b;
     --texto: #eef1f5;
@@ -55,6 +57,7 @@
 }
 
 :root[data-theme="dark"] {
+  --brillo: 245, 197, 24;
   --fondo: #10151d;
   --superficie: #18202b;
   --texto: #eef1f5;
@@ -507,7 +510,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--celeste); outli
 .pie a, .creditos a { color: var(--azul); }
 .tr-historica p span { min-width: 0; line-height: 1.2; }
 .hero { position: relative; isolation: isolate; }
-.hero::before { content: ""; position: absolute; left: 50%; top: 50%; width: min(1100px, 100%); height: 760px; transform: translate(-50%, -50%); background: radial-gradient(closest-side, rgba(245, 197, 24, 0.26), rgba(245, 197, 24, 0.1) 55%, rgba(245, 197, 24, 0) 100%); filter: blur(24px); z-index: -1; pointer-events: none; }
+.hero::before { content: ""; position: absolute; left: 50%; top: 50%; width: min(1100px, 100%); height: 760px; transform: translate(-50%, -50%); background: radial-gradient(closest-side, rgba(var(--brillo), 0.26), rgba(var(--brillo), 0.1) 55%, rgba(var(--brillo), 0) 100%); filter: blur(24px); z-index: -1; pointer-events: none; }
 @media (max-width: 900px) { .hero::before { height: 70%; } }
 
 .pie-enlaces { display: flex; flex-wrap: wrap; gap: 8px 22px; }
