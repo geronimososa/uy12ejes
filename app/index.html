@@ -17,6 +17,12 @@
     <meta property="og:title" content="uy12ejes · Test político uruguayo de 12 ejes" />
     <meta property="og:description" content="¿Realmente conocés tu ideología política? Descubrí qué partido y qué referente uruguayo piensan más parecido a vos." />
     <meta name="twitter:card" content="summary" />
+    <script>
+      try {
+        var tema = localStorage.getItem('uy12ejes-tema');
+        if (tema === 'light' || tema === 'dark') document.documentElement.dataset.theme = tema;
+      } catch (e) {}
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

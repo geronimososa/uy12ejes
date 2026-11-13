@@ -27,7 +27,7 @@ export default function Privacidad() {
 
       <h2>3. Qué queda en tu dispositivo</h2>
       <p>
-        Para que puedas retomar el test si salís de la página, el progreso se guarda temporalmente en el almacenamiento de sesión de tu navegador (<em>sessionStorage</em>). Esa información permanece solo en tu dispositivo, no es accesible para el proyecto y se borra automáticamente al cerrar la pestaña.
+        Para que puedas retomar el test si salís de la página, el progreso se guarda temporalmente en el almacenamiento de sesión de tu navegador (<em>sessionStorage</em>). Esa información permanece solo en tu dispositivo, no es accesible para el proyecto y se borra automáticamente al cerrar la pestaña. Si elegís el modo claro u oscuro con el botón del encabezado, esa preferencia se guarda en el almacenamiento local de tu navegador (<em>localStorage</em>) para recordarla la próxima vez; no incluye ningún dato tuyo.
       </p>
 
       <h2>4. El enlace para compartir</h2>

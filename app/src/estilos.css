@@ -570,3 +570,7 @@ a.ver-perfil { text-decoration: none; }
 
 .aviso-rapido { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; background: var(--celeste-suave); border: 1px solid var(--borde); border-left: 6px solid var(--amarillo); border-radius: 14px; padding: 14px 18px; margin: 16px 0 0; }
 .aviso-rapido p { flex: 1 1 320px; margin: 0; }
+
+.cambiar-tema { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--borde); background: var(--superficie); color: var(--texto-fuerte); cursor: pointer; }
+.cambiar-tema:hover { border-color: var(--celeste); color: var(--celeste); }
+@media (max-width: 900px) { .cambiar-tema { margin-left: auto; } .encabezado-interior { gap: 12px; } }
