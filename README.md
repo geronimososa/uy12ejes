@@ -49,20 +49,31 @@ qué partido piensa más parecido a vos y qué referente uruguayo está más cer
 
 ## Contenido
 
+**Qué es**
+
 1. [Qué es](#qué-es)
 2. [Cómo funciona](#cómo-funciona)
 3. [Los 12 ejes](#los-12-ejes)
-4. [Metodología](#metodología)
-5. [Cálculos](#cálculos)
-6. [El compás uruguayo](#el-compás-uruguayo)
-7. [La ventana de Overton uruguaya](#la-ventana-de-overton-uruguaya)
-8. [Partidos](#partidos)
-9. [Personalidades](#personalidades)
-10. [Ideologías](#ideologías)
-11. [Tendencias que muestran los datos](#tendencias-que-muestran-los-datos)
+
+**Qué muestra**
+
+4. [El compás uruguayo](#el-compás-uruguayo)
+5. [La ventana de Overton uruguaya](#la-ventana-de-overton-uruguaya)
+6. [Partidos](#partidos)
+7. [Personalidades](#personalidades)
+8. [Ideologías](#ideologías)
+9. [Tendencias que muestran los datos](#tendencias-que-muestran-los-datos)
+
+**Cómo se hizo**
+
+10. [Metodología](#metodología)
+11. [Cálculos](#cálculos)
 12. [Cómo se ubica a cada perfil](#cómo-se-ubica-a-cada-perfil)
 13. [Validación externa: Chapel Hill Expert Survey](#validación-externa-chapel-hill-expert-survey)
 14. [Límites y advertencias](#límites-y-advertencias)
+
+**Más información**
+
 15. [Privacidad](#privacidad)
 16. [Documentación y créditos](#documentación-y-créditos)
 
@@ -142,94 +153,6 @@ Cada eje va de **0** (polo A) a **100** (polo B). El 50 es el punto medio, no "e
 - **Tecnología** recoge debates locales: la matriz eléctrica renovable, el Plan Ceibal, la celulosa (UPM), la megaminería (Aratirí), los agrotóxicos y la prohibición de la energía nuclear.
 
 </details>
-
----
-
-## Metodología
-
-### Las afirmaciones
-
-Hay **120 afirmaciones**, 10 por eje: **6 fundamentales** (principios que valen en cualquier país) y **4 uruguayas** (debates concretos del país). En cada eje hay afirmaciones de los dos polos, para que estar "de acuerdo con todo" no empuje siempre hacia el mismo lado.
-
-| Respuesta | Valor |
-|---|:-:|
-| Muy de acuerdo | 1 |
-| De acuerdo | 0,75 |
-| Neutral | 0,5 |
-| En desacuerdo | 0,25 |
-| Muy en desacuerdo | 0 |
-| No sé | *no cuenta* |
-
-### Reglas especiales
-
-- **Afirmaciones extremas.** Algunas afirmaciones marcan el borde de un eje: la pena de muerte, las fronteras abiertas para cualquiera, abolir las Fuerzas Armadas, una religión oficial, frenar el crecimiento económico. Solo cuentan cuando estás de acuerdo: rechazarlas cuenta como *Neutral*, para no empujar al polo contrario a todo el que las rechaza. Ninguna aparece en el formato rápido.
-- **Pesos.** Las dos afirmaciones uruguayas de Representación sobre la dictadura (el golpe de 1973 y los juicios por los crímenes de Estado) pesan la mitad, para que el debate sobre la memoria, que también tiene su propio dilema, no domine un eje que mide la democracia en general.
-- **Dilemas.** Cada opción de un dilema trae un valor fijo para uno o dos ejes. Elegirla suma una respuesta más con ese valor, así que un dilema nunca pesa más que una afirmación.
-
-### Los 8 dilemas
-
-| Dilema | Escenario | Ejes |
-|---|---|---|
-| Memoria | Aparecen restos de un desaparecido en un predio militar. | Representación, Poder |
-| Un presidente popular | Un presidente con 70 % de apoyo quiere gobernar por decreto un año. | Representación, Poder |
-| AFAP y jubilaciones | El sistema jubilatorio tiene déficit. | Economía, Control |
-| ANCAP | ANCAP pierde plata. | Economía, Comercio |
-| Inmigración | Llegan miles de inmigrantes de Venezuela, Cuba y otros países. | Inmigración |
-| Conflicto internacional | Una potencia invade a un país vecino suyo. | Intervención, Diplomacia |
-| Religión en lo público | Una intendencia quiere poner una estatua de la Virgen en la rambla. | Religión, Moral, Inmigración |
-| Marihuana y consumo | Aumenta el consumo problemático entre los jóvenes. | Poder, Moral |
-
-El detalle de cada afirmación y de cada opción está en [EJES-Y-PREGUNTAS.md](EJES-Y-PREGUNTAS.md).
-
----
-
-## Cálculos
-
-### Posición en cada eje
-
-Cada respuesta se convierte en un valor de 0 a 100 en dirección al polo B. Si la afirmación defiende el polo A, el valor se invierte:
-
-$$
-v_i = \begin{cases} 100 \cdot a_i & \text{si la afirmación defiende el polo B} \\ 100 \cdot (1 - a_i) & \text{si defiende el polo A} \end{cases}
-$$
-
-donde $a_i$ es tu nivel de acuerdo (de 0 a 1). La posición en el eje es el **promedio ponderado** de esos valores, sumando las opciones de dilema que tocan el eje:
-
-$$
-\text{posición}_e = \frac{\sum_i w_i \, v_i}{\sum_i w_i}
-$$
-
-### Intensidad
-
-| Distancia al 50 | Lectura |
-|:-:|---|
-| menos de 10 | Centro |
-| 10 a 25 | Inclinado |
-| 25 a 40 | Marcado |
-| 40 o más | Muy marcado |
-
-### Afinidad con partidos, referentes e ideologías
-
-La afinidad compara tu posición con la de cada perfil en todos los ejes donde los dos tienen dato:
-
-$$
-d = \frac{1}{n}\sum_{e=1}^{n} \delta_e \cdot |u_e - p_e|
-\qquad
-\text{afinidad} = (100 - 2d)\cdot \min\left(1, \frac{n}{8}\right)
-$$
-
-- $\delta_e = 1{,}25$ cuando están en **lados opuestos** del eje y los dos a más de 15 puntos del medio. Así, no es lo mismo diferir dentro del mismo lado que estar en veredas enfrentadas.
-- El factor $\min(1, n/8)$ penaliza a los perfiles comparados en menos de 8 ejes, como algunas figuras históricas.
-- La **figura histórica más afín** se muestra solo si llega al **60 %**, para no forzar emparejamientos poco representativos.
-
-### Etiqueta
-
-Tu etiqueta combina la región del compás con un adjetivo:
-
-- **progresista** si Moral está por debajo de 35, **conservador/a** si está por encima de 65;
-- si no, el adjetivo del eje más marcado (a 30 o más del medio), por ejemplo *aperturista*, *laica* o *proteccionista*.
-
-Ejemplos reales: *Centroizquierda progresista*, *Centroderecha aperturista*, *Centro conservador*, *Derecha liberal conservadora*.
 
 ---
 
@@ -449,6 +372,94 @@ El Partido Colorado reúne desde batllistas de centro hasta liberales como Jorge
 
 ---
 
+## Metodología
+
+### Las afirmaciones
+
+Hay **120 afirmaciones**, 10 por eje: **6 fundamentales** (principios que valen en cualquier país) y **4 uruguayas** (debates concretos del país). En cada eje hay afirmaciones de los dos polos, para que estar "de acuerdo con todo" no empuje siempre hacia el mismo lado.
+
+| Respuesta | Valor |
+|---|:-:|
+| Muy de acuerdo | 1 |
+| De acuerdo | 0,75 |
+| Neutral | 0,5 |
+| En desacuerdo | 0,25 |
+| Muy en desacuerdo | 0 |
+| No sé | *no cuenta* |
+
+### Reglas especiales
+
+- **Afirmaciones extremas.** Algunas afirmaciones marcan el borde de un eje: la pena de muerte, las fronteras abiertas para cualquiera, abolir las Fuerzas Armadas, una religión oficial, frenar el crecimiento económico. Solo cuentan cuando estás de acuerdo: rechazarlas cuenta como *Neutral*, para no empujar al polo contrario a todo el que las rechaza. Ninguna aparece en el formato rápido.
+- **Pesos.** Las dos afirmaciones uruguayas de Representación sobre la dictadura (el golpe de 1973 y los juicios por los crímenes de Estado) pesan la mitad, para que el debate sobre la memoria, que también tiene su propio dilema, no domine un eje que mide la democracia en general.
+- **Dilemas.** Cada opción de un dilema trae un valor fijo para uno o dos ejes. Elegirla suma una respuesta más con ese valor, así que un dilema nunca pesa más que una afirmación.
+
+### Los 8 dilemas
+
+| Dilema | Escenario | Ejes |
+|---|---|---|
+| Memoria | Aparecen restos de un desaparecido en un predio militar. | Representación, Poder |
+| Un presidente popular | Un presidente con 70 % de apoyo quiere gobernar por decreto un año. | Representación, Poder |
+| AFAP y jubilaciones | El sistema jubilatorio tiene déficit. | Economía, Control |
+| ANCAP | ANCAP pierde plata. | Economía, Comercio |
+| Inmigración | Llegan miles de inmigrantes de Venezuela, Cuba y otros países. | Inmigración |
+| Conflicto internacional | Una potencia invade a un país vecino suyo. | Intervención, Diplomacia |
+| Religión en lo público | Una intendencia quiere poner una estatua de la Virgen en la rambla. | Religión, Moral, Inmigración |
+| Marihuana y consumo | Aumenta el consumo problemático entre los jóvenes. | Poder, Moral |
+
+El detalle de cada afirmación y de cada opción está en [EJES-Y-PREGUNTAS.md](EJES-Y-PREGUNTAS.md).
+
+---
+
+## Cálculos
+
+### Posición en cada eje
+
+Cada respuesta se convierte en un valor de 0 a 100 en dirección al polo B. Si la afirmación defiende el polo A, el valor se invierte:
+
+$$
+v_i = \begin{cases} 100 \cdot a_i & \text{si la afirmación defiende el polo B} \\ 100 \cdot (1 - a_i) & \text{si defiende el polo A} \end{cases}
+$$
+
+donde $a_i$ es tu nivel de acuerdo (de 0 a 1). La posición en el eje es el **promedio ponderado** de esos valores, sumando las opciones de dilema que tocan el eje:
+
+$$
+\text{posición}_e = \frac{\sum_i w_i \, v_i}{\sum_i w_i}
+$$
+
+### Intensidad
+
+| Distancia al 50 | Lectura |
+|:-:|---|
+| menos de 10 | Centro |
+| 10 a 25 | Inclinado |
+| 25 a 40 | Marcado |
+| 40 o más | Muy marcado |
+
+### Afinidad con partidos, referentes e ideologías
+
+La afinidad compara tu posición con la de cada perfil en todos los ejes donde los dos tienen dato:
+
+$$
+d = \frac{1}{n}\sum_{e=1}^{n} \delta_e \cdot |u_e - p_e|
+\qquad
+\text{afinidad} = (100 - 2d)\cdot \min\left(1, \frac{n}{8}\right)
+$$
+
+- $\delta_e = 1{,}25$ cuando están en **lados opuestos** del eje y los dos a más de 15 puntos del medio. Así, no es lo mismo diferir dentro del mismo lado que estar en veredas enfrentadas.
+- El factor $\min(1, n/8)$ penaliza a los perfiles comparados en menos de 8 ejes, como algunas figuras históricas.
+- La **figura histórica más afín** se muestra solo si llega al **60 %**, para no forzar emparejamientos poco representativos.
+
+### Etiqueta
+
+Tu etiqueta combina la región del compás con un adjetivo:
+
+- **progresista** si Moral está por debajo de 35, **conservador/a** si está por encima de 65;
+- si no, el adjetivo del eje más marcado (a 30 o más del medio), por ejemplo *aperturista*, *laica* o *proteccionista*.
+
+Ejemplos reales: *Centroizquierda progresista*, *Centroderecha aperturista*, *Centro conservador*, *Derecha liberal conservadora*.
+
+---
+
 ## Cómo se ubica a cada perfil
 
 Las posiciones de partidos, referentes e ideologías **no se ponen a mano**. Cada perfil responde el mismo test que un usuario:
@@ -546,7 +557,6 @@ En las dimensiones comparables, las posiciones que uy12ejes asigna a los partido
 - Chapel Hill Expert Survey: https://www.chesdata.eu/ches-la/
 
 ---
-
 
 ## Límites y advertencias
 
