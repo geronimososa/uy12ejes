@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ejes from '../data/ejes.json';
 import { agruparPorEspectro, poloDominante } from '../logic/espectros.js';
 
@@ -16,38 +16,16 @@ function Indicadores({ vector }) {
   );
 }
 
-function Perfil12({ vector }) {
-  return (
-    <ul className="perfil-12">
-      {ejes.map((eje) => {
-        const valor = vector[eje.id];
-        const polo = poloDominante(eje, valor);
-        return (
-          <li key={eje.id}>
-            <span className="perfil-12-nombre">{eje.nombre}</span>
-            <span className="perfil-12-barra">
-              {polo ? <span className={`perfil-12-punto lado-${polo.lado.toLowerCase()}`} style={{ left: `${valor}%` }} /> : null}
-            </span>
-            <span className="perfil-12-polo">{polo ? (Math.abs(valor - 50) < 10 ? 'Centro' : polo.nombre) : 'Sin posición'}</span>
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
-
 function TarjetaIdeologia({ perfil, color }) {
-  const [abierta, setAbierta] = useState(false);
   return (
     <li className="tarjeta-ideologia" style={{ '--espectro': color }}>
-      <h4>{perfil.nombre}</h4>
+      <h4><Link className="enlace-perfil" to={`/perfil/${perfil.id}`}>{perfil.nombre}</Link></h4>
       <p>{perfil.descripcion}</p>
-      {abierta ? <Perfil12 vector={perfil.vector} /> : null}
       <div className="tarjeta-ideologia-pie">
         <Indicadores vector={perfil.vector} />
-        <button type="button" className="ver-perfil" aria-expanded={abierta} onClick={() => setAbierta((prev) => !prev)}>
-          {abierta ? 'Cerrar' : 'Ver perfil'} <span aria-hidden="true">{abierta ? '↑' : '→'}</span>
-        </button>
+        <Link className="ver-perfil" to={`/perfil/${perfil.id}`}>
+          Ver perfil <span aria-hidden="true">→</span>
+        </Link>
       </div>
     </li>
   );

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { Navigate, Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom';
 import afirmaciones from './data/afirmaciones.json';
 import dilemas from './data/dilemas.json';
@@ -13,8 +13,11 @@ import Resultado from './components/Resultado.jsx';
 import Creditos from './components/Creditos.jsx';
 import Privacidad from './components/Privacidad.jsx';
 
+const Perfil = lazy(() => import('./components/Perfil.jsx'));
+
 const CLAVE_TEST = 'uy12ejes-test';
 const CLAVE_RESULTADO = 'uy12ejes-resultado';
+const CLAVE_RESPUESTAS = 'uy12ejes-respuestas';
 const PORID = Object.fromEntries(afirmaciones.map((a) => [a.id, a]));
 
 function leer(clave) {
@@ -90,6 +93,7 @@ export default function App() {
   const { pathname } = useLocation();
   const [test, setTest] = useState(testGuardado);
   const [posiciones, setPosiciones] = useState(() => leer(CLAVE_RESULTADO));
+  const [respuestasFinales, setRespuestasFinales] = useState(() => leer(CLAVE_RESPUESTAS));
 
   function actualizarTest(nuevo) {
     setTest(nuevo);
@@ -141,6 +145,8 @@ export default function App() {
     const resultado = calcularPosiciones(test.orden, test.respuestas, dilemas, elecciones);
     setPosiciones(resultado);
     guardar(CLAVE_RESULTADO, resultado);
+    setRespuestasFinales(test.respuestas);
+    guardar(CLAVE_RESPUESTAS, test.respuestas);
     actualizarTest(null);
     navigate('/resultado', { replace: true });
     window.scrollTo(0, 0);
@@ -157,6 +163,8 @@ export default function App() {
   function reiniciar() {
     setPosiciones(null);
     guardar(CLAVE_RESULTADO, null);
+    setRespuestasFinales(null);
+    guardar(CLAVE_RESPUESTAS, null);
     ir('/test');
   }
 
@@ -205,9 +213,10 @@ export default function App() {
         />
         <Route
           path="/resultado"
-          element={posiciones ? <main className="contenedor"><Resultado posiciones={posiciones} onReiniciar={reiniciar} /></main> : <Navigate to="/" replace />}
+          element={posiciones ? <main className="contenedor"><Resultado posiciones={posiciones} respuestas={respuestasFinales} onReiniciar={reiniciar} /></main> : <Navigate to="/" replace />}
         />
         <Route path="/r/:codigo" element={<main className="contenedor"><ResultadoCompartido /></main>} />
+        <Route path="/perfil/:id" element={<main className="contenedor"><Suspense fallback={<p className="nota">Cargando...</p>}><Perfil /></Suspense></main>} />
         <Route path="/creditos" element={<main className="contenedor"><Creditos /></main>} />
         <Route path="/privacidad" element={<main className="contenedor"><Privacidad /></main>} />
         <Route path="*" element={<Navigate to="/" replace />} />

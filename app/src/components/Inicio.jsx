@@ -80,17 +80,19 @@ function Ejemplo() {
 
 function Tarjeta({ perfil, extra }) {
   return (
-    <li className="tarjeta-perfil">
-      <div className="tarjeta-perfil-cabeza">
-        <Foto perfil={perfil} tamano={52} />
-        <strong>{perfil.nombre}</strong>
-      </div>
-      <span className="tarjeta-region">{etiqueta(perfil.vector, ejes)}</span>
-      <p>{perfil.descripcion}</p>
-      {Object.values(perfil.vector).some((v) => v === null) ? (
-        <p className="tarjeta-nota">Ubicado en {Object.values(perfil.vector).filter((v) => v !== null).length} de 12 ejes: en el resto no tenía posición en su época.</p>
-      ) : null}
-      {extra ? <p className="tarjeta-extra">{extra}</p> : null}
+    <li>
+      <Link className="tarjeta-perfil" to={`/perfil/${perfil.id}`}>
+        <div className="tarjeta-perfil-cabeza">
+          <Foto perfil={perfil} tamano={52} />
+          <strong>{perfil.nombre}</strong>
+        </div>
+        <span className="tarjeta-region">{etiqueta(perfil.vector, ejes)}</span>
+        <p>{perfil.descripcion}</p>
+        {Object.values(perfil.vector).some((v) => v === null) ? (
+          <p className="tarjeta-nota">Ubicado en {Object.values(perfil.vector).filter((v) => v !== null).length} de 12 ejes: en el resto no tenía posición en su época.</p>
+        ) : null}
+        {extra ? <p className="tarjeta-extra">{extra}</p> : null}
+      </Link>
     </li>
   );
 }

@@ -30,7 +30,7 @@ function envolvente(puntos) {
 const aSvg = ({ x, y }) => ({ x, y: 100 - y });
 const trazo = (puntos) => puntos.map((pt) => `${pt.x},${pt.y}`).join(' ');
 
-export default function Compas({ usuario, partidos, centro }) {
+export default function Compas({ usuario, partidos, centro, rotulo = 'Vos' }) {
   const puntos = partidos.map((p) => ({ id: p.id, ...aSvg(posicionCompas(p.vector)) }));
   const ventana = envolvente(puntos);
   const mayoritario = puntos.filter((pt) => MAYORITARIOS.includes(pt.id));
@@ -43,7 +43,7 @@ export default function Compas({ usuario, partidos, centro }) {
         <p><strong>Cómo leerlo.</strong> De izquierda a derecha, la economía: más Estado o más mercado. De abajo hacia arriba, el poder: más libertades y garantías, o más autoridad y orden.</p>
         <p><strong>La zona sombreada es lo que hoy se discute en serio en Uruguay.</strong> Es el espacio que ocupan los partidos con bancas en el Parlamento. Lo más oscuro es donde se mueven el FA, el PN y el PC. Si tu punto cae afuera, tus ideas existen, pero hoy ningún partido con bancas las defiende así. Datos ajustados a {ACTUALIZACION}.</p>
         <ul className="compas-leyenda">
-          <li><i className="cl-usuario" /> Vos</li>
+          <li><i className="cl-usuario" /> {rotulo}</li>
           <li><i className="cl-partido" /> Partidos</li>
           <li><span className="cl-cruz">+</span> Centro uruguayo (promedio de los partidos según sus bancas)</li>
         </ul>

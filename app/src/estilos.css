@@ -518,3 +518,27 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--celeste); outli
 .legal a { color: var(--azul); }
 .legal-resumen { background: var(--celeste-suave); border-left: 4px solid var(--celeste); border-radius: 10px; padding: 14px 18px; margin: 24px 0 8px; }
 .legal-volver { margin-top: 40px; }
+
+.enlace-perfil { color: inherit; font-weight: 700; text-decoration: none; }
+.enlace-perfil:hover { color: var(--celeste); text-decoration: underline; }
+a.tarjeta-perfil { height: 100%; box-sizing: border-box; color: inherit; text-decoration: none; }
+a.tarjeta-perfil:hover { border-color: var(--celeste); }
+a.ver-perfil { text-decoration: none; }
+.perfil-cabeza { display: flex; align-items: center; gap: 16px; margin: 8px 0; }
+.perfil-cabeza h1 { margin: 0 0 6px; }
+.perfil-12-pagina { background: var(--superficie); border: 1px solid var(--borde); border-radius: 14px; padding: 16px; }
+.perfil-12-pagina li { grid-template-columns: 100px 1fr 150px; }
+.compartir-enlaces { margin-top: 10px; }
+.compartir-enlaces a.boton { color: var(--texto); text-decoration: none; }
+.compartir-enlaces a.boton:hover { border-color: var(--celeste); color: var(--celeste); }
+.motivos { margin-top: 8px; font-size: 0.88rem; }
+.motivos summary { cursor: pointer; color: var(--azul); font-weight: 600; }
+.motivos p { margin: 6px 0; color: var(--suave); }
+.motivos ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+.motivos li span { display: block; }
+.motivos li strong { font-size: 0.82rem; color: var(--suave); }
+
+@media (max-width: 480px) {
+  .perfil-12-pagina li, .perfil-12 li { grid-template-columns: 84px 1fr 96px; gap: 8px; }
+  .perfil-cabeza { align-items: flex-start; }
+}

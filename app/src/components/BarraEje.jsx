@@ -4,7 +4,7 @@ import { TEXTO_ZONA, zona } from '../logic/overton.js';
 const ANCHO = 600;
 const X = (valor) => 10 + (valor / 100) * (ANCHO - 20);
 
-export default function BarraEje({ eje, posicion, ventana, referentes }) {
+export default function BarraEje({ eje, posicion, ventana, referentes, motivos = null }) {
   const z = zona(posicion, ventana);
   const nivel = intensidad(posicion);
   const polo = posicion < 50 ? eje.poloA : eje.poloB;
@@ -42,6 +42,20 @@ export default function BarraEje({ eje, posicion, ventana, referentes }) {
       <p className="eje-referentes">
         {ordenados.map((r) => `${r.nombre} (${Math.round(r.valor)})`).join(' · ')}
       </p>
+      {motivos && motivos.length > 0 ? (
+        <details className="motivos">
+          <summary>¿Por qué me salió esto?</summary>
+          <p>Las afirmaciones que más te acercaron a {polo}:</p>
+          <ul>
+            {motivos.map((m) => (
+              <li key={m.id}>
+                <span>{m.texto}</span>
+                <strong>Respondiste: {m.respuesta}</strong>
+              </li>
+            ))}
+          </ul>
+        </details>
+      ) : null}
     </article>
   );
 }
