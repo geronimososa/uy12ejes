@@ -485,6 +485,8 @@ Si ves un error en alguna ubicación, [abrí un issue](https://github.com/geroni
 - **El enlace del resultado** solo contiene tus 12 posiciones codificadas, no tus respuestas.
 - El sitio usa **Vercel Analytics** para contar visitas de forma agregada, sin cookies ni datos personales.
 
+La política completa, bajo la Ley N.º 18.331 de Protección de Datos Personales, está en la página [Privacidad](https://uy12ejes.vercel.app/privacidad) del sitio.
+
 ---
 
 ## Documentación y créditos

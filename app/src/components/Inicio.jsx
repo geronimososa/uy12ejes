@@ -7,6 +7,7 @@ import { etiqueta } from '../logic/compas.js';
 import EjesInicio from './EjesInicio.jsx';
 import Foto from './Foto.jsx';
 import Ideologias from './Ideologias.jsx';
+import { REPOSITORIO } from './Privacidad.jsx';
 import { AVISO_ACTUALIZACION } from '../data/actualizacion.js';
 import TarjetaResultado from './TarjetaResultado.jsx';
 
@@ -191,7 +192,7 @@ export default function Inicio({ onComenzar, onNavegar, enCurso, onContinuar }) 
       <footer className="pie">
         <p><strong>uy12ejes</strong> es una herramienta para explorar ideas, no un instrumento científico. Inspirado en tests multieje como 12 Axes y Political Compass. Ubicaciones en revisión: si ves un error, avisanos.</p>
         <p className="pie-actualizacion">{AVISO_ACTUALIZACION}</p>
-        <p><Link to="/creditos">Créditos de las imágenes</Link></p>
+        <p className="pie-enlaces"><Link to="/privacidad">Privacidad</Link><Link to="/creditos">Créditos de las imágenes</Link><a href={REPOSITORIO} target="_blank" rel="noreferrer">Código fuente en GitHub</a></p>
       </footer>
     </div>
   );

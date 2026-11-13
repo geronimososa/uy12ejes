@@ -509,3 +509,12 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--celeste); outli
 .hero { position: relative; isolation: isolate; }
 .hero::before { content: ""; position: absolute; left: 50%; top: 50%; width: min(1100px, 100%); height: 760px; transform: translate(-50%, -50%); background: radial-gradient(closest-side, rgba(245, 197, 24, 0.26), rgba(245, 197, 24, 0.1) 55%, rgba(245, 197, 24, 0) 100%); filter: blur(24px); z-index: -1; pointer-events: none; }
 @media (max-width: 900px) { .hero::before { height: 70%; } }
+
+.pie-enlaces { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.legal { max-width: 720px; padding-top: 32px; padding-bottom: 48px; }
+.legal h2 { font-size: 1.25rem; margin: 36px 0 10px; }
+.legal p, .legal li { line-height: 1.65; }
+.legal ul { padding-left: 20px; display: grid; gap: 8px; }
+.legal a { color: var(--azul); }
+.legal-resumen { background: var(--celeste-suave); border-left: 4px solid var(--celeste); border-radius: 10px; padding: 14px 18px; margin: 24px 0 8px; }
+.legal-volver { margin-top: 40px; }

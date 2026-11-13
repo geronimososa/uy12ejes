@@ -5,7 +5,7 @@ import ejes from '../data/ejes.json';
 import perfiles from '../data/perfiles.json';
 import { ORDEN_EJES, afinidad, calcularPosiciones, intensidad, rankear } from './calculo.js';
 import { centroUruguayo, etiqueta, posicionCompas, region } from './compas.js';
-import { codificar, decodificar } from './enlace.js';
+import { VERSION_ENLACE, codificar, decodificar, leerEnlace } from './enlace.js';
 import { ventana, zona } from './overton.js';
 
 const partidos = perfiles.filter((p) => p.tipo === 'partido');
@@ -256,5 +256,14 @@ describe('enlace opaco', () => {
     expect(decodificar(codigo)).toEqual(vector);
     const alterado = (codigo[0] === 'A' ? 'B' : 'A') + codigo.slice(1);
     expect(decodificar(alterado)).toBeNull();
+  });
+
+  it('el enlace lleva la versión y los enlaces viejos sin versión se siguen leyendo', () => {
+    const vector = { estructura: 50, representacion: 10, poder: 60, inmigracion: 40, diplomacia: 70, intervencion: 30, economia: 20, control: 80, comercio: 55, religion: 15, moral: 35, tecnologia: 65 };
+    const nuevo = leerEnlace(codificar(vector));
+    expect(nuevo.estado).toBe('ok');
+    expect(nuevo.version).toBe(VERSION_ENLACE);
+    expect(leerEnlace('JXM3IXZPDRx4NWc1fA').estado).toBe('ok');
+    expect(leerEnlace('no-es-un-enlace').estado).toBe('invalido');
   });
 });

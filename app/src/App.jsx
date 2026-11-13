@@ -3,7 +3,7 @@ import { Navigate, Route, Routes, useLocation, useNavigate, useParams } from 're
 import afirmaciones from './data/afirmaciones.json';
 import dilemas from './data/dilemas.json';
 import { calcularPosiciones } from './logic/calculo.js';
-import { decodificar } from './logic/enlace.js';
+import { leerEnlace } from './logic/enlace.js';
 import Encabezado from './components/Encabezado.jsx';
 import Inicio from './components/Inicio.jsx';
 import Formato from './components/Formato.jsx';
@@ -11,6 +11,7 @@ import Pregunta from './components/Pregunta.jsx';
 import Dilema from './components/Dilema.jsx';
 import Resultado from './components/Resultado.jsx';
 import Creditos from './components/Creditos.jsx';
+import Privacidad from './components/Privacidad.jsx';
 
 const CLAVE_TEST = 'uy12ejes-test';
 const CLAVE_RESULTADO = 'uy12ejes-resultado';
@@ -62,7 +63,16 @@ function irA(id) {
 function ResultadoCompartido() {
   const { codigo } = useParams();
   const navigate = useNavigate();
-  const posiciones = decodificar(codigo);
+  const { estado, posiciones } = leerEnlace(codigo);
+  if (estado === 'version') {
+    return (
+      <section className="tarjeta">
+        <h2 className="afirmacion">Este resultado es de una versión anterior del test</h2>
+        <p className="nota">Desde entonces cambiaron los ejes o la forma de calcular, así que no se puede mostrar sin riesgo de que salga equivocado. Hacé el test de nuevo para ver tu resultado actualizado.</p>
+        <button type="button" className="boton boton-amarillo" onClick={() => navigate('/test')}>Hacer el test</button>
+      </section>
+    );
+  }
   if (!posiciones) {
     return (
       <section className="tarjeta">
@@ -199,6 +209,7 @@ export default function App() {
         />
         <Route path="/r/:codigo" element={<main className="contenedor"><ResultadoCompartido /></main>} />
         <Route path="/creditos" element={<main className="contenedor"><Creditos /></main>} />
+        <Route path="/privacidad" element={<main className="contenedor"><Privacidad /></main>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
