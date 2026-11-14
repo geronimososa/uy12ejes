@@ -10,6 +10,9 @@
     <link rel="canonical" href="https://uy12ejes.vercel.app/" />
     <meta name="theme-color" content="#0b3a7e" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_UY" />
     <meta property="og:site_name" content="uy12ejes" />
@@ -26,6 +29,16 @@
         var tema = localStorage.getItem('uy12ejes-tema');
         if (tema === 'light' || tema === 'dark') document.documentElement.dataset.theme = tema;
       } catch (e) {}
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "uy12ejes",
+        "alternateName": ["uy 12 ejes", "Test político uruguayo de 12 ejes"],
+        "url": "https://uy12ejes.vercel.app/",
+        "inLanguage": "es-UY"
+      }
     </script>
     <script type="application/ld+json">
       {
